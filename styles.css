@@ -6,14 +6,7 @@
   font-family: "Tahoma";
 }
 
-div.well {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 0px;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
+
 
 .container div.btn-group-vertical {
   margin-bottom: 20px;
