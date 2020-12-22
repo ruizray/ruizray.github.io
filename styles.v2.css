@@ -82,15 +82,7 @@ a:hover {
   cursor: pointer;
 }
 
-.position {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #014b82;
-  padding-bottom: 0px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
+
 
 .person {
   color: dimgray;
