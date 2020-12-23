@@ -1,0 +1,156 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+
+
+            </div>
+        </div>
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="missionStatement" class="sectionHead">
+                    Mission Statement
+                </div>
+                <p>The Bolingbrook Emergency Management Agency (BEMA) is a volunteer organization tasked with the
+                    responsibility of providing emergency services and coordinating the efforts of the Village and other
+                    agencies to prepare for, respond to, mitigate and recover from disasters, both natural and man made.
+                    Bolingbrook EMA also provides unique and supplemental emergency services to protect the general
+                    welfare and safety of the public.</p>
+            </div>
+            <div class="section">
+                <div id="servicesProvided" class="sectionHead">
+                    Services Provided
+                </div>
+                <p>The Bolingbrook Emergency Management Agency (BEMA) is a volunteer organization tasked with the
+                    responsibility of providing emergency services and coordinating the efforts of the Village and other
+                    agencies to prepare for, respond to, mitigate and recover from disasters, both natural and man made.
+                    Bolingbrook EMA also provides unique and supplemental emergency services to protect the general
+                    welfare and safety of the public.</p>
+
+                <div class="subsection">
+                    <div class="subhead">
+                        Primary
+                    </div>
+                    <p>
+                    <ul>
+                        <li> Disaster Coordination</li>
+                        <li> Emergency Communications</li>
+                        <li> Public Notification and Warning</li>
+                        <li> Tornado Spotting</li>
+                        <li> Search and Rescue</li>
+                        <li> Emergency Sheltering (in conjunction with the American Red Cross)</li>
+                        <li> Emergency Evacuation</li>
+                        <li> Emergency Power and Lighting</li>
+                    </ul>
+                    </p>
+                    <div class="subhead">
+                        Secondary
+                    </div>
+                    <p>
+                    <ul>
+                        <li> Traffic Control</li>
+                        <li> Security</li>
+                        <li> General Assistance as needed by any Village Department</li>
+
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+            <div class="section">
+                <div id="applicants" class="sectionHead">
+                    Applicants
+                </div>
+                <p>All applicants will be required to have a background check completed.
+
+                    Interested citizens can fill out an application and return it to Fire Administration, 375 W.
+                    Briarcliff
+                    Road.</p>
+                <ul>
+                    <li> Valid driver&#8217;s license </li>
+                    <li> At least 18 years of age</li>
+                    <li> Willing to be available 24/7 (for emergency situations)</li>
+                    <li> Reside in the Village of Bolingbrook</li>
+                    <li> Previous weather spotting experience preferred, will train</li>
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+
+            <div class="well">
+                <h3 class="position">Battalion Chief / EMA Director</h3>
+                <div class="person">Troy Kirch<br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<script>
+    function myFunction(dots, more, btn) {
+        var dots = document.getElementById(dots);
+        var moreText = document.getElementById(more);
+        var btnText = document.getElementById(btn);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
