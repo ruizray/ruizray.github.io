@@ -1,0 +1,147 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+            </div>
+        </div>
+
+
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="whatToDo" class="sectionHead">
+                    What to do if Your Child is Missing
+                </div>
+                
+                <ol>
+                    <li><strong>Immediately call your local law enforcement agency.</strong> Provide law enforcement
+                        with your
+                        child&#8217;s name, date of
+                        birth, height, weight and descriptions of any other unique identifiers such as eyeglasses and
+                        braces.
+                        Tell
+                        them
+                        when you noticed your child was missing and what clothing he or she was wearing.</li>
+                    <li>Request law enforcement authorities immediately enter your child&#8217;s name and identifying
+                        information
+                        into
+                        the
+                        FBI&#8217;s National Crime Information Center Missing Person File</li>
+                    <li>After you have reported your child missing to law enforcement, call the <a
+                            href="https://www.missingkids.org/home"><strong>National Center for Missing and
+                                Exploited Children® (NCMEC)</strong> </a>at 1-800-THE-LOST® (1-800-843-5678).</li>
+
+                </ol>
+            </div>
+
+            <div class="section">
+
+                <div id="nationalRunawaySafeline" class="sectionHead">
+                    National Runaway Safeline
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <p>The mission of the National Runaway Safeline (NRS) is to help keep America's runaway,
+                            homeless and at-risk youth safe and off the streets. Through 1-800-RUNAWAY nad
+                            1800RUNAWAY.org, NRS
+                            provided 24/7/365 trauma sensitive solution-focused crisis interventions, information and
+                            referral via
+                            our nearly 7,000 resource database and runaway education and prevention services</p>
+                    </div>
+                    <div style="text-align:center" class="col-md-3"><img style="width:40%;"
+                            src="https://www.1800runaway.org/wp-content/themes/app/_/img/logo-1800runaway-registered-tagline-color.png?v=20200421"
+                            alt="" />
+                        <br><a href="tel:1-800-786-2929">1-800-RUNAWAY</a><br><a
+                            href="https://www.1800runaway.org/">www.1800runaway.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div id="NCMEC" class="sectionHead">
+                    National Center for Missing and Exploited Children
+                </div>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-9">The National Center for Missing and Exploited Children (NCMEC) is a non-profit
+                        501(c)(3) coporations whose mission is to help find missing children, reduce child sexual
+                        exploitation,
+                        and prevent child victimization. Since 1984, NCMEC has served as the national clearinghouse and
+                        resource
+                        center for families, victims, privte organizations, law enforcement and the public on issues
+                        relating to
+                        missing and sexually exploited children.</div>
+                    <div style="text-align:center" class="col-md-3"><img style="background:#404041;width:100%"
+                            src="https://www.missingkids.org/content/dam/missingkids/logos/ncmec%20logo-website.png">
+                        <br><a href="1-800-843-5678">1-800-843-5678</a><br><a
+                                href="https://www.missingkids.org/home">www.missingkids.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Text that must be centered must be tucked between div --->
+            
+
+           
+
+        </div>
+
+
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
