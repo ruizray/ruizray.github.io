@@ -48,13 +48,9 @@ button.btn.btn-primary:hover::after {
   content: "\203A";
 }
 
-.well .person:first-of-type {
-  margin-top: 0px;
-}
 
-.person {
-  margin-top: 10px;
-}
+
+
 
 .sectionHead {
   font-size: 28px;
@@ -98,6 +94,10 @@ a:hover {
 
 .subsection {
   padding-left: 0px;
+}
+
+.well .person:first-of-type .position{
+  margin-top: 0px;
 }
 
 .position {
