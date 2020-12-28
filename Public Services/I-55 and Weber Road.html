@@ -1,0 +1,113 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+            </div>
+
+
+        </div>
+
+
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="willNever" class="sectionHead">
+                    About Project
+                </div>
+
+                <p>The Illinois Department of Transportation (Department) let two projects to reconstruct the interchange of Interstate 55 (I-55) at
+                    Weber Road, and Weber Road from Romeo Road (135th Street) to Rodeo Drive (119th Street) in Will County in March, 2018. The
+                    interchange of I-55 @ Weber Road and Weber Road need to be updated to respond to the increased travel demands due to development
+                    and growth has placed on the surrounding area. The project is located within the municipalities of Bolingbrook and Romeoville in
+                    Will County. Upon completion, the project will provide a number of improvements for the roadway users, as it will: increase
+                    roadway and intersection capacity, correct geometric deficiencies, providing a new bridge structure in conjunction of
+                    rehabilitating the existing bridge structure, and ultimately improve safety and mobility.
+
+                </p>
+
+                <div class="CTA">
+
+                    More information about the project here
+
+                    <a href="https://idot.illinois.gov/projects/i55-at-weber-road"><button class='btn btn-primary CTAbutton' type='button'>IDOT
+                            Project Website</button></a>
+                </div>
+                <p>If you have any further questions, please feel free to call Engineering with the Public Services Department at 630-226-8850.</p>
+
+
+            </div>
+
+            <div class="section">
+                <div id="media" class="sectionHead">
+                    Media
+                </div>
+                <div style="text-align:center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8Pxv0vbdt-o" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+            <div class="well">
+                <div class="contact">
+                    <h3 class="position">Public Services</h3>
+                    <div class="person">Engineering</div>
+                    <a href="tel:(630)226-8850">(630)226-8850</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+
+    .image.left {
+        display: none;
+    }
+</style>
