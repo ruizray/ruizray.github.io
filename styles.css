@@ -48,8 +48,12 @@ button.btn.btn-primary:hover::after {
   content: "\203A";
 }
 
-.well .position:first-of-type {
+.well .person:first-of-type {
   margin-top: 0px;
+}
+
+.person {
+  margin-top: 10px;
 }
 
 .sectionHead {
