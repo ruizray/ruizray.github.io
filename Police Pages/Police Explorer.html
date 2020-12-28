@@ -1,0 +1,125 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+
+
+            </div>
+        </div>
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="welcome" class="sectionHead">
+                    Welcome
+                </div>
+                <p>Youths need solid information on the adult world that they are preparing to enter. Today’s teenagers
+                    have a chance to find out firsthand about a variety of careers of Special interest – Law Enforcement
+                    is one. The Bolingbrook Police Department’s Law Enforcement Explorer Program has been carefully
+                    designed to meet the needs of young men and women, ages 14 through 21, who are interested in Law
+                    Enforcement. The program provides young adults with opportunities to assist law enforcement
+                    personnel in their work. <strong>However, Explorers are not allowed to substitute for law
+                        enforcement
+                        personnel, and they are forbidden from representing themselves as police officers.</strong></p>
+            </div>
+            <div class="section">
+                <div id="purpose" class="sectionHead">
+                    Purpose
+                </div>
+                <ul>
+                    <li>To explore all phases of law enforcement, giving the Explorers an insight into the
+                        many fields of law enforcement and information to help them qualify for a career
+                        in this field</li>
+                    <li>To help young adults find their own lifestyles through experiences that develop
+                        strong character, give citizenship training and improve personal and mental
+                        Fitness</li>
+                    <li>To instill within the Explorers a genuine wish to develop the habits, attitudes and
+                        practices of contributing members of society</li>
+                </ul>
+                <p>Each member of the Law Enforcement Explorer Post is expected to have team spirit &#8211;
+                    be prepared by study,
+                    training, and discipline to meet the responsibilities of their post. Confidence, essential for
+                    accomplishment, comes from successful experience gained through the diligent performance of duty.
+                    Courtesy,
+                    patience, commitment and tact are characteristics of the experienced, competent Law Enforcement
+                    Explorer. To
+                    help guide post members live these ideals, Explorers subscribe to a code of ethics.</p>
+            </div>
+            
+
+
+        </div>
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+
+            <div class="well">
+                <h3 class="position">Officer Michelle Geier</h3>
+                <div class="person">(630)226-8609<br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<script>
+    function myFunction(dots, more, btn) {
+        var dots = document.getElementById(dots);
+        var moreText = document.getElementById(more);
+        var btnText = document.getElementById(btn);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
