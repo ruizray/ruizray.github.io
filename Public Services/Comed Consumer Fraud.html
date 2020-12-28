@@ -1,0 +1,128 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+            </div>
+
+            <div class="SidebarTitle">
+                Message from ComEd
+            </div>
+            <div style="width:100%;text-align:center">
+                <img style="width:100%"
+                     src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/FINAL_Consumer_Fraud_Protection_Bill_Insert_r5_Page_1.jpg">
+            </div>
+        </div>
+
+
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="willNever" class="sectionHead">
+                    ComEd will never...
+                </div>
+
+                <div class="subsection">
+                    <div class="subHead">
+                        Come to your
+                        home to request a payment.
+                    </div>
+
+                    <p>ComEd regularly receives reports of scammers
+                        posing as ComEd employees. They’ll go to great
+                        lengths to try to take your money</p>
+                </div>
+
+                <div class="subsection">
+                    <div class="subHead">
+                        Call you to:
+                    </div>
+                    <ul>
+                        <li>Ask for your account number</li>
+                        <li>Ask for personal information such as your social
+                            security number or bank information</li>
+                        <li>Ask you to make a direct payment with a prepaid
+                            cash card</li>
+                    </ul>
+                    <p>Avoid being the victim of a scam and learn how
+                        to spot energy-related fraud when it may be
+                        happening to you. ComEd cares. We’re committed
+                        to working together.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div id="reports" class="sectionHead">
+                    Reporting suspicious behavior
+                </div>
+
+                <div class="CTA">
+
+                    If you experience suspicious behavior,
+                    please call <span style='word-break:keep-all;display: inline-block;'>1-800-EDISON-1</span> to report
+                    or visit
+                    ComEd.com/ScamAlert to learn more.
+
+                    <a href="ComEd.com/ScamAlert"><button class='btn btn-primary CTAbutton' type='button'>Report
+                            Suspicious Behvaior</button></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+            <div class="well">
+                <div class="contact">
+                    <h3 class="position">ComEd</h3>
+                    <a href="tel:(800)334-7661">(800)334-7661</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
