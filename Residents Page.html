@@ -1,0 +1,104 @@
+<!-- advanced html editor -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<div class="containerNew">
+
+    <div id="mainPage">
+        <div class="groups">
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="links">
+    <a id="bctv" href="https://www.bolingbrook.com/bctvlive">bctv LIVE</a>
+    <a id="bctv" href="https://www.bolingbrook.com/index.asp?SEC=E72D3735-3978-4920-911B-4265BA011CD0">Entertainment</a>
+    <a id="about" href="https://www.bolingbrook.com/welcome_new_residents">New Residents</a>
+
+</div>
+
+
+
+
+
+
+<style>
+    nav.horizontal.block.menu>ul>li>a>.triangle,
+    body>div.allContainer>header>div.topbar2>div.banner>nav>ul>li.current.actual.hasChildren>ul {
+        display: none;
+    }
+
+    .links {
+        display: none;
+    }
+
+
+    .mainContent {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+   
+
+
+    button.btn.btn-primary::after,
+    button.btn.btn-primary:hover::after {
+        position: inherit;
+    }
+
+    .header {
+        font-size: 24px;
+        text-align: center;
+        width: 100%
+    }
+
+
+
+    
+
+
+</style>
+
+
+
+
+<script>
+
+    var categories = new Array("bctv", "about", "covid", "FAQ", "info", "events");
+    var links = document.querySelector(".links");
+    var groups = document.querySelector(".groups");
+
+    for (var i = 0; i < categories.length; ++i) {
+
+        var frame = $("<div id=" + categories[i] + " class='btn-group-vertical'></div>");
+        $(".groups").append(frame);
+
+        for (var j = 0; j < links.childElementCount; j++) {
+            if (links.children[j].getAttribute("id") === categories[i]) {
+
+                var button = $("<button class='btn btn-primary' type='button'></button>").text(links.children[j].text);
+                var a = $("<a href=" + links.children[j].href + "></a>");
+                a.append(button);
+                $(frame).append(a);
+            }
+        }
+
+    }
+</script>
