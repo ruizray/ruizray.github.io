@@ -84,13 +84,20 @@ h2 {
   margin-top: 0px;
 }
 
+
+a:hover {
+  cursor: pointer;
+}
+
+
 .SidebarTitle {
   text-align: center;
   font-size: 30px;
   padding: 10px 0px 10px 0px;
 }
-a:hover {
-  cursor: pointer;
+
+.subsection {
+  padding-left: 0px;
 }
 
 .position {
@@ -103,14 +110,12 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.person,.name {
+
+.person, .name ,.contact{
   color: dimgray;
   font-size: 20px;
   padding-bottom: 0px;
-}
-
-.subsection {
-  padding-left: 0px;
+  margin-top:5px;
 }
 
 .CTA {
@@ -177,7 +182,4 @@ ol li {
   display: none;
 }
 
-.contact{
-    margin-top:5px;
-    font-size:20px;
-}
+
