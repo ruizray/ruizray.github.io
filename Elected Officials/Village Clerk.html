@@ -11,14 +11,14 @@
 
 <div class="container">
     <div class="row">
-        <div id="profile" class="col-sm-2 sidenav">
+        <div id="profile" class="col-md-2 sidenav">
             <img style="width:100%"
                  src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/mmb_2020.jpg">
             <h3 class="position">
                 Village Clerk<br>Martha "Marti" M. Barton
             </h3>
 
-            <div  class="person">
+            <div class="person">
                 <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-phone-alt"></span>
                     Town Center</div>
                 <div class="contact"><a href="tel:(630)226-8681">(630) 226-8411</a></div>
@@ -27,7 +27,7 @@
         </div>
 
 
-        <div class="col-sm-10">
+        <div class="col-md-10">
 
             <p>A native Ohioan, Marti Barton moved to Bolingbrook with her family in 1987, having been attracted to the village by its diversity and
                 reasonably-priced housing options. Marti stepped right into public service providing auxiliary communications as a licensed ham radio
@@ -107,22 +107,20 @@
 
 
 
-
+<!-----Set height of navbar to match height of content-->
 <script>
-    function myFunction(dots, more, btn) {
-        var dots = document.getElementById(dots);
-        var moreText = document.getElementById(more);
-        var btnText = document.getElementById(btn);
+    document.onload = setEqualHeight();
+    window.onresize = setEqualHeight;
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+    function setEqualHeight() {
+        if ($(window).width() > 992) {
+            var rowHeight = document.querySelector(".row").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px")
         }
+        else {
+            document.querySelector("#profile").setAttribute("style", "height:auto")
+        }
+
     }
 </script>
 
