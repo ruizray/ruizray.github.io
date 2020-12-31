@@ -182,4 +182,17 @@ ol li {
   display: none;
 }
 
+#profile {
+  text-align: -webkit-left !important;
+  background-color: #f1f1f1 !important;
+}
+
+#profile > div.person{
+  margin-bottom: 5px;
+}
+
+#profile > h3.position{
+  text-align:center;
+  margin-bottom:10px
+}
 
