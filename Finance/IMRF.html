@@ -1,0 +1,103 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                On this Page
+            </div>
+            <div id="thisPage" class="btn-group-vertical">
+
+
+
+            </div>
+        </div>
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="Information" class="sectionHead">
+                    Information
+                </div>
+                <p>In 2019, the Illinois General Assembly passed <strong>Public Act 101-0504</strong>. The law requires IMRF to post certain employer cost and
+                    participation information on its website. IMRF will update these reports annually.</p>
+
+                    <div class="CTA">
+                        To visit the IMRF website and get more information, click below.
+                        <a href="https://www.imrf.org/en/about-imrf/transparency/employer-cost-and-participation-information"><button
+                                    class='btn btn-primary CTAbutton' type='button'>IMRF Website</button></a>
+                    </div>
+
+                <div class="CTA">
+                    To read the act in its entirety, click below.
+                    <a href="https://www.bolingbrook.com/rent"><button
+                                class='btn btn-primary CTAbutton' type='button'>Public Act 101-0504</button></a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<script>
+    function myFunction(dots, more, btn) {
+        var dots = document.getElementById(dots);
+        var moreText = document.getElementById(more);
+        var btnText = document.getElementById(btn);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
