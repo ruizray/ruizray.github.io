@@ -196,3 +196,14 @@ ol li {
   margin-bottom:10px
 }
 
+@media only screen and (max-width: 768px) {
+  #profileImage {
+      width:75% !important;
+  }
+
+  #profile {
+    height:auto;
+    width:100%;
+    text-align:center !important;
+  }
+}
