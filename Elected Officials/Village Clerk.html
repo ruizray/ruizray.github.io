@@ -11,8 +11,8 @@
 
 <div class="container">
     <div class="row">
-        <div id="profile" class="col-md-2 sidenav">
-            <img style="width:100%"
+        <div id="profile" class="col-sm-3 sidenav">
+            <img id="profileImage" style="width:100%"
                  src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/mmb_2020.jpg">
             <h3 class="position">
                 Village Clerk<br>Martha "Marti" M. Barton
@@ -27,7 +27,7 @@
         </div>
 
 
-        <div class="col-md-10">
+        <div id ="bio" class="col-sm-9">
 
             <p>A native Ohioan, Marti Barton moved to Bolingbrook with her family in 1987, having been attracted to the village by its diversity and
                 reasonably-priced housing options. Marti stepped right into public service providing auxiliary communications as a licensed ham radio
@@ -104,28 +104,39 @@
 </div>
 
 
+<style>
+@media only screen and (max-width: 768px) {
+  #profileImage {
+      width:75% !important;
+  }
+
+  #profile {
+    height:auto;
+    width:100%;
+    text-align:center !important;
+  }
+}
+
+</style>
 
 
-
-<!-----Set height of navbar to match height of content-->
 <script>
     document.onload = setEqualHeight();
     window.onresize = setEqualHeight;
-
+   
     function setEqualHeight() {
-        if ($(window).width() > 992) {
-            var rowHeight = document.querySelector(".row").scrollHeight;
-            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px")
+        if ($(window).width() > 750) {
+           var rowHeight = document.querySelector("#bio").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px !important")
+           
         }
         else {
-            document.querySelector("#profile").setAttribute("style", "height:auto")
+            var rowHeight = document.querySelector(".row").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:auto;width:100%;text-align:center !important;")
+          
         }
 
     }
 </script>
 
-<style>
-    #itemImage {
-        width: 100%;
-    }
-</style>
+<!-----Set height of navbar to match height of content-->
