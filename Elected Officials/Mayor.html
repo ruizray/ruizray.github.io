@@ -1,0 +1,122 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div id="profile" class="col-sm-3 sidenav">
+            <img id="profileImage" style="width:100%" alt="Mayor Mary"
+                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Mary_Basta_2019(1)(1).png">
+            <h3 class="position">
+                Mayor<br>Mary Alexander-Basta
+            </h3>
+
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-phone-alt"></span>
+                    Town Center</div>
+                <div class="contact"><a href="(630)226-8417">(630)226-8417</a></div>
+            </div>
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-phone-alt"></span>
+                    Phone</div>
+                <div class="contact"><a href="(630)333-6513">(630)333-6513</a></div>
+            </div>
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-envelope"></span>
+                    Email</div>
+                <div class="contact"><a href="mailto:mbasta@bolingbrook.com">mbasta@bolingbrook.com</a></div>
+            </div>
+
+        </div>
+
+
+        <div id="bio" class="col-sm-9">
+            <ul>
+                <li>Bolingbrook Village Trustee</li>
+                <li> Serves on the Village ’s Public Safety Committee and the Public Services Committee</li>
+                <li> Event design and coordination consultant with twenty plus years of experience doing major corporate event planning and hotel/club
+                    management - studied Hospitality Management at Tennessee State University</li>
+                <li>Experienced in Village Planning and Development; served as Chair of the Bolingbrook Plan Commission</li>
+                <li>Active leader in the School District community; currently serving as the John F. Kennedy PTA President</li>
+                <li>Serves as an Executive Board member of the 40-year old Bolingbrook Soccer League</li>
+                <li>Founding Vice President of Bolingbrook STEM (Science, Technology, Engineering, &Math ) Association for youth</li>
+                <li>Dedicated wife, and mother of two sons</li>
+                <li> 2018 Female Citizen of the Year</li>
+                <li>Active member of Saint Mark of Burr Ridge Church Community</li>
+
+            </ul>
+            <p>Mary and her husband, Dr. Emad Basta, moved to Bolingbrook in November 2003. They are parents of two sons, Peter (16) and Benjamin (14). Bolingbrook was their choice, because of its diversity, its opportunities to serve and for all of the amenities that others have also found attractive about the community. While she found her career challenging and satisfying, she and her husband also wanted to raise a family here. Since a position in the hospitality industry was not a nine to five job, she left the corporate world to start a family. As her children grew, Mary found herself seeking more adult interaction, so she looked for ways to get involved, which led her to serving in the PTA. In all of her activities, both professional and community service, Mary enjoys problem-solving; finding ways to work smarter, not harder; and to take them to the next level of success.</p>
+            
+
+            <div class="section">
+                <div id="education" class="sectionHead">
+                    Education
+                </div>
+                <p>
+                    Mary studied Mass Communications at the American University in Cairo, Egypt; and Hospitality Management at Tennessee State University.
+                    </p>
+            </div>
+            <div class="section">
+                <div id="community" class="sectionHead">
+                    Community Involvement
+                </div>
+                <p>
+                    The Basta family are very involved in service to the Bolingbrook community, and can be seen at many community events. Mary states that she was strongly influenced toward community involvement by her parents. Both her mother and her uncle now live in Bolingbrook, as well. Because of her passion for youth development, Mary currently serves on the Executive Board of the Bolingbrook Soccer Club, which recently celebrated its 40th year of service to youth in Bolingbrook in 2018. Mary ’s dedication to youth development has led her to support the school community as President of the John F. Kennedy PTA, President of the Plainfield Middle Schools Music Boosters, and prior to that as PTA President at Eichelberger Elementary School. She continues to serve as a consultant ECN Children ’s Cancer Network in Newport Beach, CA, coordinating fundraising events and creating new chapters in other states Additionally, she maintains the organization ’s legal registration status and works with auditors to ensure accurate financial reporting. Her community service is not limited to only youth, Mary previously served as President of the Bloomfield West II Homeowners Association Mary served as the Chair of the Bolingbrook Plan Commission, which reviews new residential and commercial development in Bolingbrook and makes recommendations to the Village Board.
+
+                    </p>
+            </div>
+
+            <div class="section">
+                <div id="professional" class="sectionHead">
+                    Professional/ Business Experience
+                </div>
+                <p>
+                    Her professional background includes Social and Corporate Event Planning, Hotel and Club Management at locations such as the Palmer House Hilton, Four Seasons, and the Chicago Yacht Club where she became the first female General Manager in the Club’s 125-year history. She currently works as an independent Hospitality and Event Consultant.
+
+
+                    </p>
+            </div>
+
+            <div class="section">
+                <div id="professional" class="sectionHead">
+                    Recognitions
+                </div>
+                <p>
+                    Mary has received recognition as the recipient of the CAPE (Coordination of Parent and groups for Educational Efficiency) in 2013, 2017 and 2019. In honor of her exemplary service to the Bolingbrook community over the years, Mary was chosen as the 2018 Bolingbrook Female Citizen of the Year.
+
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.onload = setEqualHeight();
+    window.onresize = setEqualHeight;
+
+    function setEqualHeight() {
+        if ($(window).width() > 750) {
+            var rowHeight = document.querySelector("#bio").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px !important")
+
+        }
+        else {
+            var rowHeight = document.querySelector(".row").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:auto;width:100%;text-align:center !important;")
+
+        }
+
+    }
+</script>
+
+<!-----Set height of navbar to match height of content-->
