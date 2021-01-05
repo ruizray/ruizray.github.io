@@ -1,0 +1,133 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div id="profile" class="col-sm-3 sidenav">
+            <img id="profileImage" style="width:100%" alt="Village Trustee Michael Carpanzano"
+                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Michael_Carpanzano_2019.png">
+            <h3 class="position">
+                Village Trustee<br>Michael Carpanzano
+            </h3>
+
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-phone-alt"></span>
+                    Town Center</div>
+                <div class="contact"><a href="(630)226-8417">(630)226-8417</a></div>
+            </div>
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-phone-alt"></span>
+                    Phone</div>
+                <div class="contact"><a href="(708)699-4326">(708)699-4326</a></div>
+            </div>
+            <div class="person">
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-envelope"></span>
+                    Email</div>
+                <div class="contact"><a href="mailto:mcarpanzano@bolingbrook.com">mcarpanzano@bolingbrook.com</a></div>
+            </div>
+            <div class="person">
+                <br>
+                <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-home"></span>
+                    2201 Misty Creek Trail<br>
+                    Bolingbrook, IL 60490-4549</div>
+
+            </div>
+
+        </div>
+
+
+        <div id="bio" class="col-sm-9">
+
+            <p>Trustee Carpanzano currently sits on The Village of Bolingbrook Finance Committee and Public Services Committee. He is married to his
+                wife Nadia and have a son named Luca. They share a home with their adopted pet Turbo. He is a member of The Compass Church.
+            </p>
+
+
+            <div class="section">
+                <div id="education" class="sectionHead">
+                    Education
+                </div>
+                <p>
+                    Master of Business Administration (MBA), University of Saint Francis - Joliet, IL
+                </p>
+            </div>
+            <div class="section">
+                <div id="community" class="sectionHead">
+                    Community Involvement
+                </div>
+                <ul>
+
+                    <li> President of the Board, Midwest Christian Montessori Academy (MCMA) - Volunteer</li>
+                    <li>Treasurer of the Board, Heart Haven OutReach (H2O) - Volunteer</li>
+                    <li>Committee Chair, Distinguished Citizen Award Dinner (Rainbow Council, Boy Scouts of America) - Volunteer</li>
+                    <li>Volunteer Content Creator, Bolingbrook Events Facebook Page</li>
+                    <li>Current or Former Committee Member for The Community Foundation of Will County, United Way of Will County, Camp Fire Illinois
+                        Prairie, P.O.W.E.R. Connection, DuPage County Area Project (DuCAP), March of Dimes, American Cancer Society</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div id="professional" class="sectionHead">
+                    Professional/ Business Experience
+                </div>
+                <ul>
+                    <li>Regional Director of Sales, National Physical Therapy Practice</li>
+                    <li>Former Executive Director, Bolingbrook Area Chamber of Commerce</li>
+                    <li>Former Treasurer, Crime Stoppers of Bolingbrook</li>
+                    <li>Former President, Kiwanis Club of Bolingbrook &Romeoville</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div id="professional" class="sectionHead">
+                    Recognitions
+                </div>
+                <ul>
+                    <li> Best Under 40, My Suburban Life (Shaw Media), September 2014</li>
+                    <li>President's Award for Outstanding Community Service, Bolingbrook Area Chamber of Commerce, March 2012</li>
+                    <li>Character Counts Award, Bolingbrook/Romeoville Character Counts Coalition, October 2011</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+
+    document.onload = setEqualHeight();
+    window.onresize = setEqualHeight;
+
+    function setEqualHeight() {
+
+        if(document.querySelector("#profile").scrollHeight > document.querySelector("#bio").scrollHeight){
+            document.querySelector("#profile").setAttribute("style", "height:auto;")
+        }
+
+        else if ($(window).width() > 750) {
+            var rowHeight = document.querySelector("#bio").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px !important")
+
+        }
+        else {
+            var rowHeight = document.querySelector(".row").scrollHeight;
+            document.querySelector("#profile").setAttribute("style", "height:auto;width:100%;text-align:center !important;")
+
+        }
+
+    }
+</script>
+
+<!-----Set height of navbar to match height of content-->
