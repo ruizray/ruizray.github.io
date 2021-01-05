@@ -32,8 +32,8 @@
                     Email</div>
                 <div class="contact"><a href="mailto:mcarpanzano@bolingbrook.com">mcarpanzano@bolingbrook.com</a></div>
             </div>
-            <div class="person">
-                <br>
+            <div style="margin-top:20px;" class="person">
+                
                 <div class="name"><span style="font-family: Glyphicons Halflings" class="glyphicon glyphicon-home"></span>
                     2201 Misty Creek Trail<br>
                     Bolingbrook, IL 60490-4549</div>
@@ -103,31 +103,6 @@
 </div>
 
 
-<script>
 
-
-
-    document.onload = setEqualHeight();
-    window.onresize = setEqualHeight;
-
-    function setEqualHeight() {
-
-        if(document.querySelector("#profile").scrollHeight > document.querySelector("#bio").scrollHeight){
-            document.querySelector("#profile").setAttribute("style", "height:auto;")
-        }
-
-        else if ($(window).width() > 750) {
-            var rowHeight = document.querySelector("#bio").scrollHeight;
-            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px !important")
-
-        }
-        else {
-            var rowHeight = document.querySelector(".row").scrollHeight;
-            document.querySelector("#profile").setAttribute("style", "height:auto;width:100%;text-align:center !important;")
-
-        }
-
-    }
-</script>
 
 <!-----Set height of navbar to match height of content-->
