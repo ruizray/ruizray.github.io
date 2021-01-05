@@ -116,6 +116,8 @@ a:hover {
   font-size: 20px;
   padding-bottom: 0px;
   margin-top:0px;
+  overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .CTA {
