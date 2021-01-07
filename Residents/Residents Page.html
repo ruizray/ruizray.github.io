@@ -99,3 +99,37 @@
 
     }
 </script>
+
+
+<script>
+    var list = $("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul");
+
+    var length = list.children().length;
+
+      
+      
+    for (var i = 1; i <= length; i++) {
+        console.log(i);
+        var name = $("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li:nth-child(" + i + ") >:not(ul) > span").text();
+        var item = $("<div class = 'item'></div>");
+        item.append($("<div class= 'header'></div>").text(name));
+        $(".containerNew").append(item);
+        if ($("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li:nth-child(" + i + ") ").attr('class') == "hasChildren") {
+            for (var j = 1; j <= $("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li:nth-child(" + i + ") > ul").children().length; j++) {
+                name = $("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li:nth-child(" + i + ") > ul >li:nth-child(" + j + ")>:not(ul) > span").text();
+                var link = $("div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li:nth-child(" + i + ") > ul >li:nth-child(" + j + ")>:not(ul)").attr('href')
+                 var a = $("<a href=" + link + "></a>");
+                var button = $("<button class='btn btn-primary' type='button'></button>").text(name);
+                a.append(button)
+                item.append(a)
+                console.log(name);
+            }
+
+        }
+
+        console.log(name)
+    }
+
+
+
+</script>
