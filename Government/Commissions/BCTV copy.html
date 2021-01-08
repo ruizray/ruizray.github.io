@@ -243,25 +243,25 @@
             </div>
         </div>
     </div>
+</div>
+<script>
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
 
-    <script>
-        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
 
-        for (var i = 0; i < items.length; ++i) {
-            var id = items[i].getAttribute("id");
-            var text = items[i].innerText;
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
 
-            var button = $(
-                "<button type='button' class='btn btn-outline-primary'></button>"
-            ).text(text);
-            var a = $("<a href= #" + id + "></a>");
-            a.append(button);
-
-            $("#thisPage").append(a);
-        }
-    </script>
-    <style>
-        #itemImage {
-            width: 100%;
-        }
-    </style>
+        $("#thisPage").append(a);
+    }
+</script>
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
