@@ -272,3 +272,7 @@ ol li {
 #leftSidebar {
     display: none;
 }
+
+.section>h1 {
+    text-align: center;
+}
