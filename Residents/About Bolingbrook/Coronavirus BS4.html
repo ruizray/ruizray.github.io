@@ -1,0 +1,133 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="C:\Users\rruiz\Documents\GitHub\ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+        <div id="leftSidebar" class="col-md-3">
+            
+            <div id="responsiveLink" class="card mb-3">
+                
+                <div id="thisPage" class="btn-group-vertical">
+                    <h3 class="card-header">On This Page</h3>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <h3 class="card-header">Helpful Links</h3>
+                
+                <img src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/COVID(1).jpg">
+                
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> <a href="https://www.dph.illinois.gov/covid19/statistics">IDPH COVID-19 Numbers by Zip Code</a>
+                    </li>
+                    <li class="list-group-item"> <a href="https://www.dph.illinois.gov/regionmetrics?regionID=1">Regional Metrics (Bolingbrook is
+                            region 7)</a></li>
+
+                    <li class="list-group-item"><a href="https://www2.illinois.gov/dceo/Pages/default.aspx">
+                            COVID-19 HELP
+                        </a></li>
+                    <li class="list-group-item"><a href="https://www.cdc.gov/">
+                            Centers For Disease Control &Prevention
+                        </a></li>
+                    <li class="list-group-item"><a
+                           href="http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus">
+                            Illinois Department of Public Health
+                        </a></li>
+                    <li class="list-group-item"><a href="https://c19-willcountygis.hub.arcgis.com/">
+                            Will County COVID-19 Cases
+                        </a></li>
+                    <li class="list-group-item"><a href="https://c19-willcountygis.hub.arcgis.com/">
+                            Dupage County Health Department
+                        </a></li>
+                </ul>
+
+                <div class="card-footer text-muted">
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <h1 id="about">Latest Information</h1>
+                <p>
+                    The Village of Bolingbrook has been in constant communication with both Amita Bolingbrook Hospital and Edward Hospital, along with
+                    the Will County and Illinois Department of Public Health to monitor the possible spread of the Coronavirus (COVID-19) in the
+                    Bolingbrook area. We are following the most current recommendations for treatment and preventing the potential spread of
+                    infection. Protective equipment and procedures are in place to provide emergency medical treatment and safe transport of
+                    individuals to the hospital.
+                </p>
+            </div>
+
+
+            <div class="section">
+                <h1 id="about">Testing</h1>
+
+
+                <p>Walgreens located at 695 W. Boughton Road is now allowing Healthcare Professionals, First Responders and anyone 18 and older WITH
+                    SYMPTOMS to test at the Bolingbrook site.
+                </p>
+
+
+
+
+            </div>
+
+
+            <div class="section">
+                <h1 id="Links">Important Links</h1>
+                <p>
+                    As a Village Commission, BCT provides programming that informs, entertains and preserves the spirit character and diversity of
+                    Bolingbrook through the scheduled Village Board meetings, School Board meetings, Plan Commission meetings, free concerts, sports
+                    programs, religious services, informational documentaries and specials that highlight what makes the Village unique.
+                </p>
+
+            </div>
+
+
+        </div>
+        <div id="Sidebar" class="col-md-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>

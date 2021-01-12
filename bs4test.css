@@ -3,8 +3,7 @@
 .contentBG {
     max-width: 100% !important;
     width: auto !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
@@ -64,6 +63,12 @@ button.btn-outline-primary::after {
     float: right;
     content: "\203A";
 }
+
+.section {
+    font-size:1.1rem;
+
+}
+
 
 .sectionHead {
     font-size: 28px;
@@ -218,8 +223,9 @@ ol li {
         width: 100%;
         text-align: center !important;
     }
-    #leftSidebar {
+    #responsiveLink {
         display: contents !important;
+        
     }
     .container {
         padding-left: 15px !important;
@@ -232,47 +238,27 @@ ol li {
     font-size: 24px;
 }
 
-.card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 30px;
-    padding: 10px 0px 10px 0px;
-    border: none;
-}
-
-.card-container {
-    border: 1px solid rgba(0, 0, 0, .125);
-    background-color: rgba(0, 0, 0, .03);
-}
-
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.0rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.5rem;
-    background-color: rgba(0, 0, 0, .03);
-    border: none;
-}
-
-.card {
-    border: none;
-}
-
-.card-container>.card.mb-2:last-child {
-    margin-bottom: 0px !important;
-}
 
 #name {
     font-size: 1.2rem;
 }
 
-#leftSidebar {
+#thisPage{
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom:10px;
+}
+
+#responsiveLink {
     display: none;
+    
 }
 
 .section>h1 {
     text-align: left !important;
 }
+
+.list-group-flush > .list-group-item {
+ 
+    border: 1px solid rgba(0,0,0,.125);   border-left:none;
+    border-right:none;
+  }
