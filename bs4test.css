@@ -9,6 +9,12 @@
     margin-right: 0px !important;
 }
 
+.contentBG{
+    margin-right:15px !important;
+    margin-left:15px !important;
+}
+
+
 .socialFixed {
     display: none;
 }
