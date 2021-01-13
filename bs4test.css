@@ -8,6 +8,10 @@
     
 }
 
+.contentBG{
+    padding-left:0px;
+}
+
 #content{
     width: auto !important;
     max-width: 100% !important;
