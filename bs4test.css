@@ -6,9 +6,10 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding-left:0px !important;
+    padding-right:0px !important; 
 }
 
-.contentBG{
+#content{
     margin-right:15px !important;
     margin-left:15px !important;
 }
