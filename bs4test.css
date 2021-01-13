@@ -3,9 +3,9 @@
 .contentBG {
     max-width: 100% !important;
     width: auto !important;
-    
     margin-left: 0px !important;
     margin-right: 0px !important;
+    padding-left:0px !important;
 }
 
 .contentBG{
@@ -66,28 +66,9 @@ button.btn-outline-primary::after {
 
 .section {
     font-size:1.1rem;
-
 }
 
 
-.sectionHead {
-    font-size: 28px;
-    text-align: left;
-    width: 100%;
-    font-weight: bold;
-    padding-top: 0px;
-    font-family: "Archivo Black", sans-serif;
-    color: #014b82;
-}
-
-.subHead {
-    font-size: 20px;
-    text-align: left;
-    width: 100%;
-    font-weight: unset;
-    /* font-style: italic; */
-    color: #014b82;
-}
 
 hr {
     border-top: 2px solid rgb(0 0 0 / 25%) !important;
@@ -178,21 +159,8 @@ ol li {
     margin-top: -0.2em;
 }
 
-@media only screen and (max-width: 992px) {
-    .CTA {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .person {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
 
-#itemImage {
-    width: 100%;
-}
+
 
 #more,
 .more {
@@ -228,12 +196,21 @@ ol li {
         
     }
     .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        
+    }
+
+    .CTA {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .person {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
-.subsection>h3 {
+#subhead {
     color: #014b82;
     font-size: 24px;
 }

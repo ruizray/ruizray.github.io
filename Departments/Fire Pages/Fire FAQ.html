@@ -1,0 +1,115 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="C:\Users\rruiz\Documents\GitHub\ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+        <div id="leftSidebar" class="col-lg-3">
+
+
+
+
+        </div>
+
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+
+                <div class="subsection">
+                    <h3 id="subHead">How do I dispose of an old Smoke Detector?</h3>
+                    <p>Once the battery is removed, Smoke Detectors can be placed in the regular trash.<br>
+                    Residents can take their used batteries to Batteries Plus Bulbs at:
+                    <ul>
+                        <li>Address: 1231 W Boughton Rd</li>
+                        <li>Phone: (630) 945-4925‎</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">How can I obtain a copy of my ambulance invoice?</h3>
+                    <p>Contact Paramedic Billing Services at (630) 530-2988.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">Does the Fire Department offer any lifesaving/CPR classes?</h3>
+                    <p>The fire department does occasionally offer CPR classes for the general public. For more information, please contact Fire
+                        Administration at (630) 226-8540.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">How do I rent one of the Fire Station Community Rooms?</h3>
+                    <p>Fire Administration handles all scheduling of the community rooms. You can contact Fire Administration at 630-226-8540 to
+                        schedule the use of the community rooms. The Bolingbrook Fire Department has 2 community rooms available for meetings/parties
+                        for residents who live in Bolingbrook. Fire Station 4, located at 1111 W. Boughton Road, has a meeting room that can
+                        accommodate 40 people. Fire Station 5, located at 1900 Rodeo Drive, has a meeting room that can be split into 2 rooms each
+                        accommodating 42 people. The rooms can be combined to accommodate 84 people.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">Why does the fire truck respond to ambulance calls?</h3>
+                    <p>Bolingbrook Fire Department ambulances transport to local hospitals. That may mean that an ambulance may not be close to your
+                        house when you request our services. The fire truck may be the closest unit and can start lifesaving procedures prior to the
+                        arrival of an ambulance from another fire station. All of our fire trucks are equipped with EMT's, capable of basic lifesaving
+                        techniques and some of our fire trucks are equipped with paramedics and the capability of performing advanced lifesaving
+                        techniques prior to the arrival of an ambulance.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">Can I come for a tour of the fire station?</h3>
+                    <p>The Bolingbrook Fire Department welcomes tours at any of the fire stations. You can stop by any day during normal business
+                        hours. If you need to set up a time, please call the main fire department number to schedule the time and date.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">How do I schedule the Fire Department to come to our block party?</h3>
+                    <p>Please fill out the Block Party application form and return it to Village Hall. After you receive approval, contact Fire
+                        Administration at 630-226-8540 to request the Fire Department at your block party.</p>
+
+                </div>
+                <div class="subsection">
+                    <h3 id="subHead">Does the Village allow open burning?</h3>
+                    <p>Open burning is prohibited except for aged logs in a free standing outdoor fireplace. This is according to Chapter 26, Article
+                        4 (Fire Prevention Code) of the Village of Bolingbrook. To read the outdoor firepit ordinance <a
+                           href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/OutdoorFirepitOrdinance(1).pdf">click
+                            here.</a></p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+
+        </div>
+    </div>
+</div>
+<script>
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
