@@ -209,6 +209,10 @@ ol li {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  #mainPage{
+    margin-bottom:20px;
+    margin-top:20px;
+  }
 }
 
 .subHead {
@@ -271,4 +275,21 @@ ol li {
 .card {
   border: 0px;
   border-radius:0px;
+}
+
+#photoCard{
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  
+}
+
+#photoCard > .card-header{
+  border-top:0px;
+}
+
+#thisPage{
+  border:0px;
+}
+
+.card > img{
+  width: -webkit-fill-available;
 }
