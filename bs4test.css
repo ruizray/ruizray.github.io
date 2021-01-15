@@ -76,7 +76,8 @@ button.btn-outline-primary {
   overflow: hidden;
 }
 
-button.btn.btn-primary:hover {
+button.btn.btn-primary:hover,
+button.btn-outline-primary:hover {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -255,3 +256,24 @@ ol li {
   border-left: none;
   border-right: none;
 }
+
+#title{
+    margin-bottom:-.2rem;
+}
+
+#fullLink {
+    color:#6c757d !important;
+    font-size:1.25rem;
+    font-weight: 500;
+}
+
+#smallLink{
+    font-size:1.25rem
+}
+
+#smallContactList > li{
+  border:none;
+  padding-top: .1rem;
+  padding-bottom: 0.1rem;
+}
+
