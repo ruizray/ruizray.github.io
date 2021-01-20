@@ -1,16 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
 
 
 
 
-<div class="container">
+<div id="content" class="container">
     <div class="row">
-        <div id="profile" class="col-sm-3 sidenav">
+        <div id="profile" class="col-sm-3">
             <img id="profileImage" style="width:100%" alt="Village Clerk Marti Barton"
                  src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/mmb_2020.jpg">
             <h3 class="position">
@@ -26,7 +26,7 @@
         </div>
 
 
-        <div id ="bio" class="col-sm-9">
+        <div id="bio" class="col-sm-9">
 
             <p>A native Ohioan, Marti Barton moved to Bolingbrook with her family in 1987, having been attracted to the village by its diversity and
                 reasonably-priced housing options. Marti stepped right into public service providing auxiliary communications as a licensed ham radio
@@ -38,20 +38,22 @@
             </p>
 
             <div class="section">
-                <div id="education" class="sectionHead">
+                <h1 id="education" class="sectionHead">
                     Education
-                </div>
+                </h1>
+               
                 <ul>
                     <li>Successful completion of the Illinois Municipal League&#8217;s &#8220;Role of the Clerk&#8221; which is a Municipal Clerks of
                         Illinois training program.</li>
                     <li>Bachelor of Arts degree in English and Speech/Theatre with a minor in Education from Adrian College in Adrian, Michigan.</li>
                     <li>Pastoral Ordination from the Universal Life Church and Monastery in 2010</li>
                 </ul>
+            
             </div>
             <div class="section">
-                <div id="community" class="sectionHead">
+                <h1 id="community" class="sectionHead">
                     Community Involvement
-                </div>
+                </h1>
                 <ul>
                     <li>Currently serving her 12th year on the governing board of the Illinois Aviation Museum, including leadership positions on the
                         Marketing and Cavalcade of Planes committees.</li>
@@ -64,9 +66,9 @@
             </div>
 
             <div class="section">
-                <div id="professional" class="sectionHead">
+                <h1 id="professional" class="sectionHead">
                     Professional/ Business Experience
-                </div>
+                </h1>
                 <ul>
                     <li>As an ordained non-denominational minister, founded Joyful Promises Officiant Services in 2010, performing weddings, vow
                         renewals, and civil union ceremonies.</li>
@@ -83,9 +85,9 @@
             </div>
 
             <div class="section">
-                <div id="professional" class="sectionHead">
+                <h1 id="professional" class="sectionHead">
                     Recognitions
-                </div>
+                </h1>
                 <ul>
                     <li>2019, awarded Bolingbrook Chamber&#8217;s Best of Bolingbrook Businesses award for Joyful Promises. </li>
                     <li>2017, earned Distinguished Toastmaster, Toastmasters International/District 30</li>
@@ -95,31 +97,6 @@
 
                 </ul>
             </div>
-
-
-
         </div>
     </div>
 </div>
-
-
-<script>
-    document.onload = setEqualHeight();
-    window.onresize = setEqualHeight;
-   
-    function setEqualHeight() {
-        if ($(window).width() > 750) {
-           var rowHeight = document.querySelector("#bio").scrollHeight;
-            document.querySelector("#profile").setAttribute("style", "height:" + rowHeight + "px !important")
-           
-        }
-        else {
-            var rowHeight = document.querySelector(".row").scrollHeight;
-            document.querySelector("#profile").setAttribute("style", "height:auto;width:100%;text-align:center !important;")
-          
-        }
-
-    }
-</script>
-
-<!-----Set height of navbar to match height of content-->

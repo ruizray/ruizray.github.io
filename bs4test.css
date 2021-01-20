@@ -81,6 +81,15 @@ button.btn-outline-primary:hover {
   border-color: #337ab7;
 }
 
+
+#thisPage > a:not(:first-child) > button {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+#thisPage > a:last-child > button {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.125) !important;
+}
+
 button.btn.btn-primary::after,
 button.btn.btn-primary:hover::after,
 button.btn-outline-primary::after {
@@ -95,25 +104,12 @@ button.btn-outline-primary::after {
   font-size: 1.1rem;
 }
 
-hr {
-  border-top: 2px solid rgb(0 0 0 / 25%) !important;
-  margin-top: 0px !important;
-}
-
-h2 {
-  margin-top: 0px;
-}
-
 a:hover {
   cursor: pointer;
 }
 
 .subsection {
   padding-left: 0px;
-}
-
-.well .person:first-of-type .position {
-  margin-top: 0px;
 }
 
 .position {
@@ -212,6 +208,9 @@ ol li {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .card-header {
+    text-align: center;
+  }
   #mainPage {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -265,7 +264,6 @@ ol li {
   padding-bottom: 0.1rem;
 }
 
-
 .card {
   border-radius: 0px;
 }
@@ -300,5 +298,3 @@ ol li {
   border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
-
-
