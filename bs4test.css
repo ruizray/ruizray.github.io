@@ -198,8 +198,11 @@ ol li {
   }
   #responsiveLink {
     display: contents !important;
+    border: 0px solid rgba(0, 0, 0, 0.125) !important;
   }
-
+  #extraCard {
+    border-top: 0px !important;
+  }
   .CTA {
     margin-left: 0px;
     margin-right: 0px;
@@ -209,9 +212,9 @@ ol li {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  #mainPage{
-    margin-bottom:20px;
-    margin-top:20px;
+  #mainPage {
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -225,14 +228,8 @@ ol li {
 
 #thisPage {
   border: 0px solid rgba(0, 0, 0, 0.125) !important;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
-
-#thisPage > .card-header{
-  
-}
-
-
 
 #responsiveLink {
   display: none;
@@ -269,33 +266,39 @@ ol li {
 }
 
 
-.card-container {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-top:0px;
-  padding: 0px;
-}
-.card-header{
-  border-top:1px solid rgba(0, 0, 0, 0.125);
-  border-radius:0px !important;
-}
 .card {
-  border: 0px;
-  border-radius:0px;
+  border-radius: 0px;
 }
 
-#photoCard{
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  
+.card-header {
+  border-radius: 0px !important;
+}
+.card-container .card:not(:first-child) {
+  border-top: 0px !important;
 }
 
-#photoCard > .card-header{
-  border-top:0px;
+#extraCard {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
-
-#thisPage{
-  border:0px;
+#responsiveLink {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
-
-.card > img{
+.card > img {
   width: -webkit-fill-available;
 }
+
+#photoCard {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#photoCard > .card-header {
+  border-top: 0px;
+}
+
+#thisPage {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+
