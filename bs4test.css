@@ -77,16 +77,17 @@ button.btn-outline-primary {
 button.btn.btn-primary:hover,
 button.btn-outline-primary:hover {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #337ab7 !important;
+  border-color: #337ab7 !important;
 }
 
-
-#thisPage > a:not(:first-child) > button {
+#thisPage > a:not(:first-child) > button,
+#quickLinks > a:not(:first-child) > button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
-#thisPage > a:last-child > button {
+#thisPage > a:last-child > button,
+#quickLinks > a:last-child > button {
   border-bottom: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
 
