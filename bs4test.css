@@ -95,11 +95,14 @@ button.btn.btn-primary::after,
 button.btn.btn-primary:hover::after,
 button.btn-outline-primary::after {
   position: absolute;
-  margin-top: 0px;
+  margin-top: -1rem;
   right: 10px;
   float: right;
   content: "\203A";
+  font-size: 2.0rem;
+  font-weight: 100;
 }
+
 
 .section {
   font-size: 1.1rem;
