@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 <link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 <div id="content" class="container">
@@ -176,8 +176,22 @@
         $("#thisPage").append(a);
     }
 </script>
+<script>
+    var list = document.querySelectorAll("#smallLink");
+    
+    if($(window).width() >= 900){
+        for(var i =0; i < list.length; i ++){
+            console.log(list[i].href)
+            var str =list[i].href ;
+            str = str.split(":").pop();
+            list[i].innerText = str   
+        }
+      
+    }
+</script>
 <style>
     #itemImage {
         width: 100%;
     }
+   
 </style>
