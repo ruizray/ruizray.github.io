@@ -214,31 +214,54 @@
 
 <script>
 
-const filter = ['Code Enforcement'];
+    window.onload = function () {
+        desktopContactinfo();
+        populateFromNavbar();
+    }
 
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
 
-
-    var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
-
-
-    for (var i = 0; i < ul.length; ++i) {
-        var link = ul[i].firstElementChild.href;
-        var name = ul[i].firstElementChild.lastElementChild.textContent;
-        for (const element of filter) {
-            if(element === name ){
-                break;
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
             }
-            else{
-                var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
-                var a = $("<a href=" + link + "></a>");
-                a.append(button)
-                $('#quickLinks').append(a); 
-                break;
-            }
-        } 
+
+        }
     }
 
 
+    function populateFromNavbar(){
+        const filter = ['Code Enforcement'];
+
+
+
+        var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
+
+
+        for (var i = 0; i < ul.length; ++i) {
+            var link = ul[i].firstElementChild.href;
+            var name = ul[i].firstElementChild.lastElementChild.textContent;
+            for (const element of filter) {
+                if (element === name) {
+                    break;
+                }
+                else {
+                    var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
+                    var a = $("<a href=" + link + "></a>");
+                    a.append(button)
+                    $('#quickLinks').append(a);
+                    break;
+                }
+            }
+        }
+
+    }
 </script>
 
 <style>

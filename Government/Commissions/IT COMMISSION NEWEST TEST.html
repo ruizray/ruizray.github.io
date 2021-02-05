@@ -95,41 +95,29 @@
                     <ul id="contactList" class="list-group list-group-flush">
                         <li id="contactInfo" class="list-group-item ">
                             <h4 id="title" class="card-title">Jerry Gynac<small class="text-muted"> chair</small></h4>
+                           
                             <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Phone
+                               href="mailto:chair@vobitc.org" class="card-link">Email
                             </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Email
-                            </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Website
-                            </a>
+                           
 
                         </li>
                         <li id="contactInfo" class="list-group-item ">
                             <h4 id="title" class="card-title">Karl Natschke<small class="text-muted"> Vice-Chair</small></h4>
+                           
                             <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Phone
+                               href="mailto:knatchke@vobitc.org" class="card-link">Email
                             </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Email
-                            </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Website
-                            </a>
+                            
                         </li>
                         <li id="contactInfo" class="list-group-item">
 
                             <h4 id="title" class="card-title">James Farrell<small class="text-muted"> CIO at the Village / Liason</small></h4>
+                            
                             <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Phone
+                               href="mailto:jfarrell@bolingbrook.com" class="card-link">Email
                             </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Email
-                            </a>
-                            <a id="smallLink"
-                               href="tel:(630)226-8500" class="card-link">Website
-                            </a>
+                            
                         </li>
                     </ul>
                 </div>
@@ -177,17 +165,26 @@
     }
 </script>
 <script>
+
+window.onload = function () {
+        desktopContactinfo();
+    }
+
+function desktopContactinfo() {
     var list = document.querySelectorAll("#smallLink");
     
     if($(window).width() >= 900){
         for(var i =0; i < list.length; i ++){
-            console.log(list[i].href)
-            var str =list[i].href ;
+            list[i].setAttribute("style","color:#6c757d !important;font-weight:500");
+            var method = list[i].innerText
+            var str = list[i].href ;
             str = str.split(":").pop();
-            list[i].innerText = str   
+            str = method +": " +str;
+            list[i].innerText = str  
         }
       
     }
+}
 </script>
 <style>
     #itemImage {

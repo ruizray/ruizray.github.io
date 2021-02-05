@@ -77,11 +77,11 @@
                             </a>
 
                         </li>
-                        
+
                     </ul>
                 </div>
 
-               
+
 
 
 
@@ -92,7 +92,35 @@
 </div>
 
 
+
+
+
+
+
+
+
 <script>
+
+    window.onload = function () {
+        desktopContactinfo();
+        populateLeftWithItems();
+    }
+
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
 
     function populateLeftWithItems() {
         var list = document.querySelectorAll("div.box.B_JOB > div > article > h2 >a ")
@@ -112,30 +140,8 @@
         }
 
     }
-    window.onload = function () {
-        populateLeftWithItems();
-    }
-
-</script>
-
-<script>
-    var list = document.querySelectorAll("#smallLink");
-    
-    if($(window).width() >= 900){
-        for(var i =0; i < list.length; i ++){
-            console.log(list[i].href)
-            var str =list[i].href ;
-            str = str.split(":").pop();
-            list[i].innerText = str   
-        }
-      
-    }
-
-
 </script>
 <style>
-    
-
     #responsiveLink {
         display: contents !important;
     }
