@@ -1,318 +1,311 @@
-<<<<<<< HEAD
-.container,
-.contentBG {
-=======
 @media only screen and (min-width: 900px) {
-  .container,
-  .mainContent,
-  .contentBG {
->>>>>>> 8f2bf849c9fa06532026c5ba000135364f8df20b
-    max-width: 100% !important;
-    width: auto !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-
-  .contentBG {
-    padding-left: 0px !important;
-  }
-
-  #content {
-    width: auto !important;
-    max-width: 100% !important;
-    margin-right: 15px !important;
-    margin-left: 15px !important;
-  }
-  #smallLink{
-    display:block;
-  }
-  .card-link+.card-link {
-    margin-left: 0rem;
-  }
+    .container,
+    .contentBG {
+        max-width: 100% !important;
+        width: auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .contentBG {
+        padding-left: 0px !important;
+    }
+    #content {
+        width: auto !important;
+        max-width: 100% !important;
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
+    #smallLink {
+        display: block;
+    }
+    .card-link+.card-link {
+        margin-left: 0rem;
+    }
 }
 
 @media only screen and (max-width: 900px) {
-  .container,
-  .mainContent,
-  .contentBG {
-    max-width: 100% !important;
-    width: auto !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-  }
-
-  #content {
-    width: auto !important;
-    max-width: 100% !important;
-    margin-right: 15px !important;
-    margin-left: 15px !important;
-  }
+    .container,
+    .mainContent,
+    .contentBG {
+        max-width: 100% !important;
+        width: auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    #content {
+        width: auto !important;
+        max-width: 100% !important;
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
 }
 
 .socialFixed {
-  display: none;
+    display: none;
 }
 
 .container div.btn-group-vertical {
-  margin-bottom: 0px;
-  width: 100%;
-  align-items: inherit;
+    margin-bottom: 0px;
+    width: 100%;
+    align-items: inherit;
 }
 
 button.btn.btn-primary {
-  border: none;
-  width: 100%;
-  border-radius: 0px;
-  font-size: 18px;
-  color: #337ab7;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-color: gray;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    border: none;
+    width: 100%;
+    border-radius: 0px;
+    font-size: 18px;
+    color: #337ab7;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-color: gray;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 button.btn-outline-primary {
-  width: 100%;
-  border-radius: 0px;
-  padding: 10px;
-  border: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    width: 100%;
+    border-radius: 0px;
+    padding: 10px;
+    border: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 button.btn.btn-primary:hover,
 button.btn-outline-primary:hover {
-  color: #fff;
-  background-color: #337ab7 !important;
-  border-color: #337ab7 !important;
+    color: #fff;
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
 }
 
-.CTAbutton:hover{
-  background-color:white;
+.CTAbutton:hover {
+    background-color: white;
 }
 
-#thisPage > a:not(:first-child) > button,
-#quickLinks > a:not(:first-child) > button {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+#thisPage>a:not(:first-child)>button,
+#quickLinks>a:not(:first-child)>button {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
-#thisPage > a:last-child > button,
-#quickLinks > a:last-child > button {
-  border-bottom: 0px solid rgba(0, 0, 0, 0.125) !important;
+#thisPage>a:last-child>button,
+#quickLinks>a:last-child>button {
+    border-bottom: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
 
 button.btn.btn-primary::after,
 button.btn.btn-primary:hover::after,
 button.btn-outline-primary::after {
-  position: absolute;
-  margin-top: -1rem;
-  right: 10px;
-  float: right;
-  content: "\203A";
-  font-size: 2.0rem;
-  font-weight: 100;
+    position: absolute;
+    margin-top: -1rem;
+    right: 10px;
+    float: right;
+    content: "\203A";
+    font-size: 2.0rem;
+    font-weight: 100;
 }
 
-
 .section {
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 }
 
 a:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .subsection {
-  padding-left: 0px;
+    padding-left: 0px;
 }
 
 .position {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #014b82;
-  padding-bottom: 0px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #014b82;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .CTA {
-  flex-flow: nowrap;
-  text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  padding: 20px 20px 20px 20px;
-  background-color: #f5f5f5;
-  border-color: gray;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    flex-flow: nowrap;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 20px 20px 20px 20px;
+    background-color: #f5f5f5;
+    border-color: gray;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .CTAbutton {
-  color: #fff !important;
-  background-color: #337ab7 !important;
-  border-color: #337ab7 !important;
-  border-radius: 4px !important;
+    color: #fff !important;
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+    border-radius: 4px !important;
 }
 
 .CTAbutton:hover {
-  color: #337ab7 !important;
-  background-color: white !important;
-  border-color: #122b40;
+    color: #337ab7 !important;
+    background-color: white !important;
+    border-color: #122b40;
 }
 
 .CTAbutton::after,
 .CTAbutton:hover::after {
-  display: none;
+    display: none;
 }
 
 ul li,
 ol li {
-  margin-bottom: 0em;
-  margin-top: -0.2em;
+    margin-bottom: 0em;
+    margin-top: -0.2em;
 }
 
 #more,
 .more {
-  display: none;
+    display: none;
 }
 
 #profile {
-  text-align: -webkit-left !important;
-  background-color: #f1f1f1 !important;
-  padding-top: 10px;
+    text-align: -webkit-left !important;
+    background-color: #f1f1f1 !important;
+    padding-top: 10px;
 }
 
-#profile > div.person {
-  margin-bottom: 5px;
+#profile>div.person {
+    margin-bottom: 5px;
 }
 
-#profile > h3.position {
-  text-align: center;
-  margin-bottom: 10px;
+#profile>h3.position {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 992px) {
-  #profileImage {
-    width: 75% !important;
-  }
-  #profile {
-    height: auto;
-    width: 100%;
-    text-align: center !important;
-  }
-  #responsiveLink {
-    display: contents !important;
-    border: 0px solid rgba(0, 0, 0, 0.125) !important;
-  }
-  #extraCard {
-    border-top: 0px !important;
-  }
-  .CTA {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .person {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .card-header {
-    text-align: center;
-  }
-  #mainPage {
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+    #profileImage {
+        width: 75% !important;
+    }
+    #profile {
+        height: auto;
+        width: 100%;
+        text-align: center !important;
+    }
+    #responsiveLink {
+        display: contents !important;
+        border: 0px solid rgba(0, 0, 0, 0.125) !important;
+    }
+    #extraCard {
+        border-top: 0px !important;
+    }
+    .CTA {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .person {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card-header {
+        text-align: center;
+    }
+    #mainPage {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }
 
 .subHead {
-  color: #014b82;
+    color: #014b82;
 }
 
 #name {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 #thisPage {
-  border: 0px solid rgba(0, 0, 0, 0.125) !important;
-  margin-bottom: 0px;
+    border: 0px solid rgba(0, 0, 0, 0.125) !important;
+    margin-bottom: 0px;
 }
 
 #responsiveLink {
-  display: none;
+    display: none;
 }
 
-.section > h1 {
-  text-align: left !important;
+.section>h1 {
+    text-align: left !important;
 }
 
-.list-group-flush > .list-group-item {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-left: none;
-  border-right: none;
+.list-group-flush>.list-group-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-left: none;
+    border-right: none;
 }
 
 #title {
-  margin-bottom: -0.2rem;
+    margin-bottom: -0.2rem;
 }
 
 #fullLink {
-  color: #6c757d !important;
-  font-size: 1.25rem;
-  font-weight: 500;
+    color: #6c757d !important;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 #smallLink {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
-#smallContactList > li {
-  border: none;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+#smallContactList>li {
+    border: none;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
 }
 
 .card {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 .card-header {
-  border-radius: 0px !important;
+    border-radius: 0px !important;
 }
+
 .card-container .card:not(:first-child) {
-  border-top: 0px !important;
+    border-top: 0px !important;
 }
 
 #extraCard {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
+
 #responsiveLink {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
-.card > img {
-  width: -webkit-fill-available;
+
+.card>img {
+    width: -webkit-fill-available;
 }
 
 #photoCard {
-  border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-#photoCard > .card-header {
-  border-top: 0px;
+#photoCard>.card-header {
+    border-top: 0px;
 }
 
 #thisPage {
-  border: 1px solid rgba(0, 0, 0, 0.125) !important;
-  border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
-  border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
