@@ -1,0 +1,114 @@
+<!-- advanced html editor -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+<script src=""></script>
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-lg-2">
+        </div>
+        <div id="mainPage" class="col-lg-8">
+            <div class="card-columns">
+                <div class="card">
+                    <h1 class="card-header">Residents</h1>
+                    <a href="https://www.bolingbrook.com/welcome_new_residents">
+                        <button type='button' class='btn btn-outline-primary'>New Residents</button>
+                    </a>
+
+                    <a href="https://www.bolingbrook.com/index.asp?SEC=828A11D4-E403-4F15-9E98-0F7A66817221">
+                        <button type='button' class='btn btn-outline-primary'>Safest City In Illinois</button>
+                    </a>
+                    <a href="https://www.elocallink.tv/m/v/player.php?pid=w9a1A7A7B61">
+                        <button type='button' class='btn btn-outline-primary'>Video Tour</button>
+                    </a>
+                    <a href="https://www.bolingbrook.com/history">
+                        <button type='button' class='btn btn-outline-primary'>Village History</button>
+                    </a>
+
+                    <a href="https://www.bolingbrook.com/privacy_policy">
+                        <button type='button' class='btn btn-outline-primary'>Privacy Policy</button>
+                    </a>
+
+                </div>
+                <div id="rightSidebar" class="col-lg-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var links = ["https://www.us-cert.gov/ncas/tips/ST05-002",
+            "https://stopthinkconnect.org/resources/preview/rethink-cyber-safety-rules-and-the-tech-talk-with-your-teens",
+            "https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-building-a-digital-defense-for-school-kids-and-cell-phone-safety",
+            "https://www.dhs.gov/stopthinkconnect-toolkit",
+            "http://backgroundchecks.org/the-concerned-parents-toolbox-120-tools-and-tricks-to-protect-your-kids.html"
+        ]
+
+        var backToSchool = {
+            title: "Back-to-School",
+            imgUrl: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?cs=srgb&dl=pexels-max-fischer-5212345.jpg&fm=jpg",
+            links: links
+        };
+
+        var links = ["https://www.webroot.com/us/en/resources/tips-articles/what-is-social-engineering",
+            "https://www.kaspersky.com/resource-center/threats/computer-viruses-and-malware-facts-and-faqs",
+            "https://www.cnn.com/2020/05/01/tech/iloveyou-virus-computer-security-intl-hnk/index.html",
+            "https://www.cisa.gov/sites/default/files/publications/NCSAM_Phishing_2020.pdf"
+        ]
+
+        var backToSchool = {
+            title: "Back-to-School",
+            imgUrl: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?cs=srgb&dl=pexels-max-fischer-5212345.jpg&fm=jpg",
+            links: links
+        };
+
+
+
+
+
+
+        function buildCard() {
+
+            var item = $("<div class = 'card'></div>");
+            console.log(backToSchool.links[0])
+            item.append($("<h1 class= 'card-header'></h1>").text(backToSchool.title));
+            $(".card-columns").append(item);
+        }
+
+
+    </script>
+
+    <style>
+        .card-header {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+        }
+
+
+
+
+        @media (max-width: 900px) {
+            .card-columns .card {
+                width: 100%;
+                margin-bottom: 0px;
+                border-bottom: 0px;
+            }
+
+
+            .card:last-child {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+            }
+
+            .item.card>a>.btn-outline-primary {
+                border-bottom: 0.5px solid rgba(0, 0, 0, 0.125) !important;
+            }
+        }
+    </style>
