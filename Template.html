@@ -1,0 +1,83 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+
+<div id="content" class="container">
+    <div class="row">
+        <div id="Sidebar" class="col-md-3">
+
+            
+            <div id="thisPage"
+                 class="btn-group-vertical">
+            </div>
+        </div>
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <div id="header" class="sectionHead">
+                    Header
+                </div>
+                <p>Brief description of what is covered in this section</p>
+            </div>
+            <div class="section">
+                <div id="header2" class="sectionHead">
+                    Header number 2
+                </div>
+                <div class="subsection">
+                    <div class="subHead">Subheading</div>
+                    <p>Brief description of subsection</p>
+
+                </div>
+                <div class="CTA">
+                    Provide brief description of what is going to be linked
+                    <a href="https://www.bolingbrook.com/rent"><button
+                                class='btn btn-primary CTAbutton' type='button'>Name of file/website</button></a>
+                </div>
+            </div>
+        </div>
+        <div id="Sidebar" class="col-md-3">
+            <div class="SidebarTitle">
+                Contact Information
+            </div>
+
+            <div class="well">
+                <div class="person">
+                    <h3 class="position">Office/Department/Position</h3>
+                    <div class="name">Name of Person</div>
+                    <div class="contact"> <a href="tel:(630) 226-8760">(630) 226-8760</a></div>
+                    <div class="contact"><a href="mailto:PDCodeenforcement@bolingbrook.com">PDCodeenforcement@bolingbrook.com</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+
+    for (var i = 0; i < items.length; ++i) {
+
+
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>

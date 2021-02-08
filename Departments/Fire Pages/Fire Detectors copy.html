@@ -1,0 +1,102 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="C:\Users\rruiz\Documents\GitHub\ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Martin Luther King's Birthday</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Monday, January 18th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">President's Day</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Monday, February 15th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Memorial Day</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Monday, May 31st</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Independence Day</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Monday, July 5th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Labor Day</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Monday, September 6th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Veteran's Day</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Thursday, November 11th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Thanksgiving</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Thursday, November 25th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Day after Thanksgiving</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Friday, November 26th</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">Christmas Day (Closed)</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Friday, December 24th (observed)</h4>
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="Martin" class="sectionHead">New Years Day (closed)</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Friday, December 31st (observed)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>

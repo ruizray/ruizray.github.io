@@ -1,0 +1,147 @@
+<!-- advanced html editor -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+                <p style="color:darkred;font-weight:700;text-align:center">PLEASE CALL BEFORE ARRIVING AT A FACILITY TO ENSURE THEY ARE OPERATING AS A
+                    WARMING/COOLING CENTER</p>
+                <a style="text-align:center" href="https://www.willcountyema.org/warmingcooling">
+                    <p>Will County Warming/Cooling Centers</p>
+                </a>
+                <h1 id="promenade">Promenade</h1>
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <a
+                           href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/the-promenade-bolingbrook-403_Cropped.jpg">
+                            <img class="pull-right" style="padding-left:20px;text-align:center;float:right;width:50%"
+                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/the-promenade-bolingbrook-403_Cropped.jpg"></a>
+                        <div class="subsection">
+                            <h4 class="subHead">
+                                Building 700 <small class="text-muted"> 10:00AM - 7:00PM</small>
+                            </h4>
+                            <p>635 E Boughton Rd, Bolingbrook, IL 60440<br>
+                                Located across from Rock Bottom off Janes Avenue<br>630-296-8350</p>
+                        </div>
+                        <div class="subsection">
+                            <h4 class="subHead">
+                                Building 400 <small class="text-muted"> 10:00AM - 7:00PM</small>
+                            </h4>
+                            <p>631 E Boughton Rd, Bolingbrook, IL 60440<br>
+                                Located behind Barnes & Noble off Boughton Road<br>630-296-8350 </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="section">
+                <h1 id="fireStations">Fire Stations</h1>
+                <div class="row">
+                    <div style="margin-bottom:20px;" class="col-md-12">
+
+
+                        <a
+                           href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Station4_Web.jpg">
+                            <img class="pull-right" style="text-align:center;float:right;width:50%"
+                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Station4_Web.jpg"></a>
+                        <div class="subsection">
+                            <h4 class="subHead">
+                                Fire House Number 4 <small class="text-muted"> 9:00 AM - 9:00 PM</small>
+                            </h4>
+                            <p>1111W.Boughton Road<br>
+                                630-226-8504
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12">
+
+
+                        <a
+                           href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Station5_Web.jpg">
+                            <img class="pull-right" style="text-align:center;float:right;width:50%"
+                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Station5_Web.jpg"></a>
+                        <div class="subsection">
+                            <h4 class="subHead">
+                                Fire House Number 5 <small class="text-muted"> 9:00 AM - 9:00 PM</small>
+                            </h4>
+                            <p>1900 Rodeo Drive<br>630-226-8504
+
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+</script>
+<style>
+    @media only screen and (max-width: 992px) {
+        img {
+            width: 100% !important;
+        }
+
+        .col-md-12 {
+            text-align: center;
+        }
+
+        .text-muted {
+            display: block;
+        }
+
+        .subhead {
+            margin-bottom: 0rem;
+        }
+    }
+
+    .mainContent {
+        width: 100% !important;
+    }
+</style>

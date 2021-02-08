@@ -1,0 +1,156 @@
+<!-- advanced html editor -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="employmentLinks" class="btn-group-vertical">
+                        <h3 class="card-header">Employment Opportunities</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+                <h1 id="missionStatement">Welcome</h1>
+                <p>
+                    Thank you for your interest in pursuing a career with us. We are honored that you are interested in being a part of an exceptional
+                    team.<br>
+                    The Village of Bolingbrook is an Equal Opportunity Employer.
+                <div class="CTA">
+                    Simply fill out and return the application form and we will respond to your submission as soon as possible.
+                    <a
+                       href="https://www.bolingbrook.com/vertical/sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Commission_Application_08.04.2020.pdf"><button
+                                class='btn btn-primary CTAbutton'
+                                type='button'>Online Application Form</button></a>
+                </div>
+
+                All applications will be accepted until all positions are filled. Please note that due to the demand of applications that we
+                receive, a member of our team will reach out to you if they decide to move forward during the process.
+
+                </p>
+            </div>
+
+            <div class="section">
+
+                <h1 id="about" class="sectionHead">Available Positions</h1>
+                <div class="subsection">
+                    <h4 class="subHead">Where</h4>
+                    <p>Village Board Room</p>
+                    <h4 class="subHead">When</h4>
+                    <p>1st, 3rd and 5th Thursday of every month Starting at 7:00PM</p>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Contact Information</h3>
+
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item ">
+                            <h4 id="title" class="card-title">Human Resources Office</h4>
+                            <a id="smallLink"
+                               href="tel:630-226-8435" class="card-link">Phone
+                            </a>
+                            <a id="smallLink"
+                               href="tel:630-226-8459" class="card-link">Fax
+                            </a>
+                            <a id="smallLink"
+                               href="mailto:vobhumanresources@bolingbrook.com" class="card-link">Email
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+    window.onload = function () {
+        desktopContactinfo();
+        populateLeftWithItems();
+    }
+
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
+
+    function populateLeftWithItems() {
+        var list = document.querySelectorAll("div.box.B_JOB > div > article > h2 >a ")
+        for (var i = 0; i < list.length; i++) {
+
+            var link = list[i].href
+            var text = list[i].innerText;
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+
+
+            var a = $("<a href= " + link + "></a>");
+            a.append(button);
+
+            $("#employmentLinks").append(a);
+        }
+
+    }
+</script>
+<style>
+    #responsiveLink {
+        display: contents !important;
+    }
+
+    #employmentLinks {
+        border: 1px solid rgba(0, 0, 0, .125);
+    }
+
+    div.box.B_JOB>div>article {
+        display: none;
+    }
+</style>

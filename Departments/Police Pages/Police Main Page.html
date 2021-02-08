@@ -1,64 +1,67 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<!-- advanced html editor -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
 
-
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="quickLinks" class="btn-group-vertical">
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+             <div class=card style="background-color:white">
+              <h3 class="card-header">Quick Links</h3>
+                 <div id="quickLinks">
+                    
+                      
+                 </div>
+              </div>
             </div>
         </div>
-
-        <div id="mainPage" class="col-md-6">
-            <div id="missionStatement" class="sectionHead">
-                Mission Statement
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="pull-left" style="padding-right:20px;"><img
-                             src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/BPD_Star_-_Transparent_Background.png"
-                             alt="" width="200" height="255" /></div>
-                    <p>The mission of the Bolingbrook Police Department is to work in partnership with the community to
-                        prevent, reduce and deter crime. We are committed to the citizens of Bolingbrook and the men and
-                        women
-                        of our department to provide professional police service in an ethical, courteous and impartial
-                        manner.
-                        In furtherance of this mission, we are committed to the following values represented by the law
-                        enforcement star we wear:&nbsp;<strong>Justice, Temperance, Courage, Prudence, Fortitude, Tolerance
-                            and
-                            Truth.</strong>
-                    </p>
-                </div>
-            </div>
+        <div id="mainPage" class="col-lg-6">
             <div class="section">
-
-                <div id="wildlifeRemoval" class="sectionHead">
-                    Brook Police News
-                </div>
-                <iframe src="https://www3.thedatabank.com/dpg/698/pm.asp?index=1&Publication=Brook+Police+News" width="100%" height="300"></iframe>
-            </div>
-            <div style="margin-left:25%;margin-right:25%" class="CTA">
-                <p style="color:red">Click here to sign up to receive Brook Police News.</p>
-                <a href="https://www.bolingbrook.com/police_news"><button
-                            class='btn btn-primary CTAbutton' type='button'>Sign up for Brook Police News </button></a>
-            </div>
-            <div class="section">
-                <div id="message" class="sectionHead">
-                    Message From the Department
-                </div>
+                <h1 id="missionStatement">Mission Statement</h1>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="pull-right" style="padding-left:20px;text-align:center"><img
+                        <div style="padding-right:20px;float:left;"><img
+                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/BPD_Star_-_Transparent_Background.png"
+                                 alt="" width="200" height="255" /></div>
+                        <p>The mission of the Bolingbrook Police Department is to work in partnership with the community to
+                            prevent, reduce and deter crime. We are committed to the citizens of Bolingbrook and the men and
+                            women
+                            of our department to provide professional police service in an ethical, courteous and impartial
+                            manner.
+                            In furtherance of this mission, we are committed to the following values represented by the law
+                            enforcement star we wear:&nbsp;<strong>Justice, Temperance, Courage, Prudence, Fortitude, Tolerance
+                                and
+                                Truth.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div style="padding: 0px 0px 0px 0px;" class="card">
+
+                    <iframe id="newsBox" src="https://www3.thedatabank.com/dpg/698/pm.asp?index=1&Publication=Brook+Police+News" width="100%"
+                            height="300"></iframe>
+                </div>
+
+                <div style="margin-left:25%;margin-right:25%" class="CTA">
+                    <p style="color:red">Click here to sign up to receive Brook Police News.</p>
+                    <a href="https://www.bolingbrook.com/police_news"><button
+                                class='btn btn-primary CTAbutton' type='button'>Sign up for Brook Police News </button></a>
+                </div>
+            </div>
+
+            <div class="section">
+
+                <h1 id="about" class="sectionHead">Message From the Department</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right" style="padding-left:20px;text-align:center;float:right;"><img
                                  style="height: 270px !important;max-width: 100% !important;width: 250px;"
                                  src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/940.jpg"
                                  alt="Police Chief Mike Rompa" /> <br><i>Mike Rompa<br>Chief of Police</i></div>
@@ -79,7 +82,11 @@
                             great
                             place to
                             live, work and raise a family.
-                        
+
+
+
+
+                            <br>
                             If you have any questions regarding our department or if we
                             can be
                             of
@@ -87,133 +94,191 @@
                             <a href="mailto:police@bolingbrook.com">police@bolingbrook.com</a>
                             or telephone at <a href="tel:630-226-8600">630-226-8600</a>.
                         </p>
+
+
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
+        <div id="rightSidebar" class="col-lg-3">
+
+            <div class="card-container">
+                <div class="card ">
+                    <h3 class="card-header">Police Administration</h3>
+                    <ul id="contactList" class="list-group list-group-flush">
+
+
+                        <li id="contactInfo" class="list-group-item"><small style="font-size:1.05em;margin-bottom:10px;"
+                                   class="text-muted">For
+                                emergencies dial 9-1-1. Emails are monitored Monday through Friday during normal business hours and SHOULD NOT be
+                                considered as an emergency contact for the Police Department.
+                            </small>
+
+                            <h4 id="title" class="card-title">Police Department
+                            </h4>
+                            <a id="smallLink"
+                               href="tel:(630)226-8500" class="card-link">Phone
+                            </a>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">Email
+                            </a>
+
+                        </li>
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Mike Rompa<small class="text-muted"> Chief of Police
+                                </small></h4>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">Email
+                            </a>
+                        </li>
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Rich Hilliard<small class="text-muted"> Commander | Patrol Division
+                                </small></h4>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">Email
+                            </a>
+                        </li>
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Dennis Hess<small class="text-muted"> Commander | Investigations Division
+                                </small></h4>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">Email
+                            </a>
+                        </li>
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Anthony Columbus <small class="text-muted"> Lieutenant | Professional Standards
+                                </small></h4>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">Email
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <h3 class="card-header">Departments</h3>
+                    <ul id="contactList" class="list-group list-group-flush">
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Animal Control</h4>
+                            <a id="smallLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">(555)555-5555
+                            </a>
+                        </li>
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">After Hours</h4>
+                            <a id="fullLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">(555)555-5555
+                            </a>
+                        </li>
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Investigations</h4>
+                            <a id="fullLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">(555)555-5555
+                            </a>
+                        </li>
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Code Enforcement</h4>
+                            <a id="fullLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">(555)555-5555
+                            </a>
+                        </li>
+
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Evidence</h4>
+                            <a id="fullLink"
+                               href="mailto:police@bolingbrook.com" class="card-link">(555)555-5555
+                            </a>
+
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+
+               
             </div>
-
-
-
-
-
-            <div class="well">
-
-
-
-                <div class="person">
-                    <h3 class="position">Police Administration</h3>
-                    <div class="name">Located at</div>
-                    <div class="contact"> <a
-                           href="https://www.google.com/maps/place/375+W+Briarcliff+Rd,+Bolingbrook,+IL+60440/@41.6965281,-88.0828755,17z/data=!3m1!4b1!4m5!3m4!1s0x880e5bd03cf1b5d7:0x9b74cc198ab95dcf!8m2!3d41.6965281!4d-88.0806868"
-                           target="_blank">375 W. Briarcliff Road &nbsp;</a></div>
-                    <div class="name">Main Line</div>
-                    <div class="contact"><a href="tel:630-226-8600">630-226-8600</a></div>
-                    <span style="color:black;font-size:18px;">(For emergencies dial 9-1-1)</span>
-                    <div class="name">Email</div>
-                    <div class="contact"><a href="mailto:police@bolingbrook.com">police@bolingbrook.com</a></div>
-
-                    <span style="color:black;font-size:18px;">(Emails are monitored Monday through Friday during normal business hours and SHOULD NOT
-                        be considered as an emergency contact for the Police Department.)</span>
-                </div>
-                <div class="person">
-                    <h3 class="position">Animal Control</h3>
-                    <div class="name">Main Line</div>
-                    <div class="contact"> <a href="tel:630-226-8500">630-226-8500</a></div>
-
-                    <div class="name">Linda Laketa (Supervisor)</div>
-                    <div class="contact"><a href="mailto:llaketa@bolingbrook.com">llaketa@bolingbrook.com</a></div>
-                </div>
-
-
-                <div class="person">
-                    <h3 class="position">After Hours</h3>
-
-                    <div class="contact"> <a href="tel:630-226-8500">630-226-8500</a></div>
-
-                </div>
-
-                <div class="person">
-                    <h3 class="position">Investigations</h3>
-                    <div class="contact"> <a href="tel:630-226-8500">630-226-8500</a></div>
-                </div>
-
-                <div class="person">
-                    <h3 class="position">Code Enforcement</h3>
-                    <div class="contact"> <a href="tel:630-226-8760">630-226-8760 </a></div>
-                </div>
-
-
-
-
-
-            </div>
-
-
-
-            <div class="SidebarTitle">
-                Licensed Professionals
-            </div>
-
-
         </div>
     </div>
 </div>
 
 
 
-<script>
-
-
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
-    }
-</script>
-
 
 
 
 <script>
 
+    window.onload = function () {
+        desktopContactinfo();
+        populateFromNavbar();
+    }
 
-    var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
 
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
 
-    for (var i = 0; i < ul.length; ++i) {
-
-        var link = ul[i].firstElementChild.href;
-        var name = ul[i].firstElementChild.lastElementChild.textContent;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(name);
-        var a = $("<a href=" + link + "></a>");
-        a.append(button)
-        $('#quickLinks').append(a);
-
-
-
-
-
-
+        }
     }
 
 
+    function populateFromNavbar(){
+        const filter = ['Code Enforcement'];
+
+
+
+        var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
+
+
+        for (var i = 0; i < ul.length; ++i) {
+            var link = ul[i].firstElementChild.href;
+            var name = ul[i].firstElementChild.lastElementChild.textContent;
+            for (const element of filter) {
+                if (element === name) {
+                    break;
+                }
+                else {
+                    var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
+                    var a = $("<a href=" + link + "></a>");
+                    a.append(button)
+                    $('#quickLinks').append(a);
+                    break;
+                }
+            }
+        }
+
+    }
 </script>
+
+<style>
+#responsiveLink{
+display:contents;
+}
+button.btn.btn-primary:hover, button.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #337ab7 !important;
+    border-color: #337ab7;
+}
+
+button.btn.btn-primary{
+ background-color:white;   
+}
+
+ #quickLinks > a:first-child > button {
+ border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;  
+}
+</style>
