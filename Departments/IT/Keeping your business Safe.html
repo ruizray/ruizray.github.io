@@ -1,0 +1,271 @@
+<!-- advanced html editor -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+
+<script src=""></script>
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="Sidebar" class="col-lg-2">
+        </div>
+        <div id="mainPage" class="col-lg-8">
+            <div  style="text-align:center;width:100%;margin-bottom:20px;">
+                <a href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/essentials_Page_1_Web.jpg"><img style="width:45%" src="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/essentials_Page_1_Web.jpg"></a>
+                <a href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/essentials_Page_2_Web.jpg">
+                <img style="width:45%" src="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/essentials_Page_2_Web.jpg"></a>
+            </div>
+            
+            <div  class="card-columns">
+            </div>
+        </div>
+        <div id="rightSidebar" class="col-lg-2">
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var link1 = {
+        title: "INFO: FTC Protecting Small Businesses",
+        url: "https://www.ftc.gov/tips-advice/business-center/small-businesses"
+    };
+
+    var link2 = {
+        title: "INFO: NCCIC Private Sector Infrastructure Assessment Fact Sheet",
+        url: "https://us-cert.cisa.gov/sites/default/files/FactSheets/NCCIC%20ICS_FactSheet_Private_Sector_Assessments_S508C.pdf"
+    };
+
+    var link3 = {
+        title: "TOOL: DHS SMB Road Map",
+        url: "https://us-cert.cisa.gov/sites/default/files/c3vp/smb/DHS-SMB-Road-Map.pdf"
+    };
+    var link4 = {
+        title: "TOOL: Cyberplanner",
+        url: "https://www.fcc.gov/cyberplanner"
+    };
+    var link5 = {
+        title: "TOOL: SANS Security Policy Form Templates",
+        url: "https://www.sans.org/information-security-policy/"
+    };
+
+    var link5 = {
+        title: "TOOL: Knowb4 Cybersecurity Training",
+        url: "https://www.knowbe4.com/"
+    };
+    var links = [link1, link2, link3, link4, link5]
+    var identificationProtection = {
+        title: "Identification and Protection",
+        imgUrl: "https://cdn.pixabay.com/photo/2016/03/10/08/49/hand-1248053_1280.jpg",
+
+    };
+    buildCard(identificationProtection, links);
+
+
+
+
+    var link1 = {
+        title: "INFO: Cybersecurity at Work",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_WorkSecure_2020.pdf"
+    };
+
+    var link2 = {
+        title: "INFO: Cybersecurity While Traveling",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_TravelingTips_2020.pdf"
+    };
+
+    var link3 = {
+        title: "INFO: E-Skimming",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_ESkimming_2020.pdf"
+    };
+    var link4 = {
+        title: "INFO: Small Business Information Security - The Fundamentals",
+        url: "https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.7621r1.pdf"
+    };
+
+    var links = [link1, link2, link3, link4]
+    var detection = {
+        title: "Detection",
+        imgUrl: "https://cdn.pixabay.com/photo/2017/01/30/14/11/blue-light-2020909_1280.png",
+
+    };
+    buildCard(detection, links);
+
+
+    var link1 = {
+        title: "TOOL: List of Resources to Respond",
+        url: "https://us-cert.cisa.gov/resources/business#respond"
+    };
+
+    var link2 = {
+        title: "INFO: Security Breach Notification Laws",
+        url: "https://www.ncsl.org/research/telecommunications-and-information-technology/security-breach-notification-laws.aspx"
+    };
+
+    var link3 = {
+        title: "INFO: CEO's Guide to Cyberbreach Response from AT&T",
+        url: "https://www.business.att.com/content/dam/attbusiness/reports/cyberbreachresponse.pdf"
+    };
+    var link4 = {
+        title: "INFO: IT Disaster Recovery Plan",
+        url: "https://www.ready.gov/business/implementation/IT"
+    };
+    var link5 = {
+        title: "ARTICLE: Cybersecurity Incident Recovery from NIST",
+        url: "https://www.nist.gov/publications/guide-cybersecurity-incident-recovery"
+    };
+    var link6 = {
+        title: "TOOL: Bolingbrook Report",
+        url: "https://www.bolingbrook.com/reporting_threats"
+    };
+
+    var links = [link1, link2, link3, link4, link5, link6]
+    var responseRecovery = {
+        title: "Response and Recovery",
+        imgUrl: "https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg",
+
+    };
+    buildCard(responseRecovery, links);
+
+
+    var link1 = {
+        title: "INFO: Ransomware Outbreak",
+        url: "https://www.us-cert.gov/sites/default/files/2019-08/CISA_Insights-Ransomware_Outbreak_S508C.pdf"
+    };
+
+    var link2 = {
+        title: "TOOL: CISA resource page on ransomware",
+        url: "https://www.us-cert.gov/Ransomware"
+    };
+
+    var link3 = {
+        title: "ARTICLE: Ransomware protection and containment strategies",
+        url: "https://www.bolingbrook.com/ransomware%20protection%20and%20containment%20strategies"
+    };
+    
+
+
+    var links = [link1, link2, link3, link4]
+    var ransomware = {
+        title: "Ransomware",
+        imgUrl: "https://cdn.pixabay.com/photo/2020/05/28/16/31/ransomware-5231739_1280.jpg",
+
+    };
+    buildCard(ransomware, links);
+
+    var link1 = {
+        title: "ARTICLE: How to Stay Updated",
+        url: "https://www.gispp.org/2020/09/10/staying-updated-with-latest-cyber-security-news-and-trends/"
+    };
+
+    var link2 = {
+        title: "ARTICLE: Hackers Hit Hospitals in Disruptive Ransomware Attack",
+        url: "https://www.wsj.com/articles/hackers-hit-hospitals-in-disruptive-ransomware-attack-11603992735"
+    };
+
+    var links = [link1, link2]
+    var recentNews = {
+        title: "Recent News",
+        imgUrl: "https://cdn.pixabay.com/photo/2013/07/12/19/16/newspaper-154444_1280.png",
+
+    };
+    buildCard(recentNews, links);
+    
+    var link1 = {
+        title: "ARTICLE: Telework Security Basics from NIST",
+        url: "https://www.nist.gov/blogs/cybersecurity-insights/telework-security-basics"
+    };
+
+    var link2 = {
+        title: "ARTICLE: Cybersecurity in the Time of COVID-19",
+        url: "https://www.crowdstrike.com/blog/securing-a-remote-workforce-in-the-time-of-covid-19/"
+    };
+
+    var link3 = {
+        title: "ARTICLE: Enterprise VPN Security",
+        url: "https://us-cert.cisa.gov/ncas/alerts/aa20-073a"
+    };
+
+
+    var link4 = {
+        title: "TOOL: Telework Essentials Toolkit",
+        url: "https://www.cisa.gov/publication/telework-essentials-toolkit"
+    };
+
+
+    var links = [link1, link2, link3, link4]
+    var Covid19 = {
+        title: "Covid-19",
+        imgUrl: "https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/COVID(1).jpg",
+
+    };
+    buildCard(Covid19, links);
+
+    
+
+
+
+    function buildCard(boxInfo, links) {
+
+        var item = $("<div class='card'></div>");
+        var itemImage = $("<img style='width:100%;height:265px !important' src=''></img>");
+        itemImage.attr("src", boxInfo.imgUrl);
+        item.append($("<h1 class='card-header'></h1>").text(boxInfo.title));
+        $(".card-columns").append(item);
+        item.append(itemImage)
+
+        for (i = 0; i < links.length; i++) {
+            var linkUrl = $("<a></a>");
+            linkUrl.attr("href", links[i].url);
+            var button = $("<button type='button' class='btn btn-outline-primary'></button>").text(links[i].title)
+            linkUrl.append(button)
+            item.append(linkUrl);
+        }
+    }
+
+
+</script>
+
+<style>
+    .card-header {
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+
+
+    .btn.btn-outline-primary {
+        border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+
+    @media (max-width: 900px) {
+        .card-columns .card {
+            width: 100%;
+            margin-bottom: 0px;
+            border-bottom: 0px;
+        }
+
+        .col-lg-12 img {
+            float: none !important;
+        }
+
+        .jumbotron {
+            text-align: center;
+        }
+
+        .card:last-child {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+        }
+
+        .item.card>a>.btn-outline-primary {
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.125) !important;
+        }
+    }
+</style>
