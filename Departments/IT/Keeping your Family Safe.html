@@ -13,102 +13,289 @@
         <div id="Sidebar" class="col-lg-2">
         </div>
         <div id="mainPage" class="col-lg-8">
+
+            <div style="padding:1rem 2rem" class="jumbotron">
+
+                <p class="lead">Going into the holidays, internet users tend to get considerably more stressed resulting in more distracted computer
+                    usage.
+                    With Cyber Security Awareness Month coming to a close, the Village of Bolingbrook is encouraging home computer users and IT alike
+                    to keep security top of mind by using Knowbe4's Home Internet Security Course. This course is designed to assist all members of
+                    your family in making wise decisions when it comes to Internet usage, free of charge to residents.
+                    The course highlights important aspects of internet safety including Online Banking Security, Securing your Home Network, and
+                    Protecting Children Online.</p>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img style="float:right;height: 8rem !important;"
+                             src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Know(2).png">
+                        <p>Take the FREE Home Internet Security Course by clicking below<br>Password: homecourse (all one word)
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="https://www.knowbe4.com/homecourse" role="button">Learn more</a>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
             <div class="card-columns">
-                <div class="card">
-                    <h1 class="card-header">Residents</h1>
-                    <a href="https://www.bolingbrook.com/welcome_new_residents">
-                        <button type='button' class='btn btn-outline-primary'>New Residents</button>
-                    </a>
-
-                    <a href="https://www.bolingbrook.com/index.asp?SEC=828A11D4-E403-4F15-9E98-0F7A66817221">
-                        <button type='button' class='btn btn-outline-primary'>Safest City In Illinois</button>
-                    </a>
-                    <a href="https://www.elocallink.tv/m/v/player.php?pid=w9a1A7A7B61">
-                        <button type='button' class='btn btn-outline-primary'>Video Tour</button>
-                    </a>
-                    <a href="https://www.bolingbrook.com/history">
-                        <button type='button' class='btn btn-outline-primary'>Village History</button>
-                    </a>
-
-                    <a href="https://www.bolingbrook.com/privacy_policy">
-                        <button type='button' class='btn btn-outline-primary'>Privacy Policy</button>
-                    </a>
-
-                </div>
-                <div id="rightSidebar" class="col-lg-2">
-                </div>
             </div>
         </div>
+        <div id="rightSidebar" class="col-lg-2">
+        </div>
+
     </div>
+</div>
 
-    <script>
+<script>
 
-        var links = ["https://www.us-cert.gov/ncas/tips/ST05-002",
-            "https://stopthinkconnect.org/resources/preview/rethink-cyber-safety-rules-and-the-tech-talk-with-your-teens",
-            "https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-building-a-digital-defense-for-school-kids-and-cell-phone-safety",
-            "https://www.dhs.gov/stopthinkconnect-toolkit",
-            "http://backgroundchecks.org/the-concerned-parents-toolbox-120-tools-and-tricks-to-protect-your-kids.html"
-        ]
+    var link1 = {
+        title: "Keeping children Safe Online",
+        url: "https://www.us-cert.gov/ncas/tips/ST05-002"
+    };
 
-        var backToSchool = {
-            title: "Back-to-School",
-            imgUrl: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?cs=srgb&dl=pexels-max-fischer-5212345.jpg&fm=jpg",
-            links: links
-        };
+    var link2 = {
+        title: "Rethink Cyber Safety Rules and the “Tech Talk ”with Your Teens",
+        url: "https://stopthinkconnect.org/resources/preview/rethink-cyber-safety-rules-and-the-tech-talk-with-your-teens"
+    };
 
-        var links = ["https://www.webroot.com/us/en/resources/tips-articles/what-is-social-engineering",
-            "https://www.kaspersky.com/resource-center/threats/computer-viruses-and-malware-facts-and-faqs",
-            "https://www.cnn.com/2020/05/01/tech/iloveyou-virus-computer-security-intl-hnk/index.html",
-            "https://www.cisa.gov/sites/default/files/publications/NCSAM_Phishing_2020.pdf"
-        ]
+    var link3 = {
+        title: "Building a Digital Defense for School Kids and Cell Phone Safety",
+        url: "https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-building-a-digital-defense-for-school-kids-and-cell-phone-safety"
+    };
+    var link4 = {
+        title: "Stop.Think.Connect. Toolkit",
+        url: "https://www.us-cert.gov/ncas/tips/ST05-002"
+    };
+    var link5 = {
+        title: "Stay Safe Online",
+        url: "https://www.us-cert.gov/ncas/tips/ST05-002"
+    };
 
-        var backToSchool = {
-            title: "Back-to-School",
-            imgUrl: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?cs=srgb&dl=pexels-max-fischer-5212345.jpg&fm=jpg",
-            links: links
-        };
+    var link5 = {
+        title: "Concerned Parent ’s Internet Safety Toolbox",
+        url: "http://backgroundchecks.org/the-concerned-parents-toolbox-120-tools-and-tricks-to-protect-your-kids.html"
+    };
+    var links = [link1, link2, link3, link4, link5]
+    var backToSchool = {
+        title: "Back-to-School",
+        imgUrl: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?cs=srgb&dl=pexels-max-fischer-5212345.jpg&fm=jpg",
+
+    };
+    buildCard(backToSchool, links);
 
 
 
 
+    var link1 = {
+        title: "INFO: Social Engineering",
+        url: "https://www.webroot.com/us/en/resources/tips-articles/what-is-social-engineering"
+    };
+
+    var link2 = {
+        title: "INFO: Malware and Viruses",
+        url: "https://www.kaspersky.com/resource-center/threats/computer-viruses-and-malware-facts-and-faqs"
+    };
+
+    var link3 = {
+        title: "Article: 'ILOVEYOU' Virus",
+        url: "https://www.cnn.com/2020/05/01/tech/iloveyou-virus-computer-security-intl-hnk/index.html"
+    };
+    var link4 = {
+        title: "INFO: Phishing",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_Phishing_2020.pdf"
+    };
+
+    var links = [link1, link2, link3, link4]
+    var typesOfAttacks = {
+        title: "Types of Attacks",
+        imgUrl: "https://cdn.pixabay.com/photo/2017/05/17/19/50/ransomware-2321665_1280.png",
+
+    };
+    buildCard(typesOfAttacks, links);
 
 
-        function buildCard() {
+    var link1 = {
+        title: "INFO: Think Before You Link",
+        url: "https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/ThinkBeforeYouLink.pdf"
+    };
 
-            var item = $("<div class = 'card'></div>");
-            console.log(backToSchool.links[0])
-            item.append($("<h1 class= 'card-header'></h1>").text(backToSchool.title));
-            $(".card-columns").append(item);
+    var link2 = {
+        title: "INFO: Social Media Bots",
+        url: "https://www.cisa.gov/sites/default/files/publications/19_0717_cisa_social-media-bots-overview.pdf"
+    };
+
+    var link3 = {
+        title: "DOCUMENTARY: The Social Dilemma",
+        url: "https://www.netflix.com/title/81254224"
+    };
+    var link4 = {
+        title: "INFO: The War on Pineapple",
+        url: "https://www.cisa.gov/sites/default/files/publications/19_1008_cisa_the-war-on-pineapple-understanding-foreign-interference-in-5-steps.pdf"
+    };
+    var link5 = {
+        title: "INFO: Social Media Cybersecurity",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_SocialMediaCybersecurity_2020.pdf"
+    };
+    var link6 = {
+        title: "WEBSITE: StopBullying.gov",
+        url: "https://www.stopbullying.gov/resources/get-help-now"
+    };
+
+    var links = [link1, link2, link3, link4, link5, link6]
+    var socialMedia = {
+        title: "Social Media",
+        imgUrl: "https://inteng-storage.s3.amazonaws.com/img/iea/rV6ndqlOXq/sizes/social-media_md.jpg",
+
+    };
+    buildCard(socialMedia, links);
+
+
+    var link1 = {
+        title: "INFO: Multifactor Authentication",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_MFAGuide_2020.pdf"
+    };
+
+    var link2 = {
+        title: "TOOL: Check if You've Been Compromised",
+        url: "https://www.haveibeenpwned.com/"
+    };
+
+    var link3 = {
+        title: "TOOL: Check your Password Strength",
+        url: "https://www.uic.edu/apps/strong-password/"
+    };
+    var link4 = {
+        title: "ARTICLE: How to Choose a Password Manager",
+        url: "https://www.cnet.com/how-to/best-password-manager-of-2020-1password-last-password-and-more/"
+    };
+
+
+    var links = [link1, link2, link3, link4, link5, link6]
+    var passwords = {
+        title: "Passwords",
+        imgUrl: "https://cdn.pixabay.com/photo/2019/01/17/19/11/registration-3938434_1280.jpg",
+
+    };
+    buildCard(passwords, links);
+
+    var link1 = {
+        title: "INFO: Online Data Privacy",
+        url: "https://www.cisa.gov/sites/default/files/publications/NCSAM_OnlinePrivacy_2020.pdf"
+    };
+
+    var link2 = {
+        title: "TOOL: How to Manage Your Privacy Settings",
+        url: "https://staysafeonline.org/stay-safe-online/managing-your-privacy/manage-privacy-settings/"
+    };
+
+    var link3 = {
+        title: "INFO: Tips for Teens",
+        url: "https://staysafeonline.org/stay-safe-online/managing-your-privacy/privacy-tips-teens/"
+    };
+    var link4 = {
+        title: "INFO: Tips for Older Adults",
+        url: "https://staysafeonline.org/stay-safe-online/managing-your-privacy/privacy-tips-older-adults/"
+    };
+    var link5 = {
+        title: "DOCUMENTARY: Cyber-Seniors",
+        url: "https://cyberseniorsdocumentary.com/"
+    };
+
+
+    var links = [link1, link2, link3, link4, link5]
+    var dataPrivacy = {
+        title: "Data Privacy",
+        imgUrl: "https://cdn.pixabay.com/photo/2017/05/16/23/32/spyware-2319403_1280.jpg",
+
+    };
+    buildCard(dataPrivacy, links);
+
+    var link1 = {
+        title: "ARTICLE: How to Stay Updated",
+        url: "https://www.gispp.org/2020/09/10/staying-updated-with-latest-cyber-security-news-and-trends/"
+    };
+
+    var link2 = {
+        title: "ARTICLE: Is TikTok a Cybersecurity Threat?",
+        url: "https://www.infosecurity-magazine.com/opinions/tiktok-cybersecurity-threat/"
+    };
+
+    var link3 = {
+        title: "ARTICLE: Breach at Dickey’s BBQ Smokes 3M Cards",
+        url: "https://krebsonsecurity.com/2020/10/breach-at-dickeys-bbq-smokes-3m-cards/"
+    };
+
+
+
+    var links = [link1, link2, link3]
+    var recentNews = {
+        title: "Recent News",
+        imgUrl: "https://cdn.pixabay.com/photo/2013/07/12/19/16/newspaper-154444_1280.png",
+
+    };
+    buildCard(recentNews, links);
+
+
+
+
+    function buildCard(boxInfo, links) {
+
+        var item = $("<div class='card'></div>");
+        var itemImage = $("<img style='width:100%;height:265px !important' src=''></img>");
+        itemImage.attr("src", boxInfo.imgUrl);
+        item.append($("<h1 class='card-header'></h1>").text(boxInfo.title));
+        $(".card-columns").append(item);
+        item.append(itemImage)
+
+        for (i = 0; i < links.length; i++) {
+            var linkUrl = $("<a></a>");
+            linkUrl.attr("href", links[i].url);
+            var button = $("<button type='button' class='btn btn-outline-primary'></button>").text(links[i].title)
+            linkUrl.append(button)
+            item.append(linkUrl);
+        }
+    }
+
+
+</script>
+
+<style>
+    .card-header {
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+
+
+    .btn.btn-outline-primary {
+        border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+
+    @media (max-width: 900px) {
+        .card-columns .card {
+            width: 100%;
+            margin-bottom: 0px;
+            border-bottom: 0px;
         }
 
+        .col-lg-12 img {
+            float: none !important;
+        }
 
-    </script>
-
-    <style>
-        .card-header {
-            font-weight: 700;
-            font-size: 1.5rem;
+        .jumbotron {
             text-align: center;
+        }
+
+        .card:last-child {
             border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
         }
 
-
-
-
-        @media (max-width: 900px) {
-            .card-columns .card {
-                width: 100%;
-                margin-bottom: 0px;
-                border-bottom: 0px;
-            }
-
-
-            .card:last-child {
-                border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
-            }
-
-            .item.card>a>.btn-outline-primary {
-                border-bottom: 0.5px solid rgba(0, 0, 0, 0.125) !important;
-            }
+        .item.card>a>.btn-outline-primary {
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.125) !important;
         }
-    </style>
+    }
+</style>
