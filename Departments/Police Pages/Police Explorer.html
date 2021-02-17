@@ -1,32 +1,30 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
-
-
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage" class="btn-group-vertical">
-
-
-
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="mainPage" class="col-md-6">
             <div class="section">
-                <div id="welcome" class="sectionHead">
+                <h1 id="welcome" class="sectionHead">
                     Welcome
-                </div>
+                </h1>
                 <p>Youths need solid information on the adult world that they are preparing to enter. Today’s teenagers
                     have a chance to find out firsthand about a variety of careers of Special interest – Law Enforcement
                     is one. The Bolingbrook Police Department’s Law Enforcement Explorer Program has been carefully
@@ -37,9 +35,9 @@
                         personnel, and they are forbidden from representing themselves as police officers.</strong></p>
             </div>
             <div class="section">
-                <div id="purpose" class="sectionHead">
+                <h1 id="purpose" class="sectionHead">
                     Purpose
-                </div>
+                </h1>
                 <ul>
                     <li>To explore all phases of law enforcement, giving the Explorers an insight into the
                         many fields of law enforcement and information to help them qualify for a career
@@ -63,15 +61,19 @@
 
 
         </div>
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
-            </div>
+        <div id="rightSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Contact Information</h3>
 
-            <div class="well">
-                <h3 class="position">Officer Michelle Geier</h3>
-                <div class="person">(630)226-8609<br>
-
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Officer Michelle Geier</h4>
+                            <a id="smallLink"
+                               href="tel:(630)226-8609" class="card-link">Phone
+                            </a>
+         
+                    </ul>
                 </div>
 
             </div>
@@ -81,41 +83,48 @@
 
 
 
+
 <script>
 
 
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
     }
-</script>
 
-<script>
-    function myFunction(dots, more, btn) {
-        var dots = document.getElementById(dots);
-        var moreText = document.getElementById(more);
-        var btnText = document.getElementById(btn);
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
         }
     }
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
+
 </script>
 
 <style>

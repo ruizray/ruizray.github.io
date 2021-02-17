@@ -2,9 +2,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
 
 <div id="content" class="container">
     <div class="row">
@@ -32,9 +33,9 @@
 
                 <h1 id="about" class="sectionHead">Public Meetings</h1>
                 <div class="subsection">
-                    <h2 class="subHead">Where:<small class="text-muted"> BCT Studio - Lower Level of Village Hall</small></h2>
+                    <h4 style="display:inline" class="subHead">Where:</h4><span style="display:inline"> BCT Studio - Lower Level of Village Hall</span><br>
 
-                    <h2 class="subHead">When:<small class="text-muted"> 2nd Monday of each month at 7:30pm.</small></h2>
+                    <h4 style="display:inline" class="subHead">When:</h4><span style="display:inline"> 2nd Monday of each month at 7:30pm.</span>
                     <p></p>
                 </div>
             </div>
@@ -160,25 +161,48 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 8f2bf849c9fa06532026c5ba000135364f8df20b
 <script>
-    var items = document.querySelector("#mainPage").querySelectorAll("h1");
 
-    for (var i = 0; i < items.length; ++i) {
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
 
-        var button = $(
-            "<button type='button' class='btn btn-outline-primary'></button>"
-        ).text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
     }
+
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
+
 </script>
 <style>
     #itemImage {
