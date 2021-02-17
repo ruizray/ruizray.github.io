@@ -1,32 +1,29 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
 
 
 <div id="content" class="container">
     <div class="row">
-        <div id="Sidebar" class="col-md-3">
-
-            <div class="SidebarTitle">
-
+        
+            <div id="leftSidebar" class="col-lg-3">
+                
             </div>
-            <div id="thisPage"
-                 class="btn-group-vertical">
-            </div>
-        </div>
 
 
-        <div id="mainPage" class="col-md-6">
+        <div style="text-align:center !important" id="mainPage" class="col-md-6">
 
-            <div class="section">
-                <div id="Ashift" class="sectionHead">
+            <div  class="section">
+                <h1 style="text-align:center !important" id="Ashift" class="sectionHead">
                     "A" Shift - Gold Shift
-                </div>
+                </h1>
                 <div class="subsection">
-                    <div class="subHead">Ron Banda - Battalion Chief</div>
+                    <h4 class="subHead">Ron Banda - Battalion Chief</h4>
                     <ul>
                         <li>Chris Alioto - Lieutenant</li>
                         <li> Edgar Hughes - Lieutenant</li>
@@ -37,11 +34,11 @@
                 </div>
             </div>
             <div class="section">
-                <div id="Ashift" class="sectionHead">
+                <h1 style="text-align:center !important" id="Ashift" class="sectionHead">
                     "B" Shift - Black Shift
-                </div>
+                </h1>
                 <div class="subsection">
-                    <div class="subHead">Joe Fagan - Battalion Chief</div>
+                    <h4 class="subHead">Joe Fagan - Battalion Chief</h4>
                     <ul>
                         <li>Dave Butcher - Lieutenant</li>
                         <li>Dave Proffitt - Lieutenant</li>
@@ -52,11 +49,11 @@
                 </div>
             </div>
             <div class="section">
-                <div id="Ashift" class="sectionHead">
+                <h1 style="text-align:center !important" id="Ashift" class="sectionHead">
                     "C" Shift - Red Shift
-                </div>
+                </h1>
                 <div class="subsection">
-                    <div class="subHead">Dan Ross - Battalion Chief</div>
+                    <h4 class="subHead">Dan Ross - Battalion Chief</h4>
                     <ul>
                         <li>John Merino - Lieutenant</li>
                         <li>Rich Kostelz - Lieutenant</li>
@@ -67,39 +64,24 @@
                 </div>
             </div>
         </div>
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-               
-            </div>
+        <div id="rightSidebar" class="col-lg-3">
 
-           
+
         </div>
     </div>
 </div>
 
 
 
-<script>
 
-
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
-    }
-</script>
 
 <style>
     #itemImage {
         width: 100%;
     }
+
+    ul li, ol li {
+    
+    list-style-position: inside;
+}
 </style>

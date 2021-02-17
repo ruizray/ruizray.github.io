@@ -1,32 +1,31 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage" class="btn-group-vertical">
-
-
-
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="mainPage" class="col-md-6">
+        <div id="mainPage" class="col-lg-6">
             <div class="section">
-                <div id="about" class="sectionHead">
+                <h1 id="about" class="sectionHead">
                     About
-                </div>
+                </h1>
                 <p>As the Village grows, so does the demand for Emergency Medical Services. In 2011, the Bolingbrook
                     Fire Department saw 4,302 EMS related patients. The daily EMS Division operations are run by EMS
                     Director, Lt. Todd Nemeth. The EMS division is responsible for coordinating the activities of
@@ -38,9 +37,9 @@
                 </p>
             </div>
             <div class="section">
-                <div id="becomingParamedic" class="sectionHead">
+                <h1 id="becomingParamedic" class="sectionHead">
                     Becoming an EMT
-                </div>
+                </h1>
                 <p>
                     The initial education for EMT's is usually conducted through the local community college. It
                     consists of one semester of classroom with 16 hours of working in the emergency room and on an
@@ -60,9 +59,9 @@
                     currently has 63 EMT-P (Paramedics) and 23 EMT-B (EMT Basics)<br></p>
             </div>
             <div class="section">
-                <div id="Preceptor" class="sectionHead">
+                <h1 id="Preceptor" class="sectionHead">
                     Preceptor program
-                </div>
+                </h1>
                 Over the past ten years, the Bolingbrook Fire Department has been involved in the Paramedic
                 Preceptor program through the Edward Hospital EMS system. A Preceptor is a Paramedic who volunteers
                 his/her time to field train a Paramedic student by giving them the ability to ride along with the
@@ -72,9 +71,9 @@
             </div>
 
             <div class="section">
-                <div id="medicationDisposal" class="sectionHead">
+                <h1 id="medicationDisposal" class="sectionHead">
                     Medication Disposal
-                </div>
+                </h1>
                 <p> If you have expired drugs or medications that you no longer use, do you know the proper way to
                     dispose of them?
 
@@ -106,24 +105,24 @@
                         information.</li>
                 </ul>
                 <div class="subsection">
-                    <div class="subHead">
+                    <h4 class="subHead">
                         Disposal of Hypodermic Needles
-                    </div>
+                    </h4>
 
                     <p>Stericycle is a company that provides home disposal kits for sharps needles. For a small fee, the
-                    company will send you a home kit that you will return to them once it is full. <br>
+                        company will send you a home kit that you will return to them once it is full. <br>
 
-                    Visit the <a href="http://www.stericycle.com/consumer-needle-disposal">Stericycle website</a> to
-                    order a pre-addressed package, or contact Dean at 847/943-6596.</p>
+                        Visit the <a href="http://www.stericycle.com/consumer-needle-disposal">Stericycle website</a> to
+                        order a pre-addressed package, or contact Dean at 847/943-6596.</p>
                 </div>
             </div>
 
 
 
             <div class="section">
-                <div id="webLinks" class="sectionHead">
+                <h1 id="webLinks" class="sectionHead">
                     EMS Web Links
-                </div>
+                </h1>
                 <p>Below is a list of web sites that will give you EMS related topics and
                     information.
                 <ul>
@@ -164,38 +163,29 @@
 <script>
 
 
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
     }
-</script>
 
-<script>
-    function myFunction(dots, more, btn) {
-        var dots = document.getElementById(dots);
-        var moreText = document.getElementById(more);
-        var btnText = document.getElementById(btn);
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
         }
     }
+
 </script>
 
 <style>

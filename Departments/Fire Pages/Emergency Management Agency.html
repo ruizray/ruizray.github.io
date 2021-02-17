@@ -1,9 +1,11 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
 
 
 
@@ -11,22 +13,21 @@
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage" class="btn-group-vertical">
-
-
-
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="mainPage" class="col-md-6">
+        <div id="mainPage" class="col-lg-6">
             <div class="section">
-                <div id="missionStatement" class="sectionHead">
+                <h1 id="missionStatement" class="sectionHead">
                     Mission Statement
-                </div>
+                </h1>
                 <p>The Bolingbrook Emergency Management Agency (BEMA) is a volunteer organization tasked with the
                     responsibility of providing emergency services and coordinating the efforts of the Village and other
                     agencies to prepare for, respond to, mitigate and recover from disasters, both natural and man made.
@@ -34,9 +35,9 @@
                     welfare and safety of the public.</p>
             </div>
             <div class="section">
-                <div id="servicesProvided" class="sectionHead">
+                <h1 id="servicesProvided" class="sectionHead">
                     Services Provided
-                </div>
+                </h1>
                 <p>The Bolingbrook Emergency Management Agency (BEMA) is a volunteer organization tasked with the
                     responsibility of providing emergency services and coordinating the efforts of the Village and other
                     agencies to prepare for, respond to, mitigate and recover from disasters, both natural and man made.
@@ -44,9 +45,9 @@
                     welfare and safety of the public.</p>
 
                 <div class="subsection">
-                    <div class="subHead">
+                    <h4 class="subHead">
                         Primary
-                    </div>
+                    </h4>
                     <p>
                     <ul>
                         <li> Disaster Coordination</li>
@@ -59,9 +60,9 @@
                         <li> Emergency Power and Lighting</li>
                     </ul>
                     </p>
-                    <div class="subHead">
+                    <h4 class="subHead">
                         Secondary
-                    </div>
+                    </h4>
                     <p>
                     <ul>
                         <li> Traffic Control</li>
@@ -74,9 +75,9 @@
 
             </div>
             <div class="section">
-                <div id="applicants" class="sectionHead">
+                <h1 id="applicants" class="sectionHead">
                     Applicants
-                </div>
+                </h1>
                 <p>All applicants will be required to have a background check completed.
 
                     Interested citizens can fill out an application and return it to Fire Administration, 375 W.
@@ -90,21 +91,52 @@
                     <li> Previous weather spotting experience preferred, will train</li>
 
                 </ul>
+                <div class="CTA">
+                    <p >Click Here to fill out an application.</p>
+                    <a href="https://www.bolingbrook.com/police_news"><button
+                                class='btn btn-primary CTAbutton' type='button'>EMA Application</button></a>
+                </div>
             </div>
 
 
         </div>
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
-            </div>
+        <div id="rightSidebar" class="col-lg-3">
 
-            <div class="well">
-                <h3 class="position">Battalion Chief / EMA Director</h3>
-                <div class="person">Troy Kirch<br>
+            <div class="card-container">
+                <div class="card ">
+                    <h3 class="card-header">Fire Administration</h3>
+                    <ul id="contactList" class="list-group list-group-flush">
 
+
+                        <li id="contactInfo" class="list-group-item"><small style="font-size:1.05em;margin-bottom:10px;"
+                                   class="text-muted">For
+                                emergencies dial 9-1-1. Emails are monitored Monday through Friday during normal business hours and SHOULD NOT be
+                                considered as an emergency contact for the Fire Department.
+                            </small>
+
+                            <h4 id="title" class="card-title">Fire Department
+                            </h4>
+                            <a id="smallLink"
+                               href="tel:(630)226-8540" class="card-link">Phone
+                            </a>
+                            <a id="smallLink"
+                               href="mailto:fire@bolingbrook.com" class="card-link">Email
+                            </a>
+
+                        </li>
+
+                       
+                       
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Troy Kirch<small class="text-muted"> Battalion Chief of Training/EMA Director
+                                </small></h4>
+
+                        </li>
+                        
+
+
+                    </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -112,39 +144,46 @@
 
 
 
+
+
 <script>
-
-
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
     }
-</script>
+    
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
 
-<script>
-    function myFunction(dots, more, btn) {
-        var dots = document.getElementById(dots);
-        var moreText = document.getElementById(more);
-        var btnText = document.getElementById(btn);
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+        }
+    }
+
+
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
         }
     }
 </script>

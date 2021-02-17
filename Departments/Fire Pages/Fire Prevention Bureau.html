@@ -1,39 +1,29 @@
-<meta charset="utf-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="newest stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700"
-      rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
-
-
-<div id="content"
-     class="container">
+<div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-             
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage"
-                 class="btn-group-vertical">
-
-
-
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="mainPage"
              class="col-md-6">
             <div class="section">
-                <div id="about"
-                     class="sectionHead">
+                <h1 id="about" class="sectionHead">
                     About
-                </div>
+                </h1>
                 <p> Bolingbrook Fire Department has a full-time Fire Prevention Bureau which consists of the Fire
                     Marshal and 3
                     shift Fire Inspectors. Their responsibilities include:</p>
@@ -47,10 +37,10 @@
                 </ul>
             </div>
             <div class="section">
-                <div id="carbonMonoxide"
+                <h1 id="carbonMonoxide"
                      class="sectionHead">
                     Carbon Monoxide Detector Law
-                </div>
+            </h1>
                 <p>Effective January 1, 2007, every dwelling unit will be required to have at least one approved carbon
                     monoxide alarm in an operating condition within 15 feet of every room used for sleeping purposes.
                     Alarms can be battery powered, plug-in with battery back-up or wired into the AC power line with a
@@ -58,9 +48,9 @@
                     unit complies with specific standards and the alarm differentiates the hazard.</p>
 
                 <div class="subsection">
-                    <div class="subHead">
+                    <h4 class="subHead">
                         The Law
-                    </div>
+                    </h4>
                     <p>
                         The Illinois General Assembly has passed and the Govenor has signed the Carbon Monoxide Alarm
                         Detector Act (Public Act 094-0741). This new law, effective January 1, 2007, requires homeowners
@@ -109,10 +99,9 @@
 
             </div>
             <div class="section">
-                <div id="fireCodes"
-                     class="sectionHead">
+                <h1 id="fireCodes" class="sectionHead">
                     Fire Codes
-                </div>
+                </h1>
                 <p>The codes listed below are what the Bolingbrook Fire Department enforces:</p>
                 <ul>
                     <li> 2018 International Fire Code</li>
@@ -124,10 +113,10 @@
                 </ul>
             </div>
             <div class="section">
-                <div id="knoxBox"
+                <h1 id="knoxBox"
                      class="sectionHead">
                     Rapid Entry System - Knox Box
-                </div>
+            </h1>
                 <p>Select either a 3200 or 4400 series box. You can then either search by zip code (60440 or 60490) or
                     by Fire Department Name (Bolingbrook).</p>
                 <div class="CTA">
@@ -138,10 +127,10 @@
                 </div>
             </div>
             <div class="section">
-                <div id="smokeAlarm"
+                <h1 id="smokeAlarm"
                      class="sectionHead">
                     Smoke Alarm Assistance
-                </div>
+            </h1>
                 The Bolingbrook Fire Department (BFD) offers free smoke alarm installation to qualified residents.
                 Please use the guidelines below to determine whether you qualify for this program, and contact Fire
                 Administration at 630-226-8540 with any questions.
@@ -156,7 +145,7 @@
                         financially unable to purchase smoke alarms.</li>
                 </ul>
                 <div class="subsection">
-                    <div class="subHead">Where should smoke alarms be installed?</div>
+                    <h4 class="subHead">Where should smoke alarms be installed?</h4>
 
 
                     <ul>
@@ -165,7 +154,7 @@
                         <li> Avoid installing smoke alarms in the kitchen or in bathrooms.</li>
                     </ul>
 
-                    <div class="subHead">Smoke Alarms for People who are Deaf or Hard of Hearing</div>
+                    <h4 class="subHead">Smoke Alarms for People who are Deaf or Hard of Hearing</h4>
                     <p> Smoke alarms save lives. However, people who are deaf or hard of hearing may not be able to
                         depend
                         on the traditional smoke alarm to alert them to a fire.<br>
@@ -189,10 +178,10 @@
                 </div>
             </div>
             <div class="section">
-                <div id="wirelessAlarm"
+                <h1 id="wirelessAlarm"
                      class="sectionHead">
                     Wireless Alarm Monitoring
-                </div>
+            </h1>
                 <p>The Village of Bolingbrook implemented the wireless fire alarm monitoring for commercial and
                     multifamily occupancies in 2008. This system is replacing an existing monitoring system that is over
                     25 years old with newer, less expensive and a more reliable system. This is a cost effective,
@@ -202,7 +191,7 @@
                     alarm.</p>
 
                 <div class="subsection">
-                    <div class="subHead">How Wireless Alarm Monitoring affects you</div>
+                    <h4 class="subHead">How Wireless Alarm Monitoring affects you</h4>
                     <ul>
                         <li> Eliminates the need for expensive dedicated phone lines</li>
                         <li> Reduces the number of false alarms from phone line ground faults</li>
@@ -240,38 +229,27 @@
 
 
 <script>
-
-
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        
     }
-</script>
+    
 
-<script>
-    function myFunction(dots, more, btn) {
-        var dots = document.getElementById(dots);
-        var moreText = document.getElementById(more);
-        var btnText = document.getElementById(btn);
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
         }
     }
 </script>
