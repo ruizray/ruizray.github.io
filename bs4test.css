@@ -18,7 +18,6 @@
   #smallLink {
     font-size: 1.25rem;
     display: block;
-    line-height: 1.2rem;
   }
   .card-link + .card-link {
     margin-left: 0rem;
@@ -78,13 +77,11 @@ button.btn-outline-primary {
   overflow: hidden;
 }
 
-
 button.btn-outline-primary:hover {
   color: #fff;
   background-color: #337ab7 !important;
   border-color: #337ab7 !important;
 }
-
 
 #thisPage > a:not(:first-child) > button,
 #quickLinks > a:not(:first-child) > button {
@@ -252,7 +249,7 @@ ol li {
 }
 
 #title {
-  margin-bottom: -0.2rem;
+  margin-bottom: 0px !important;
 }
 
 #fullLink {
@@ -262,14 +259,21 @@ ol li {
 }
 
 #smallLink {
-  font-size: 1.25rem;
- 
+  
+  color: #6c757d !important;
+  font-weight: 500;
 }
 
 #smallContactList > li {
   border: none;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
+}
+
+#contactList {
+  border-top: inherit;
+  border-bottom: inherit;
+  line-height: 1.4rem;
 }
 
 .card {
