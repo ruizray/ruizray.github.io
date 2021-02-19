@@ -1,22 +1,23 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage" class="btn-group-vertical">
-
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -24,10 +25,10 @@
 
         <div id="mainPage" class="col-md-6">
             <div class="section">
-                <div id="whatToDo" class="sectionHead">
+                <h1 id="whatToDo" class="sectionHead">
                     What to do if Your Child is Missing
-                </div>
-                
+                </h1>
+
                 <ol>
                     <li><strong>Immediately call your local law enforcement agency.</strong> Provide law enforcement
                         with your
@@ -43,7 +44,7 @@
                         the
                         FBI&#8217;s National Crime Information Center Missing Person File</li>
                     <li>After you have reported your child missing to law enforcement, call the <a
-                            href="https://www.missingkids.org/home"><strong>National Center for Missing and
+                           href="https://www.missingkids.org/home"><strong>National Center for Missing and
                                 Exploited Children® (NCMEC)</strong> </a>at 1-800-THE-LOST® (1-800-843-5678).</li>
 
                 </ol>
@@ -51,9 +52,9 @@
 
             <div class="section">
 
-                <div id="nationalRunawaySafeline" class="sectionHead">
+                <h1 id="nationalRunawaySafeline" class="sectionHead">
                     National Runaway Safeline
-                </div>
+                </h1>
 
 
                 <div class="row">
@@ -65,19 +66,19 @@
                             referral via
                             our nearly 7,000 resource database and runaway education and prevention services</p>
                     </div>
-                    <div style="text-align:center" class="col-md-3"><img style="width:40%;"
-                            src="https://www.1800runaway.org/wp-content/themes/app/_/img/logo-1800runaway-registered-tagline-color.png?v=20200421"
-                            alt="" />
+                    <div style="text-align:center;" class="col-md-3"><img style="width:75%; background-color: #0e0e0e;"
+                             src="https://cdn.1800runaway.org/wp-content/uploads/2020/10/national-runaway-safeline-logo-white-2048x1574.png"
+                             alt="" />
                         <br><a href="tel:1-800-786-2929">1-800-RUNAWAY</a><br><a
-                            href="https://www.1800runaway.org/">www.1800runaway.org</a>
+                           href="https://www.1800runaway.org/">www.1800runaway.org</a>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <div id="NCMEC" class="sectionHead">
+                <h1 id="NCMEC" class="sectionHead">
                     National Center for Missing and Exploited Children
-                </div>
+                </h1>
 
 
                 <div class="row">
@@ -92,52 +93,59 @@
                         relating to
                         missing and sexually exploited children.</div>
                     <div style="text-align:center" class="col-md-3"><img style="background:#404041;width:100%"
-                            src="https://www.missingkids.org/content/dam/missingkids/logos/ncmec%20logo-website.png">
+                             src="https://www.missingkids.org/content/dam/missingkids/logos/ncmec%20logo-website.png">
                         <br><a href="1-800-843-5678">1-800-843-5678</a><br><a
-                                href="https://www.missingkids.org/home">www.missingkids.org</a>
+                           href="https://www.missingkids.org/home">www.missingkids.org</a>
                     </div>
                 </div>
             </div>
 
             <!--- Text that must be centered must be tucked between div --->
-            
 
-           
-
-        </div>
-
-
-
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
-            </div>
 
 
 
         </div>
+
+
+
+        <div id="rightSidebar" class="col-lg-3">
+
+        </div>
+
 
     </div>
 
-</div>
 
+
+</div>
 <script>
 
 
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+       
     }
+
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+    
+
 </script>
 
 <style>
