@@ -85,12 +85,6 @@ button.btn-outline-primary:hover {
 }
 
 
-button.btn-outline-primary:hover {
-  color: #fff;
-  background-color: white !important;
-  border-color: #337ab7 !important;
-}
-
 #thisPage > a:not(:first-child) > button,
 #quickLinks > a:not(:first-child) > button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
