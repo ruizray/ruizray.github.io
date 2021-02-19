@@ -17,7 +17,8 @@
   }
   #smallLink {
     font-size: 1.25rem;
-    margin-bottom: -8px;
+    display: block;
+    line-height: 1.2rem;
   }
   .card-link + .card-link {
     margin-left: 0rem;
@@ -262,6 +263,7 @@ ol li {
 
 #smallLink {
   font-size: 1.25rem;
+  display:block;
 }
 
 #smallContactList > li {
