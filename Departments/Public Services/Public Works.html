@@ -1,0 +1,156 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div style="border: 1px solid rgba(0, 0, 0, 0.125) !important" id="quickLinks" class="btn-group-vertical">
+                    <h3 class="card-header">Quick Links</h3>
+                    <a href="http://www.naperville.il.us/dynamic_content.aspx?id=148"><button type='button' class='btn btn-outline-primary'>Local
+                            Hazardous Waste</button></a>
+                    <a href="https://patch.com/illinois/bolingbrook/bolingbrook-plant-1-000-trees-after-others-lost-ash-borer"><button type='button'
+                                class='btn btn-outline-primary'>Emerald Ash Borer</button></a>
+                    <a href="https://www.bolingbrook.com/forestry"><button type='button' class='btn btn-outline-primary'>Forestry
+                            Information</button></a>
+                    <a
+                       href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/BasementFlooding(1).pdf"><button
+                                type='button' class='btn btn-outline-primary'>Basement Flooding Information</button></a>
+                </div>
+
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mainPage" class="col-md-6">
+            <div class="section">
+                <h1 id="cleanAir" class="sectionHead">
+                    Clean Air Counts
+                </h1>
+                <p>The Village of Bolingbrook is a participant of the Clean Air Counts act. The Metropolitan Mayors Caucus's participating mayors and
+                    their communities have a history of improving the environment, from promoting environmental practices through waste management,
+                    green purchasing and participation in Clean Air Counts. It is important for mayors and local governments throughout the United
+                    States to take leadership roles by adopting environmental programs that provide economic and quality of life benefits such as
+                    reduced energy bills, green space preservation, air quality improvements, and improved transportation choices.
+
+                <div class="CTA">
+                    <p>For more information on how to improve air quality in your home, office or community please click on the following link.</p>
+                    <a
+                       href="https://mayorscaucus.org/initiatives/environment/sustainaility-strategies/air/"><button
+                                class='btn btn-primary CTAbutton'
+                                type='button'>Clean Air Counts</button></a>
+                </div>
+                </p>
+            </div>
+            <div class="section">
+                <h1 id="waterInfo" class="sectionHead">
+                    Water Information
+                </h1>
+                <p>Below is the link to "Sanitary Sewer Service Guide. Information you need to know about sanitary sewer service and how to prevent
+                    sewer backups." Any questions you have regarding your water bill, high usage, water leaks, meter readings, turn on/off water
+                    service, move in/out readings, watermain breaks, leaking fire hydrants, please contact Illinois American Water at 1-855-705-8435.
+                    The website is <a href="https://amwater.com/ilaw/"> amwater.com/ilaw/</a></p>
+                <div class="CTA">
+                    <p>Illinois Water customers can get the most up-to-date information on their accounts</p>
+                    <a
+                       href="https://amwater.com/ilaw/customer-service-billing/rights-responsibilities"><button
+                                class='btn btn-primary CTAbutton'
+                                type='button'>Customer Services Billing Rights/ Responsibilities</button></a>
+                </div> </a>
+            </div>
+
+
+
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Important Numbers</h3>
+
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Illinois American Water</h4>
+                            <a id="smallLink"
+                               href="tel:1-855-705-8435" class="card-link">Phone
+                            </a>
+
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Public Works Commission</h3>
+                    <ul id="smallContactList" class="list-group list-group-flush">
+                        <li style="border-top: 1px solid rgba(0, 0, 0, 0.125) !important;" id="fullLink" class="list-group-item">Trustee Michael
+                            Lawler</li>
+                        <li id="fullLink" class="list-group-item">Trustee Maria A. Zarate</li>
+                        <li id="fullLink" class="list-group-item">Trustee Robert Jaskiewicz</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
+    }
+
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
+
+</script>
+
+<style>
+    #itemImage {
+        width: 100%;
+    }
+</style>
