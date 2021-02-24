@@ -1,124 +1,142 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
-
-
+<!-- advanced html editor -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
-            </div>
-            <div id="thisPage" class="btn-group-vertical">
-
-            </div>
-
-            <div class="SidebarTitle">
-                Message from ComEd
-            </div>
-            <div style="width:100%;text-align:center">
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
                 <img style="width:100%"
                      src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/FINAL_Consumer_Fraud_Protection_Bill_Insert_r5_Page_1.jpg">
             </div>
         </div>
 
-
-
-        <div id="mainPage" class="col-md-6">
+        <div id="mainPage" class="col-lg-6">
             <div class="section">
-                <div id="willNever" class="sectionHead">
+                <h1 id="willNever" class="sectionHead">
                     ComEd will never...
-                </div>
-
+                </h1>
                 <div class="subsection">
-                    <div class="subHead">
-                        Come to your
-                        home to request a payment.
-                    </div>
+                    <h4 class="subHead">
+                        Come to your home to request a payment.
+                    </h4>
 
-                    <p>ComEd regularly receives reports of scammers
-                        posing as ComEd employees. They’ll go to great
-                        lengths to try to take your money</p>
+                    <p>ComEd regularly receives reports of scammers posing as ComEd employees. They&#8217;ll go to great lengths to try to take your
+                        money
+                    </p>
                 </div>
-
                 <div class="subsection">
-                    <div class="subHead">
+                    <h4 class="subHead">
                         Call you to:
-                    </div>
+                    </h4>
+
                     <ul>
                         <li>Ask for your account number</li>
-                        <li>Ask for personal information such as your social
-                            security number or bank information</li>
-                        <li>Ask you to make a direct payment with a prepaid
-                            cash card</li>
+                        <li>Ask for personal information such as your social security number or bank information</li>
+                        <li>Ask you to make a direct payment with a prepaid cash card</li>
                     </ul>
-                    <p>Avoid being the victim of a scam and learn how
-                        to spot energy-related fraud when it may be
-                        happening to you. ComEd cares. We’re committed
-                        to working together.</p>
+                    <p>Avoid being the victim of a scam and learn how to spot energy-related fraud when it may be happening to you. ComEd cares.
+                        We&#8217;re
+                        committed to working together.</p>
                 </div>
             </div>
-
             <div class="section">
-                <div id="reports" class="sectionHead">
+                <h1 id="willNever" class="sectionHead">
                     Reporting suspicious behavior
-                </div>
+                </h1>
 
                 <div class="CTA">
 
-                    If you experience suspicious behavior,
-                    please call <span style='word-break:keep-all;display: inline-block;'>1-800-EDISON-1</span> to report
-                    or visit
-                    ComEd.com/ScamAlert to learn more.
-
-                    <a href="ComEd.com/ScamAlert"><button class='btn btn-primary CTAbutton' type='button'>Report
+                    <p> If you experience suspicious behavior,
+                        please call <span style='word-break:keep-all;display: inline-block;'>1-800-EDISON-1</span> to report
+                        or visit
+                        ComEd.com/ScamAlert to learn more.
+                    </p>
+                    <a
+                       href="https://www.comed.com/MyAccount/CustomerSupport/Pages/FraudTheft.aspx?utm_source=ScamAlert&utm_medium=Vanity&utm_campaign=ScamAlertVanity"><button
+                                class='btn btn-primary CTAbutton' type='button'>Report
                             Suspicious Behvaior</button></a>
                 </div>
             </div>
+
+
+
+
         </div>
+        <div id="rightSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Contact Information</h3>
 
-
-
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
-            </div>
-            <div class="well">
-                <div class="contact">
-                    <h3 class="position">ComEd</h3>
-                    <a href="tel:(800)334-7661">(800)334-7661</a>
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">ComEd</h4>
+                            <a id="smallLink"
+                               href="tel:(800)334-7661" class="card-link">Phone
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
-
         </div>
-
     </div>
-
 </div>
+
+
+
 
 <script>
 
 
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
-
-    for (var i = 0; i < items.length; ++i) {
-
-
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
-
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
-
-        $("#thisPage").append(a);
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
     }
+
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                str = method + ": " + str;
+                list[i].innerText = str
+            }
+
+        }
+    }
+
 </script>
 
 <style>
@@ -126,7 +144,7 @@
         width: 100%;
     }
 
-    .image.left{
-        display:none;
+    .left {
+        display: none;
     }
 </style>
