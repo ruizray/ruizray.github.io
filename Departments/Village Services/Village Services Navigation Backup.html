@@ -1,0 +1,301 @@
+<!-- advanced html editor -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src=""></script>
+<style>
+
+
+   
+   
+.container{
+ width:100%;   
+}
+    .mainContent {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    button.btn.btn-primary {
+            width: 100%;
+    border-radius: 0px;
+    font-size: 18px;
+    color: #ffffff;
+    /* padding: 10px; */
+        background-color: #2B4473;
+    border-color: #1d3563;
+    /* border: 0.5px solid; */
+
+    }
+
+    button.btn.btn-primary:hover {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #337ab7;
+    }
+
+    hr {
+        border-top: 2px solid rgb(0 0 0 / 25%);
+        margin-top: 0px;
+    }
+
+    #bottomLink {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    #topLink {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .header {
+        font-size: 24px;
+        text-align: center;
+        width: 100%
+    }
+
+    .containerNew {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        /* Your container needs a fixed height, and it 
+   * needs to be taller than your tallest column. */
+        height: 1100px;
+        /* Optional */
+        border-radius: 4px;
+        padding: 20px;
+        width: 100%;
+        margin: 40px auto;
+        counter-reset: items;
+        font-size: 18px;
+        font-family: "Tahoma";
+    }
+    
+  
+
+    .item {
+        width: 32%;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+        border: 1px solid #e3e3e3;
+        /* Optional */
+        background-color: #D4E0F7;
+
+        position: relative;
+        margin-bottom: 2%;
+        border-radius: 3px;
+        box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    
+
+    .item::before {
+        counter-increment: items;
+    }
+
+    /* Re-order items into 3 rows */
+    .item:nth-child(3n+1) {
+        order: 1;
+    }
+
+    .item:nth-child(3n+2) {
+        order: 2;
+    }
+
+    .item:nth-child(3n) {
+        order: 3;
+    }
+
+    /* Force new columns */
+    .containerNew::before, .containerNew::after {
+        content: "";
+        flex-basis: 100%;
+        width: 0;
+        order: 2;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    h3 {
+        text-align: center;
+    }
+    
+    
+      @media (max-width: 900px) {
+   .containerNew {
+      display:inherit;
+      height:auto;
+   }
+   }
+   
+   @media (max-width: 900px) {
+   .item {
+      width:100%;
+   }
+   }
+</style>
+<div class="containerNew">
+    <div class="item">
+        <div class="header">
+            <strong>Places of Interest</strong>
+        </div>
+        <hr>
+        <a href="http://www.bbclowairport.com/">
+            <button id="topLink" class="btn btn-primary" type="button">Bolingbrook's Clow International Airport</button>
+        </a><br>
+        <a href="https://www.bolingbrookgolfclub.com/">
+            <button  class="btn btn-primary" type="button">Bolingbrook Golf Club</button>
+        </a>
+        <a href="http://www.bolingbrookparks.org/en/home/">
+            <button class="btn btn-primary" type="button">Bolingbrook Park District</button>
+        </a>
+     
+        <a href="https://www.bolingbrook.com/cemetery">
+            <button class="btn btn-primary" type="button">Hillcrest Cemetery</button>
+        </a>
+        <br>
+        <a href="https://www.bolingbrook.com/worship">
+            <button class="btn btn-primary" type="button">Places of Worship</button>
+        </a>
+        <br>
+        <a href="https://www.bolingbrook.com/hotels/">
+            <button class="btn btn-primary" type="button">Hotels</button>
+        </a>
+        <a href="https://www.visitbolingbrook.com/">
+            <button class="btn btn-primary" type="button">Restaurants</button>
+        </a>
+        <a href="https://www.bolingbrook.com/foodentry">
+            <button class="btn btn-primary" type="button">Food Entries</button>
+        </a>
+        <a href="http://www.illinoisaviationmuseum.org/">
+            <button id="bottomLink" class="btn btn-primary" type="button">The Illinois Aviation Museum</button>
+        </a>
+    
+        <br>
+    </div>
+    <div class="item">
+        <div class="header">
+            <strong> Online Service Request</strong>
+        </div><div style="text-align:center">(Report potholes, fallen trees, fallen mailbox, graffti removal and much more.) </div>
+        
+        <hr>
+        <a id="Link" href="https://bolingbrookil.govqa.us/WEBAPP/_rs/(S(wfohpw2jy0eupvno41iqazgd))/SupportHome.aspx?sSessionID=&lp=6">
+            <button id="topLink" class="btn btn-primary" type="button">Online Service Request</button>
+        </a>
+        <br>
+        
+       
+    </div>
+    <div class="item">
+        <!--- Text that must be centered must be tucked between div --->
+        <div class="header">
+            <strong>Waste Management</strong>
+        </div>
+        <hr>
+        <a id="Link" href="https://www.bolingbrook.com/electronic_recycling">
+            <button id="topLink" class="btn btn-primary" type="button">Electronic Recycling</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/refusecollection">
+            <button id="bottomLink" class="btn btn-primary" type="button">Garbage Collection</button>
+        </a>
+        <br>
+    </div>
+    <div class="item">
+        <div class="header">
+            <strong>Village Alerts/ News</strong>
+        </div>
+        <hr>
+        <a id="Link" href="https://www.bolingbrook.com/boardactions">
+            <button id="topLink" class="btn btn-primary" style="border-top-left-radius: 4px; border-top-right-radius: 4px;" type="button">Board Actions Publication</button>
+        </a>
+        <a id="Link" href="https://www.bolingbrook.com/newsletter">
+            <button class="btn btn-primary" type="button">Newsletter Publication</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/alerts">
+            <button class="btn btn-primary" type="button">Village Alerts Publication</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/weeklyupdates">
+            <button class="btn btn-primary" type="button">Weekly Updates Publication</button>
+        </a>
+        <a id="Link" href="https://www.bolingbrook.com/police_news">
+            <button class="btn btn-primary" type="button">Brook Police News</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/education">
+            <button id="bottomLink" class="btn btn-primary" type="button">Education</button>
+        </a>
+        <br>
+    </div>
+    <div class="item">
+        <div class="header">
+            <strong>Online Bill Payment</strong>
+        </div>
+        <hr>
+        <a id="Link" href="https://www.bolingbrook.com/online_payments">
+            <button id="topLink" class="btn btn-primary" type="button">Online Payments</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/landlordlicense">
+            <button id="bottomLink" class="btn btn-primary" type="button">Landlord License Payment Online</button>
+        </a>
+        <br>
+    </div>
+    <div class="item">
+        <div class="header">
+            <strong>Events</strong>
+        </div>
+        <hr>
+        <a id="Link" href="https://www.bolingbrook.com/concerts">
+            <button id="topLink" class="btn btn-primary" type="button">Summer Concerts</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/jubilee">
+            <button id="bottomLink" class="btn btn-primary" type="button">Bolingbrook Jubilee</button>
+        </a>
+        <br>
+    </div>
+    <div style="order:2" class="item">
+        <div class="header">
+            <strong>Information</strong>
+        </div>
+        <hr>
+        <a id="Link" href="https://www.bolingbrook.com/index.asp?SEC=5A006CE3-E510-4A23-8DE9-1BFDB9728316">
+            <button id="topLink" class="btn btn-primary" type="button">Bolingbrook Today Podcasts</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/index.asp?SEC=8CA307EA-9A45-491B-938A-2DEC7CE6E100">
+            <button class="btn btn-primary" type="button">Foreclosure/Vacancies</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/index.asp?SEC=073BE154-44F5-417C-AE5C-DC2189483B2D">
+            <button class="btn btn-primary" type="button">Nuisance Wildlife</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/transportation">
+            <button class="btn btn-primary" type="button">Transportation</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/utilities">
+            <button class="btn btn-primary" type="button">Utilities</button>
+        </a>
+        <br>
+        <a id="Link" href="http://bolingbrookil.govoffice3.com/index.asp?SEC=28BCE499-98F3-4577-B231-4307EB95C77D&DE=44D9481A-957F-448D-B3A2-C113AC63B742&Type=B_BASIC">
+            <button class="btn btn-primary" type="button">Rent/Lease Program</button>
+        </a>
+        <br>
+        <a id="Link" href="https://www.bolingbrook.com/organizations">
+            <button class="btn btn-primary" type="button">Organizations</button>
+        </a>
+        <a id="Link" href="https://www.bolingbrook.com/kindness">
+            <button id="bottomLink" class="btn btn-primary" type="button">The Kindness Rocks Program</button>
+        </a>
+        <br>
+    </div>
+</div>
