@@ -101,3 +101,9 @@ function populateListWithItems() {
     }
 
 }
+
+function displayOnThisPage(){
+    if ($("#content").height() > $(window).height()) {
+    document.querySelector("#responsiveLink").setAttribute("style" , "display:contents");
+    }
+}
