@@ -1,6 +1,6 @@
+<!-- advanced html editor -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 <link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -164,10 +164,17 @@
 
 
     window.onload = function () {
+        displayOnThisPage();
         populateOnThisPage();
         desktopContactinfo();
     }
-
+    
+    
+    function displayOnThisPage(){
+        if ($("#content").height() > $(window).height()) {
+        document.querySelector("#responsiveLink").setAttribute("style" , "display:contents");
+        }
+    }
 
     function populateOnThisPage() {
         var items = document.querySelector("#mainPage").querySelectorAll("h1");
@@ -185,6 +192,12 @@
             $("#thisPage").append(a);
         }
     }
+
+
+
+
+ 
+
 
 </script>
 
