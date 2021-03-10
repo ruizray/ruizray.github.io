@@ -9,8 +9,15 @@
 <div id="content" class="container">
     <div class="row">
         <div id="leftSidebar" class="col-lg-3">
-        </div>
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
+            </div>
 
+        </div>
         <div id="mainPage" class="col-lg-9">
             <div id="Executive" class="section">
                 <div class="card">
@@ -342,7 +349,7 @@
 
                             </li>
                         </div>
-                        <div  id="emptyCell" class="col-lg-3">
+                        <div id="emptyCell" class="col-lg-3">
                             <li id="contactInfo" class="list-group-item">
 
                             </li>
@@ -399,7 +406,7 @@
                                 <a id="smallLink" href="tel:(800)244-4444" class="card-link">Phone</a>
                             </li>
                         </div>
-                        <div  class="col-lg-3">
+                        <div class="col-lg-3">
                             <li id="contactInfo" class="list-group-item">
                                 <h4 id="title" class="card-title">Refuse Collection</h4>
                                 <p style="font-size:1.3rem;margin-bottom:0px;" class="text-muted">Groot</p>
@@ -426,42 +433,7 @@
 
     </div>
 </div>
-<script>
-    window.onload = function () {
-        desktopContactinfo();
-    }
-    window.onresize = desktopContactinfo;
 
-    function desktopContactinfo() {
-        var list = document.querySelectorAll("#smallLink");
-
-        if ($(window).width() >= 900) {
-            for (var i = 0; i < list.length; i++) {
-                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
-                var method = list[i].innerText
-                var str = list[i].href;
-                str = str.split(":").pop();
-                list[i].innerText = str
-            }
-
-        }
-        if ($(window).width() < 900) {
-            for (var i = 0; i < list.length; i++) {
-                list[i].setAttribute("style", "#007bff !important;font-weight:500");
-                var method = list[i].href;
-                var test = method.split(":")
-                console.log(method);
-
-                if (method.includes("tel:") === true) {
-                    list[i].innerText = "Phone"
-                } else if (method.includes("mailto:") === true) {
-                    list[i].innerText = "Email"
-                }
-            }
-
-        }
-    }
-</script>
 <style>
     .row {
         margin-left: 0px;
@@ -494,3 +466,70 @@
         }
     }
 </style>
+
+<script>
+
+    window.onload = function () {
+        populateOnThisPage();
+        desktopContactinfo();
+        displayOnThisPage();
+        
+    }
+    window.onresize = desktopContactinfo;
+
+    function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
+                var method = list[i].innerText
+                var str = list[i].href;
+                str = str.split(":").pop();
+                list[i].innerText = str
+            }
+
+        }
+        if ($(window).width() < 900) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].setAttribute("style", "#007bff !important;font-weight:500");
+                var method = list[i].href;
+                var test = method.split(":")
+                console.log(method);
+
+                if (method.includes("tel:") === true) {
+                    list[i].innerText = "Phone"
+                } else if (method.includes("mailto:") === true) {
+                    list[i].innerText = "Email"
+                }
+            }
+
+        }
+    }
+
+
+
+
+    function displayOnThisPage() {
+        if ($("#content").height() > $(window).height()) {
+            document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
+        }
+    }
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h3");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+</script>
