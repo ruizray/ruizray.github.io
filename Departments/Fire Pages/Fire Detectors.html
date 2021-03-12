@@ -1,3 +1,4 @@
+<!-- advanced html editor -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,19 +10,23 @@
 <div id="content" class="container">
     <div class="row">
         <div id="leftSidebar" class="col-lg-3">
-            <div class="card-container">
-                <div id="responsiveLink" class="card">
-                    <div id="thisPage" class="btn-group-vertical">
-                        <h3 class="card-header">On This Page</h3>
-                    </div>
+
+            <div id="responsiveLink" class="card mb-3">
+                <div id="thisPage" class="btn-group-vertical">
+                    <h3 class="card-header">On This Page</h3>
                 </div>
             </div>
+
+
+
+
+
 
         </div>
 
         <div id="mainPage" class="col-lg-6">
             <div class="section">
-                <h1 id="smokeAlarm"
+                <h1 id="smokeDetectors"
                     class="sectionHead">Smoke Detectors</h1>
                 <p> The Bolingbrook Fire Department (BFD) offers free smoke alarm installation to qualified residents.
                     Please use the guidelines below to determine whether you qualify for this program, and contact Fire
@@ -39,10 +44,10 @@
                 <div class="subsection">
                     <h4 class="subHead">How do I dispose of an old Smoke Detector?</h4>
                     <p>Once the battery is removed, Smoke Detectors can be placed in the regular trash.<br>
-                        Residents can take their used batteries to Batteries Plus Bulbs at:
+                    Residents can take their used batteries to Batteries Plus Bulbs at:
                     <ul>
                         <li>Address: 1231 W Boughton Rd</li>
-                        <li>Phone: (630) 945-4925‎</li>
+                        <li>Phone: (630) 945-4925&#8206;</li>
                     </ul>
                     </p>
                 </div>
@@ -151,18 +156,35 @@
 </div>
 
 <script>
-    var items = document.querySelector("#mainPage").querySelectorAll("h1");
 
-    for (var i = 0; i < items.length; ++i) {
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
 
-        var button = $(
-            "<button type='button' class='btn btn-outline-primary'></button>"
-        ).text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
+    window.onload = function () {
+        displayOnThisPage();
+        populateOnThisPage();
+     
+    }
+    
+    
+    function displayOnThisPage(){
+        if ($("#content").height() > $(window).height()) {
+        document.querySelector("#responsiveLink").setAttribute("style" , "display:contents");
+        }
+    }
 
-        $("#thisPage").append(a);
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
     }
 </script>
