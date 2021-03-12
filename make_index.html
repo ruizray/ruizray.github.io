@@ -1,22 +1,23 @@
-<html>
-from mako.template import Template
-import argparse
-import os
 
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython_stdlib.js">
-    </script>
-</head>
 
-<body onload="brython()">
+    <html>
 
-    <script type="text/python">
+        <head>
+            <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython_stdlib.js">
+</script>
+        </head>
+
+        <body onload="brython()">
+
+            <script type="text/python">
             """ Build index from directory listing
 
 make_index.py </path/to/directory> [--header <header text>]
 """
+from __future__ import print_function
+import os.path, time
 
 INDEX_TEMPLATE = r"""
 
@@ -83,43 +84,43 @@ INDEX_TEMPLATE = r"""
 
 EXCLUDED = ['index.html']
 
+import os
+import argparse
 
 # May need to do "pip install mako"
+from mako.template import Template
 
-def fun(dir, rootdir):
+def fun(dir,rootdir):
     print('Processing: '+dir)
     filenames = [fname for fname in sorted(os.listdir(dir))
               if fname not in EXCLUDED and os.path.isfile(dir+fname)]
     dirnames = [fname for fname in sorted(os.listdir(dir))
-            if fname not in EXCLUDED]
+            if fname not in EXCLUDED  ]
     dirnames = [fname for fname in dirnames if fname not in filenames]
 #    header = os.path.basename(dir)
-    f = open(dir+'/index.html', 'w')
-    print(Template(INDEX_TEMPLATE).render(dirnames=dirnames, filenames=filenames,
-          header=dir, ROOTDIR=rootdir, time=time.ctime(os.path.getctime(dir))), file=f)
+    f = open(dir+'/index.html','w')
+    print(Template(INDEX_TEMPLATE).render(dirnames=dirnames,filenames=filenames, header=dir,ROOTDIR=rootdir,time=time.ctime(os.path.getctime(dir))),file=f)
     f.close()
     for subdir in dirnames:
         try:
-            fun(dir+subdir+"/", rootdir+'../')
+            fun(dir+subdir+"/",rootdir+'../')
         except:
             pass
-
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("directory")
     parser.add_argument("--header")
     args = parser.parse_args()
-    fun(args.directory+'/', '../')
-
+    fun(args.directory+'/','../')
 
 if __name__ == '__main__':
     main()
 
             </script>
 
-    <input id="zone"> <button id="mybutton"> click !< /button>
+            <input id="zone"><button id="mybutton">click !</button>
 
-</body>
+        </body>
 
-</html>
+    </html>
