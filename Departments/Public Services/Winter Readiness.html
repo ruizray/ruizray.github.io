@@ -34,17 +34,17 @@
                 <h1 id="ComEMessage" class="sectionHead">
                     Message From ComEd
                 </h1>
-                <p>Attached is a message from ComEd, urging all customers to be conscious and mindful during the upcoming winter months, regarding
-                    snow removal. Doing so will insure efficient service to all residents in the case of a power outage.
-                    Thank you for your cooperation.</p>
+
                 <div class="CTA">
-                    <p> Click here to read the message </p>
+                    <p>Attached is a message from ComEd, urging all customers to be conscious and mindful during the upcoming winter months, regarding
+                        snow removal. Doing so will insure efficient service to all residents in the case of a power outage.
+                        Thank you for your cooperation.</p>
                     <a
                        href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Customer_Snow_Plow_Letter(2).pdf"><button
                                 class='btn btn-primary CTAbutton'
                                 type='button'>ComEd Message</button></a>
                 </div>
-                
+
             </div>
             <div class="section">
                 <h1 id="ComEdMessage" class="sectionHead">
@@ -99,6 +99,7 @@
     window.onload = function () {
         populateOnThisPage();
         desktopContactinfo();
+        displayOnThisPage();
     }
 
 
@@ -133,6 +134,12 @@
 
         }
     }
+
+    function displayOnThisPage(){
+    if ($("#content").height() > $(window).height()) {
+    document.querySelector("#responsiveLink").setAttribute("style" , "display:contents");
+    }
+}
 
 </script>
 

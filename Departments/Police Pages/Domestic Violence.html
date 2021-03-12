@@ -116,7 +116,8 @@
                     <li>Battering often starts, or becomes worse, during pregnancy.</li>
                     <li>Once violence begins, it tends to increase over time and become more severe.</li>
                     <li>Two thirds of abusers who are violent towards their partners commit acts of violence towards their children.</li>
-                    <li>Children who witness violence are at a higher risk for becoming the next generation of victims and abusers, experimenting with drugs and alcohol, running away as teenagers and having problems in school.
+                    <li>Children who witness violence are at a higher risk for becoming the next generation of victims and abusers, experimenting with
+                        drugs and alcohol, running away as teenagers and having problems in school.
                     </li>
                 </ul>
             </div>
@@ -160,10 +161,10 @@
                     <li>Honeymoon or calm stage (this usually decreases or disappears over time).
                         The abuser may deny violence, say he/she was drunk, say he/she is sorry,
                         and/or promise it will never happen again.</li>
-                    
+
                 </ol>
             </div>
-            
+
         </div>
 
 
@@ -245,6 +246,7 @@
     window.onload = function () {
         desktopContactinfo();
         populateOnThisPage();
+        displayOnThisPage()
     }
 
     function populateOnThisPage() {
@@ -277,6 +279,12 @@
                 list[i].innerText = str
             }
 
+        }
+    }
+
+    function displayOnThisPage() {
+        if ($("#content").height() > $(window).height()) {
+            document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
         }
     }
 </script>
