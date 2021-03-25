@@ -237,6 +237,7 @@
     window.onload = function () {
         desktopContactinfo();
         populateOnThisPage();
+        displayOnThisPage();
     }
 
     function populateOnThisPage() {
@@ -269,6 +270,12 @@
                 list[i].innerText = str
             }
 
+        }
+    }
+
+    function displayOnThisPage() {
+        if ($("#content").height() > $(window).height()) {
+            document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
         }
     }
 </script>
