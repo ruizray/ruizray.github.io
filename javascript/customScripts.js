@@ -3,17 +3,15 @@
 //begin dialing the number or sending an email if on mobile.
 function desktopContactinfo() {
     var list = document.querySelectorAll("#smallLink");
-
-    if ($(window).width() >= 900) {
-        for (var i = 0; i < list.length; i++) {
-            list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
-            var method = list[i].innerText
-            var str = list[i].href;
+    
+    if($(window).width() >= 900){
+        for(var i =0; i < list.length; i ++){
+            console.log(list[i].href)
+            var str =list[i].href ;
             str = str.split(":").pop();
-            str = method + ": " + str;
-            list[i].innerText = str
+            list[i].innerText = str   
         }
-
+      
     }
 }
 
