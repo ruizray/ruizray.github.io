@@ -1,34 +1,35 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://ruizray.github.io/styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
 
 
 
 <div id="content" class="container">
     <div class="row">
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                On this Page
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3> 
+
+                    </div>
+                </div>
             </div>
-            <div id="thisPage" class="btn-group-vertical">
-
-            </div>
-
-
         </div>
+
 
 
 
         <div id="mainPage" class="col-md-6">
             <div class="section">
-                <div id="willNever" class="sectionHead">
+                <h1 id="About" class="sectionHead">
                     About Project
-                </div>
+                </h1>
 
                 <p>The Illinois Department of Transportation (Department) let two projects to reconstruct the interchange of Interstate 55 (I-55) at
                     Weber Road, and Weber Road from Romeo Road (135th Street) to Rodeo Drive (119th Street) in Will County in March, 2018. The
@@ -53,9 +54,9 @@
             </div>
 
             <div class="section">
-                <div id="media" class="sectionHead">
+                <h1 id="media" class="sectionHead">
                     Media
-                </div>
+                </h1>
                 <div style="text-align:center">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/8Pxv0vbdt-o" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -65,49 +66,78 @@
 
 
 
-        <div id="Sidebar" class="col-md-3">
-            <div class="SidebarTitle">
-                Contact Information
-            </div>
-            <div class="well">
-                <div class="contact">
-                    <h3 class="position">Public Services</h3>
-                    <div class="person">Engineering</div>
-                    <a href="tel:(630)226-8850">(630)226-8850</a>
-                </div>
-            </div>
+        <div id="rightSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Contact Information</h3>
 
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item">
+                            <h4 id="title" class="card-title">Public Services</h4>
+                            <a id="smallLink"
+                               href="tel:(630)226-8850" class="card-link">Phone
+                            </a>
+
+                    </ul>
+                </div>
+                
+
+            </div>
         </div>
 
     </div>
 
-</div>
+    <script>
 
-<script>
+        window.onload = function () {
+            displayOnThisPage();
+            populateOnThisPage();
+            desktopContactinfo();
+        }
 
+        function desktopContactinfo() {
+            var list = document.querySelectorAll("#smallLink");
 
-    var items = document.querySelector("#mainPage").querySelectorAll(".sectionHead");
+            if ($(window).width() >= 900) {
+                for (var i = 0; i < list.length; i++) {
+                    console.log(list[i].href)
+                    var str = list[i].href;
+                    str = str.split(":").pop();
+                    list[i].innerText = str
+                }
 
-    for (var i = 0; i < items.length; ++i) {
+            }
+        }
 
+        function populateOnThisPage() {
+            var items = document.querySelector("#mainPage").querySelectorAll("h1");
 
-        var id = items[i].getAttribute("id");
-        var text = items[i].innerText;
+            for (var i = 0; i < items.length; ++i) {
+                var id = items[i].getAttribute("id");
+                var text = items[i].innerText;
+                var button = $(
+                    "<button type='button' class='btn btn-outline-primary'></button>"
+                ).text(text);
+                var a = $("<a href= #" + id + "></a>");
+                a.append(button);
 
-        var button = $("<button class='btn btn-primary' type='button'></button>").text(text);
-        var a = $("<a href= #" + id + "></a>");
-        a.append(button);
+                $("#thisPage").append(a);
+            }
+        }
 
-        $("#thisPage").append(a);
-    }
-</script>
+        function displayOnThisPage() {
+            if ($("#content").height() > $(window).height()) {
+                document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
+            }
+        }
+    </script>
 
-<style>
-    #itemImage {
-        width: 100%;
-    }
+    <style>
+        #itemImage {
+            width: 100%;
+        }
 
-    .image.left {
-        display: none;
-    }
-</style>
+        .image.left {
+            display: none;
+        }
+    </style>

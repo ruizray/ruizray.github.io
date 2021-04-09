@@ -181,7 +181,7 @@
                                href="tel:(800)787-3224" class="card-link">Phone
                             </a>
                             <a id="smallLink"
-                               href="tel:(630)226-8820" class="card-link">TDD* Phone
+                               href="TDD:(630)226-8820" class="card-link">TDD*
                             </a>
                         </li>
                         <li id="contactInfo" class="list-group-item ">
@@ -191,7 +191,7 @@
                                href="tel:(815)729-1228" class="card-link">Phone
                             </a>
                             <a id="smallLink"
-                               href="tel:(815)741-4643" class="card-link">TDD* Phone
+                               href="TDD:(815)741-4643" class="card-link">TDD*
                             </a>
 
 
@@ -203,7 +203,7 @@
                                href="tel:(630)469-5650" class="card-link">Phone
                             </a>
                             <a id="smallLink"
-                               href="tel:(630)790-6344" class="card-link">TDD* Phone
+                               href="tdd:(630)790-6344" class="card-link">TDD*
                             </a>
 
 
@@ -244,9 +244,10 @@
 </div>
 <script>
     window.onload = function () {
+        displayOnThisPage();
         desktopContactinfo();
         populateOnThisPage();
-        displayOnThisPage()
+        displayOnThisPage();
     }
 
     function populateOnThisPage() {
@@ -268,29 +269,44 @@
 
     function desktopContactinfo() {
         var list = document.querySelectorAll("#smallLink");
-
         if ($(window).width() >= 900) {
             for (var i = 0; i < list.length; i++) {
-                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
-                var method = list[i].innerText
                 var str = list[i].href;
-                str = str.split(":").pop();
-                str = method + ": " + str;
-                list[i].innerText = str
+                var method = list[i].innerText
+                if (method == "TDD*") {
+                    str = str.split(":").pop();
+                    str = method + ": " + str;
+                    list[i].innerText = str
+
+                } else {
+                    str = str.split(":").pop();
+                    list[i].innerText = str
+                }
+
+            }
+        }
+        else {
+            for (var i = 0; i < list.length; i++) {
+                var str = list[i].href;
+                var method = list[i].innerText
+                if (method == "TDD*") {
+                    str = str.split(":").pop();
+                    str = method + ": " + str;
+                    list[i].innerText = str
+
+                }
+
+
             }
 
         }
     }
-
     function displayOnThisPage() {
         if ($("#content").height() > $(window).height()) {
             document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
         }
     }
+
+
 </script>
 
-<style>
-    #itemImage {
-        width: 100%;
-    }
-</style>
