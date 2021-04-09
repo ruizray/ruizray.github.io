@@ -282,7 +282,7 @@
 
     window.onload = function () {
         desktopContactinfo();
-   
+        populateFromNavbar();
         resizeCarousel();
     }
 
@@ -315,27 +315,27 @@
     }
 
 
-    // function populateFromNavbar() {
-    //     const filter = ['Code Enforcement'];
-    //     var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
-    //     for (var i = 0; i < ul.length; ++i) {
-    //         var link = ul[i].firstElementChild.href;
-    //         var name = ul[i].firstElementChild.lastElementChild.textContent;
-    //         for (const element of filter) {
-    //             if (element === name) {
-    //                 break;
-    //             }
-    //             else {
-    //                 var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
-    //                 var a = $("<a href=" + link + "></a>");
-    //                 a.append(button)
-    //                 $('#quickLinks').append(a);
-    //                 break;
-    //             }
-    //         }
-    //     }
+    function populateFromNavbar() {
+        const filter = ['Code Enforcement'];
+        var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
+        for (var i = 0; i < ul.length; ++i) {
+            var link = ul[i].firstElementChild.href;
+            var name = ul[i].firstElementChild.lastElementChild.textContent;
+            for (const element of filter) {
+                if (element === name) {
+                    break;
+                }
+                else {
+                    var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
+                    var a = $("<a href=" + link + "></a>");
+                    a.append(button)
+                    $('#quickLinks').append(a);
+                    break;
+                }
+            }
+        }
 
-    // }
+    }
 
     function relocateText() {
         var boxSize = document.querySelectorAll(".bottomBox").height();
