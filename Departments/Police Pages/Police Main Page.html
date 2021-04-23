@@ -3,12 +3,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
 
 <div id="content" class="container">
+
     <div class="row">
 
         <div id="leftSidebar" class="col-lg-3">
@@ -22,91 +28,82 @@
                 </div>
             </div>
         </div>
-        <div id="mainPage" class="col-lg-6">
-            <div class="section">
-                <div style="margin-bottom: 1rem;" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="jumbotron">
-                                <h1 class="display-4">Mission Statement</h1>
-                                <p class="lead">The mission of the Bolingbrook Police Department is to work in partnership with the community to
-                                    prevent, reduce and deter crime. We are committed to the citizens of Bolingbrook and the men and
-                                    women
-                                    of our department to provide professional police service in an ethical, courteous and impartial
-                                    manner.
-                                    In furtherance of this mission, we are committed to the following values represented by the law
-                                    enforcement star we wear:&nbsp;<strong>Justice, Temperance, Courage, Prudence, Fortitude, Tolerance
-                                        and
-                                        Truth.</strong></p>
-    
-                                <div class="bottomBox" style="position: relative;top: 100px ">
-                                    <hr class="my-4">
-                                    <div  class="row">
-                                        <div class="col-lg-12">
-                                            <img style="float:right;height: 9rem !important;margin-left:20px;"
-                                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Bolingbrook_PD_Police_Officer_Badge_PNG.png">
-                                            <p style="color:red;text-align:center">Ongoing Missing Persons Cases:<br>
-                                                ~Rachel Marie Mellon<br>
-                                                ~Stacy Ann Peterson<br>
-                                                ~Thomas J McGinn<br></p>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="jumbotron">
-                                <h1 class="display-4">Message From the Department</h1>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="pull-right" style="padding-left:20px;text-align:center;float:right;"><img
-                                                 style="height: 270px !important;max-width: 100% !important;width: 250px;"
-                                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/940.jpg"
-                                                 alt="Police Chief Mike Rompa" /> <br><i>Mike Rompa<br>Chief of Police</i></div>
-                                        <p class="lead">Welcome to the Bolingbrook Police Department website. We invite you to explore the various pages
-                                            and
-                                            links.
-                                            It
-                                            is our hope that you find the information here helpful. The members of the Bolingbrook Police
-                                            Department are
-                                            a
-                                            dedicated group of professionals who take great pride in their work. We are committed to preventing
-                                            crime,
-                                            addressing quality of life concerns and impartially enforcing the law. Our success is due to the
-                                            strong
-                                            support
-                                            we receive from our growing community. We recognize the value of those relationships and constantly
-                                            work to
-                                            strengthen the partnerships with those we serve. Our goal remains making sure Bolingbrook stays a
-                                            great
-                                            place to
-                                            live, work and raise a family.
 
-                                            <br>
-                                            If you have any questions regarding our department or if we
-                                            can be
-                                            of
-                                            additional service to you, please feel free to contact the police department by email at
-                                            <a href="mailto:police@bolingbrook.com">police@bolingbrook.com</a>
-                                            or telephone at <a href="tel:630-226-8600">630-226-8600</a>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
+
+        <div id="mainPage" class="col-lg-6">
+
+            <section class="one-time">
+
+                <div class="jumbotron">
+                    <h1 class="display-4">Mission Statement</h1>
+                    <p class="lead">The mission of the Bolingbrook Police Department is to work in partnership with the community to
+                        prevent, reduce and deter crime. We are committed to the citizens of Bolingbrook and the men and
+                        women
+                        of our department to provide professional police service in an ethical, courteous and impartial
+                        manner.
+                        In furtherance of this mission, we are committed to the following values represented by the law
+                        enforcement star we wear:&nbsp;<strong>Justice, Temperance, Courage, Prudence, Fortitude, Tolerance
+                            and
+                            Truth.</strong></p>
+
+
+                    <hr class="display-4">
+
+                    <div class="col-lg-12">
+                        <img style="float:right;height: 9rem !important;margin-left:20px;"
+                             src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Bolingbrook_PD_Police_Officer_Badge_PNG.png"
+                             width="100">
+                        <p style="color:red;text-align:center">Ongoing Missing Persons Cases:<br>
+                            ~Rachel Marie Mellon<br>
+                            ~Stacy Ann Peterson<br>
+                            ~Thomas J McGinn<br></p>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-            </div>
+
+
+                <div class="jumbotron">
+                    <h1 class="display-4">Message From the Department</h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right" style="padding-left:20px;text-align:center;float:right;"><img
+                                     style="height: 270px !important;max-width: 100% !important;width: 250px;"
+                                     src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/940.jpg"
+                                     alt="Police Chief Mike Rompa" /> <br><i>Mike Rompa<br>Chief of Police</i></div>
+                            <p class="lead">Welcome to the Bolingbrook Police Department website. We invite you to explore the various
+                                pages
+                                and
+                                links.
+                                It
+                                is our hope that you find the information here helpful. The members of the Bolingbrook Police
+                                Department are
+                                a
+                                dedicated group of professionals who take great pride in their work. We are committed to preventing
+                                crime,
+                                addressing quality of life concerns and impartially enforcing the law. Our success is due to the
+                                strong
+                                support
+                                we receive from our growing community. We recognize the value of those relationships and constantly
+                                work to
+                                strengthen the partnerships with those we serve. Our goal remains making sure Bolingbrook stays a
+                                great
+                                place to
+                                live, work and raise a family.
+
+                                <br>
+                                If you have any questions regarding our department or if we
+                                can be
+                                of
+                                additional service to you, please feel free to contact the police department by email at
+                                <a href="mailto:police@bolingbrook.com">police@bolingbrook.com</a>
+                                or telephone at <a href="tel:630-226-8600">630-226-8600</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
             <div class="section">
                 <div style="border: 3px solid rgba(0,0,0,.125);padding: 0px 0px 0px 0px;" class="card">
 
@@ -122,49 +119,7 @@
                 </div>
             </div>
 
-            <div class="section">
 
-                <h1 id="about" class="sectionHead">Message From the Department</h1>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="pull-right" style="padding-left:20px;text-align:center;float:right;"><img
-                                 style="height: 270px !important;max-width: 100% !important;width: 250px;"
-                                 src="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/940.jpg"
-                                 alt="Police Chief Mike Rompa" /> <br><i>Mike Rompa<br>Chief of Police</i></div>
-                        <p>Welcome to the Bolingbrook Police Department website. We invite you to explore the various pages and
-                            links.
-                            It
-                            is our hope that you find the information here helpful. The members of the Bolingbrook Police
-                            Department are
-                            a
-                            dedicated group of professionals who take great pride in their work. We are committed to preventing
-                            crime,
-                            addressing quality of life concerns and impartially enforcing the law. Our success is due to the
-                            strong
-                            support
-                            we receive from our growing community. We recognize the value of those relationships and constantly
-                            work to
-                            strengthen the partnerships with those we serve. Our goal remains making sure Bolingbrook stays a
-                            great
-                            place to
-                            live, work and raise a family.
-
-
-
-
-                            <br>
-                            If you have any questions regarding our department or if we
-                            can be
-                            of
-                            additional service to you, please feel free to contact the police department by email at
-                            <a href="mailto:police@bolingbrook.com">police@bolingbrook.com</a>
-                            or telephone at <a href="tel:630-226-8600">630-226-8600</a>.
-                        </p>
-
-
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="rightSidebar" class="col-lg-3">
 
@@ -274,7 +229,22 @@
 </div>
 
 
+<script type="text/javascript">
 
+    $(document).ready(function () {
+        $('.one-time').slick({
+
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            lazyLoad: "ondemand",
+            vertical: false,
+        });
+
+    });
+</script>
 
 
 
@@ -283,31 +253,19 @@
     window.onload = function () {
         desktopContactinfo();
         populateFromNavbar();
-        resizeCarousel();
+
     }
 
-    function resizeCarousel(){
-        var items = document.querySelectorAll("#carouselExampleControls > div > div.carousel-item > div ")
-        if ($(window).width() <= 900) {
-            for (var i = 0; i < items.length; i++) {
-                items[i].setAttribute("style", "height:auto !important;max-height:none !important");
-                console.log(items[i].getAttribute("style"))
-                
-            }
 
-        }
-    }
 
     function desktopContactinfo() {
         var list = document.querySelectorAll("#smallLink");
 
         if ($(window).width() >= 900) {
             for (var i = 0; i < list.length; i++) {
-                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
-                var method = list[i].innerText
+                console.log(list[i].href)
                 var str = list[i].href;
                 str = str.split(":").pop();
-                str = method + ": " + str;
                 list[i].innerText = str
             }
 
@@ -337,14 +295,18 @@
 
     }
 
-    function relocateText() {
-        var boxSize = document.querySelectorAll(".bottomBox").height();
 
-        
-    }
+
+
 </script>
 
 <style>
+    @media (min-width: 576px) {
+        .jumbotron {
+            padding: 2rem 2rem;
+        }
+    }
+
     #responsiveLink {
         display: contents;
     }
@@ -365,12 +327,22 @@
     }
 
 
-    .carousel-item>.jumbotron {
-        width: auto;
-        height: 576px;
-        max-height: 576px;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        padding-top: 1rem;
+    .slick-slide img {
+        width: auto !important;
+    }
+
+    .jumbotron {
+        height: auto;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
     }
 </style>
