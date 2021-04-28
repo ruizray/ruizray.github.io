@@ -1,0 +1,207 @@
+<!-- advanced html editor -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+<div id="content" class="container">
+    <div class="row">
+       
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+                <div class="card" style="background-color:white">
+                    <h3 class="card-header">Quick Links</h3>
+                        <div id="quickLinks">
+                        </div>
+                </div>
+            </div>
+             <div class="card-container">
+                <div class="card" style="background-color:white">
+                    <div id="employmentLinks" class="btn-group-vertical">
+                        <h3 class="card-header">Employment Opportunities</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+                <h1 id="missionStatement">Welcome</h1>
+                <p>
+                    Thank you for your interest in pursuing a career with us. We are honored that you are interested in being a part of an exceptional
+                    team.<br>
+                    The Village of Bolingbrook is an Equal Opportunity Employer.
+                    <p>
+                <div class="CTA">
+                    <p>Paper applications and resumes will no longer be accepted. Applications for any position at the village MUST be completed online using the link below.<span style="color:red">*</span></p>
+                    <a
+                       href="https://www.bolingbrook.com/vertical/sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Commission_Application_08.04.2020.pdf"><button
+                                class='btn btn-primary CTAbutton'
+                                type='button'>Online Application Form</button></a>
+                </div>
+                <p style="font-weight:700;color:red">If you are applying for the position of Firefighter/Paramedic, you must come into the Finance Department to pick up an application and pay the application fee.
+                Online applications will not be accepted. For more information about the testing process, click <a href="https://bolingbrookil.govoffice3.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/293348_23926_Legal_Notice_of_Fire_Recruitment_-__2021_final.pdf">here</a>. If you have any further questions, please contact the Fire Department by phone at 630-226-8540 or by email at fire@bolingbrook.com
+        All applications will be accepted until all positions are filled. Please note that due to the demand of
+        applications that we receive, a member of our team will reach out to you if they decide to move forward during
+        the process.</p>
+                <p>
+                All applications will be accepted until all positions are filled. Please note that due to the demand of applications that we
+                receive, a member of our team will reach out to you if they decide to move forward during the process.
+
+                </p>
+                
+            </div>
+
+           
+
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-header">Contact Information</h3>
+
+                    <ul id="contactList" class="list-group list-group-flush">
+                        <li id="contactInfo" class="list-group-item ">
+                            <h4 id="title" class="card-title">Human Resources Office</h4>
+                            <a id="smallLink"
+                               href="tel:(630)226-8435" class="card-link">Phone
+                            </a>
+                            <a id="smallLink"
+                               href="fax:(630)226-8459" class="card-link">Fax
+                            </a>
+                            <a id="smallLink"
+                               href="mailto:vobhumanresources@bolingbrook.com" class="card-link">Email
+                            </a>
+
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    window.onload = function () {
+        desktopContactinfo();
+        populateLeftWithItems();
+        populateOnThisPage();
+        populateListWithNavbar();
+    }
+
+   function desktopContactinfo() {
+        var list = document.querySelectorAll("#smallLink");
+        if ($(window).width() >= 900) {
+            for (var i = 0; i < list.length; i++) {
+                var str = list[i].href;
+                var method = list[i].innerText
+                if (method == "Fax") {
+                    str = str.split(":").pop();
+                    str = method + ": " + str;
+                    list[i].innerText = str
+
+                } else {
+                    str = str.split(":").pop();
+                    list[i].innerText = str
+                }
+
+            }
+        }
+        else {
+            for (var i = 0; i < list.length; i++) {
+                var str = list[i].href;
+                var method = list[i].innerText
+                if (method == "Fax") {
+                    str = str.split(":").pop();
+                    str = method + ": " + str;
+                    list[i].innerText = str
+                }
+            }
+        }
+    }
+
+    function populateLeftWithItems() {
+        var list = document.querySelectorAll("div.box.B_JOB > div > article > h2 >a ")
+        for (var i = 0; i < list.length; i++) {
+
+            var link = list[i].href
+            var text = list[i].innerText;
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+
+
+            var a = $("<a href= " + link + "></a>");
+            a.append(button);
+
+            $("#employmentLinks").append(a);
+        }
+
+    }
+    
+     function populateOnThisPage() {
+    var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+    for (var i = 0; i < items.length; ++i) {
+        var id = items[i].getAttribute("id");
+        var text = items[i].innerText;
+        var button = $(
+            "<button type='button' class='btn btn-outline-primary'></button>"
+        ).text(text);
+        var a = $("<a href= #" + id + "></a>");
+        a.append(button);
+
+        $("#thisPage").append(a);
+    }
+}
+function populateListWithNavbar() {
+    const filter = ['-0'];
+    var ul = document.querySelectorAll("body > div.allContainer > header > div.topbar2 > div.banner > nav > ul > li.current.hasChildren > ul > li.current.hasChildren > ul")[0].getElementsByTagName("li")
+    for (var i = 0; i < ul.length; ++i) {
+        var link = ul[i].firstElementChild.href;
+        var name = ul[i].firstElementChild.lastElementChild.textContent;
+        for (const element of filter) {
+            if (element === name) {
+                break;
+            }
+            else {
+                var button = $("<button type='button' class='btn btn-primary '></button>").text(name);
+                var a = $("<a href=" + link + "></a>");
+                a.append(button)
+                $('#quickLinks').append(a);
+                break;
+            }
+        }
+    }
+
+}
+</script>
+<style>
+    
+    button.btn.btn-primary:hover,
+    button.btn-outline-primary:hover {
+        color: #fff;
+        background-color: #337ab7 !important;
+        border-color: #337ab7;
+    }
+
+    button.btn.btn-primary {
+        background-color: white;
+    }
+    
+#responsiveLink {
+        display: contents !important;
+    }
+    div.box.B_JOB>div>article {
+        display: none;
+    }
+</style>
