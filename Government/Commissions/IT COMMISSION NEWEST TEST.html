@@ -5,10 +5,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 <link rel="newest stylesheet" href="https://ruizray.github.io/bs4test.css" />
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 
 <div id="content" class="container">
     <div class="row">
-
         <div id="leftSidebar" class="col-lg-3">
             <div class="card-container">
                 <img style="width:100%;border-left:1px solid rgba(0,0,0,.125); border-right:1px solid rgba(0,0,0,.125); border-top:1px solid rgba(0,0,0,.125)"
@@ -40,47 +40,133 @@
 
                 <h1 id="about" class="sectionHead">Public Meetings</h1>
                 <div class="subsection">
+                    <p>
                     <h4 style="display:inline" class="subHead">Where:</h4><span style="display:inline"> Village Board Room</span><br>
 
                     <h4 style="display:inline" class="subHead">When:</h4><span> 1st, 3rd and 5th Thursday of every month Starting at 7:00PM</span>
-
+                    </p>
                 </div>
             </div>
 
 
             <div class="section">
-                <h1 id="about">Upcoming Events</h1>
+                <div class="subsection">
+                    <h1 id="about">Upcoming Events</h1>
+
+                    <h4 class="subHead">
+                        Hardrive Failure Webinar<small class="text-muted"> Tuesday March 23rd 2021 at 7:00 pm</small>
+                    </h4>
+
+                    <p>
+                        Your hard drive will fail! Learn how to prepare for it on a PC running Windows 10. It's not a matter of whether the hard drive
+                        in
+                        your PC will crash; it&#8217;s when, they all do eventually. Learn how to deal with the inevitable. In this webinar, Jerry
+                        Gynac,
+                        commissioner with the Village of Bolingbrook Information Technology Commission, will discuss the three &#8220;Rs&#8221; of
+                        Windows
+                        10.
+                    </p>
+                    <ul>
+                        <li>Recovery</li>
+                        <li>Restore</li>
+                        <li>Replace</li>
+                    </ul>
+                    <p> Learn how to setup these Windows utilities to rescue your data. This event is sponsored by the Fountaindale Public Library.
+                        More information will be available in the 2021 spring issue of The Fountain. </p>
+                    <div class="CTA">
+                        <p>
+                            Registration is required to attend. Please go to the library's website to register:</p>
+                        <a
+                           href="http://communico.fountaindale.org/event/4882468"><button
+                                    class='btn btn-primary CTAbutton' type='button'>Library Website</button></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section">
+                <h1 id="roster">Committee Roster</h1>
                 <div class="subsection">
                     <h4 class="subHead">
-                        Hardrive Failure Webinar<small class="text-muted"> Wednesday March 24th 2021 at 7:00 pm</small>
+                        Advisory Services Committee<br><small class="text-muted"> The role of the Advisory Services committee is to review and provide
+                            action recommendations for technical IT assistance requests.</small>
                     </h4>
-                </div>
-                <p>
-                    Your hard drive will fail! Learn how to prepare for it on a PC running Windows 10. It's not a matter of whether the hard drive in
-                    your PC will crash; it&#8217;s when, they all do eventually. Learn how to deal with the inevitable. In this webinar, Jerry Gynac,
-                    commissioner with the Village of Bolingbrook Information Technology Commission, will discuss the three &#8220;Rs&#8221; of Windows
-                    10.
-                </p>
-                <ul>
-                    <li>Recovery</li>
-                    <li>Restore</li>
-                    <li>Replace</li>
-                </ul>
-                <p> Learn how to setup these Windows utilities to rescue your data. This event is sponsored by the Fountaindale Public Library.
-                    More information will be available in the 2021 spring issue of The Fountain. </p>
-                <div class="CTA">
-                    Registration is required to attend. Please go to the library's website to register:
-                    <a
-                       href="https://selfservice.bolingbrook.com/MSSLive/login.aspx?ReturnUrl=%2fMSSLive%2fcitizens%2fdefault.aspx"><button
-                                class='btn btn-primary CTAbutton' type='button'>Library Website</button></a>
-                </div>
+                    <ul>
+                        <li>
+                            <h4>Committee Chair: </h4>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Toni Washington</p>
+                            </li>
+                        </ul>
+                        <li>
+                            <h4>Committee Members: </h4>
+                        </li>
+                        <ul>
+                            <li>Elden P. Laffoon, SR.</li>
+                            <li>Brian Dennis</li>
+                            <li>Ron Stork</li>
+                            <li>Eric McIntyre</li>
+                        </ul>
+                    </ul>
 
+                </div>
+                <div class="subsection">
+                    <h4 class="subHead">
+                        Content Committee<br><small class="text-muted"> The role of the Content Committee is to review and provide action
+                            recommendations for information technology based informational and editorial content requests.</small>
+                    </h4>
+                    <ul>
+                        <li>
+                            <h4>Committee Chair: </h4>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Gwendolyn Arrington</p>
+                            </li>
+                        </ul>
+                        <li>
+                            <h4>Committee Members: </h4>
+                        </li>
+                        <ul>
+                            <li>Brian Dennis</li>
+                            <li>Eric McIntyre</li>
+                            <li>Rudy Kapadia</li>
+                            <li>Karl Natschke</li>
+                            <li>Mark Behrens</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h4 class="subHead">
+                        Special Events Committee:<br><small class="text-muted"> The role of the Special Events Committee is to provide organization
+                            oversight and coordination of activities for events that the general commission has approved commission
+                            participation.</small>
+                    </h4>
+                    <ul>
+                        <li>
+                            <h4>Committee Chair: </h4>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Dianna Walker</p>
+                            </li>
+                        </ul>
+                        <li>
+                            <h4>Committee Members: </h4>
+                        </li>
+                        <ul>
+                            <li>Sean Walker</li>
+                            <li>Karl Natschke</li>
+                            <li>Mark Behrens</li>
+                            <li>Rudy Kapadia</li>
+                            <li>Steve Mertes</li>
+                            <li>Lakshmi Anumalasetty</li>
+                        </ul>
+                    </ul>
 
+                </div>
             </div>
-
-
-
-
         </div>
         <div id="rightSidebar" class="col-lg-3">
             <div class="card-container">
@@ -88,7 +174,7 @@
                     <h3 class="card-header">Contact Information</h3>
                     <ul id="contactList" class="list-group list-group-flush">
                         <li id="contactInfo" class="list-group-item ">
-                            <h4 id="title" class="card-title">Jerry Gynac<small class="text-muted"> chair</small></h4>
+                            <h4 id="title" class="card-title">Jerry Gynac<small class="text-muted"> Chair</small></h4>
 
                             <a id="smallLink"
                                href="mailto:chair@vobitc.org" class="card-link">Email
@@ -138,7 +224,6 @@
         </div>
     </div>
 </div>
-
 <script>
 
     window.onload = function () {
@@ -152,11 +237,9 @@
 
         if ($(window).width() >= 900) {
             for (var i = 0; i < list.length; i++) {
-                list[i].setAttribute("style", "color:#6c757d !important;font-weight:500");
-                var method = list[i].innerText
+                console.log(list[i].href)
                 var str = list[i].href;
                 str = str.split(":").pop();
-                str = method + ": " + str;
                 list[i].innerText = str
             }
 

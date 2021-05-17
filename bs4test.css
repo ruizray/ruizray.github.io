@@ -236,10 +236,7 @@ ol li {
   font-size: 1.2rem;
 }
 
-#thisPage {
-  border: 0px solid rgba(0, 0, 0, 0.125) !important;
-  margin-bottom: 0px;
-}
+
 
 #responsiveLink {
   display: none;
@@ -319,4 +316,5 @@ ol li {
   border: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
+  margin-bottom: 0px;
 }
