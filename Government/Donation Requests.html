@@ -1,0 +1,108 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="newest stylesheet" href="https://ruizray.github.io\bs4test.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet" />
+
+
+<div id="content" class="container">
+    <div class="row">
+
+        <div id="leftSidebar" class="col-lg-3">
+            <div class="card-container">
+
+
+                <div id="responsiveLink" class="card">
+                    <div id="thisPage" class="btn-group-vertical">
+                        <h3 class="card-header">On This Page</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="mainPage" class="col-lg-6">
+            <div class="section">
+                
+            </div>
+
+           
+
+
+
+
+
+            <script type="text/javascript" src="https://form.jotform.com/jsform/211464190781051"></script>
+        </div>
+        <div id="rightSidebar" class="col-lg-3">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+    window.onload = function () {
+        desktopContactinfo();
+        populateOnThisPage();
+        populateListWithItems();
+        displayOnThisPage();
+    }
+
+    function desktopContactinfo() {
+    var list = document.querySelectorAll("#smallLink");
+    
+    if($(window).width() >= 900){
+        for(var i =0; i < list.length; i ++){
+            console.log(list[i].href)
+            var str =list[i].href ;
+            str = str.split(":").pop();
+            list[i].innerText = str   
+        }
+      
+    }
+}
+
+    function populateOnThisPage() {
+        var items = document.querySelector("#mainPage").querySelectorAll("h1");
+
+        for (var i = 0; i < items.length; ++i) {
+            var id = items[i].getAttribute("id");
+            var text = items[i].innerText;
+
+            var button = $(
+                "<button type='button' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= #" + id + "></a>");
+            a.append(button);
+
+            $("#thisPage").append(a);
+        }
+    }
+    function populateListWithItems() {
+        var list = document.querySelectorAll(" div.box.B_BASIC > div > article > h2 > a")
+        for (var i = 0; i < list.length; i++) {
+
+            var link = list[i].href
+            var text = list[i].innerText;
+            var button = $(
+                "<button type='button' style='border-bottom: 1px solid rgba(0,0,0,.125);' class='btn btn-outline-primary'></button>"
+            ).text(text);
+            var a = $("<a href= " + link + "></a>");
+            a.append(button);
+            $("#pageItems").append(a);
+        }
+
+    }
+    function displayOnThisPage() {
+        if ($("#content").height() > $(window).height()) {
+            document.querySelector("#responsiveLink").setAttribute("style", "display:contents");
+        }
+    }
+</script>
+<style>
+    div.box.B_BASIC>div>article>h2>a {
+        display: none;
+    }
+</style>
