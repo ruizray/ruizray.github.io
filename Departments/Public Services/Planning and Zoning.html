@@ -15,7 +15,8 @@
 
                 <div id="responsiveLink" class="card">
                     <div style="
-                        border-top: 1px solid rgba(0, 0, 0, 0.125) !important; border-right: 1px solid rgba(0, 0, 0, 0.125) !important;" id="quickLinks" class="btn-group-vertical">
+                        border-top: 1px solid rgba(0, 0, 0, 0.125) !important; border-right: 1px solid rgba(0, 0, 0, 0.125) !important;"
+                         id="quickLinks" class="btn-group-vertical">
                         <h3 class="card-header">Quick Links</h3>
                         <a href=""><button type='button' class='btn btn-outline-primary'>Zoning Code</button></a>
                         <a href=""><button type='button' class='btn btn-outline-primary'>Sign Code</button></a>
@@ -75,7 +76,7 @@
                     </div>
                 </div>
             </div>
-          
+
 
 
 
@@ -87,23 +88,32 @@
                     <h3 class="card-header">Community Development Department</h3>
                     <ul id="contactList" class="list-group list-group-flush">
                         <li id="contactInfo" class="list-group-item ">
-                            <h4 id="title" class="card-title">Village Hall<br><small class="text-muted"> Monday – Friday<br>
-                                    8:30am to 5:00pm
-                                </small></h4>
+                            <h4 id="title" class="card-title">Admin<small class="text-muted"> </small></h4>
 
                             <a id="smallLink"
                                href="tel:(630)226-8460" class="card-link">Phone
                             </a>
+                            <a id="smallLink"
+                               href="Fax:(630)226-8469" class="card-link">Fax
+                            </a>
+
+
+
                         </li>
+
                         <li id="contactInfo" class="list-group-item ">
-                            <h4 id="title" class="card-title">Planning & Zoning Office</h4>
-
+                            <h4 id="title" class="card-title">Matthew Eastman<small class="text-muted"> Director</small></h4>
                             <a id="smallLink"
-                               href="tel:(630)226-8460" class="card-link">Phone
+                               href="mailto:meastman@bolingbrook.com" class="card-link">Email
+                            </a>
+                            <a id="smallLink"
+                               href="tel:(630)226-8486" class="card-link">Phone
                             </a>
                         </li>
+
                     </ul>
                 </div>
+
                 <div class="card">
                     <h3 class="card-header">Engineering Division</h3>
                     <ul id="contactList" class="list-group list-group-flush">
@@ -124,12 +134,12 @@
                     <ul id="contactList" class="list-group list-group-flush">
                         <li id="contactInfo" class="list-group-item ">
                             <h4 id="title" class="card-title">Steven Touloumis<small class="text-muted"> Building Commissioner</small></h4>
-                                <a id="smallLink"
-                                   href="mailto:stouloumis@bolingbrook.com" class="card-link">Email
-                                </a>
-                                <a id="smallLink"
-                                   href="tel:(630)226-8470" class="card-link">Phone
-                                </a>
+                            <a id="smallLink"
+                               href="mailto:stouloumis@bolingbrook.com" class="card-link">Email
+                            </a>
+                            <a id="smallLink"
+                               href="tel:(630)226-8470" class="card-link">Phone
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -138,9 +148,15 @@
                     <ul id="contactList" class="list-group list-group-flush">
                         <li id="contactInfo" class="list-group-item ">
                             <h4 id="title" class="card-title">Matthew Eastman<small class="text-muted"> Director of Community Development</small></h4>
-                                <a id="smallLink"
-                                   href="mailto:meastman@bolingbrook.com" class="card-link">Email
-                                </a>
+                            <a id="smallLink"
+                               href="mailto:lmiller@bolingbrook.com" class="card-link">Email
+                            </a>
+                            <a id="smallLink"
+                               href="tel:(630)226-8460 " class="card-link">Phone
+                            </a>
+                            <a id="smallLink"
+                               href="tel:(630)226-8460  " class="card-link">Office
+                            </a>
 
                         </li>
                     </ul>
@@ -168,10 +184,31 @@
             for (var i = 0; i < list.length; i++) {
                 console.log(list[i].href)
                 var str = list[i].href;
-                str = str.split(":").pop();
-                list[i].innerText = str
+                str = str.split(":");
+                console.log(str)
+                if (str[0] === 'fax') {
+                    console.log("Here")
+                    list[i].innerText = str[0] + ": " + str[1]
+                } else {
+                    list[i].innerText = str[1]
+                }
+
             }
 
+        } else {
+            for (var i = 0; i < list.length; i++) {
+                console.log(list[i].href)
+                var str = list[i].href;
+                str = str.split(":");
+                console.log(str)
+                if (str[0] === 'fax') {
+                    console.log("Here")
+                    list[i].innerText = str[0] + ": " + str[1]
+                } else {
+
+                }
+
+            }
         }
     }
 
