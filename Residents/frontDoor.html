@@ -24,17 +24,12 @@
 		href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
 		rel="stylesheet"
 	/>
-
-
-	<!-------- Material UI Imports -->
-	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
-	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </head>
 
 <div id="content" class="container-fluid">
 	<div class="row gx">
 		<div class="col-lg-2">
-			<div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion" id="accordionFlushExample">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="flush-headingOne">
 						<button
@@ -45,7 +40,7 @@
 							aria-expanded="false"
 							aria-controls="flush-collapseOne"
 						>
-							Online Payments
+							<strong> Online Payments</strong>
 						</button>
 					</h2>
 					<div
@@ -55,91 +50,7 @@
 						data-bs-parent="#accordionFlushExample"
 					>
 						<div style="padding: 0px" class="accordion-body">
-							<div style="border-radius: 0px; border-top: 0px; border-bottom: 0px" class="list-group">
-								<a
-									href="https://selfservice.bolingbrook.com/MSSLive/login.aspx?ReturnUrl=%2fMSSLive%2fcitizens%2fdefault.aspx"
-									class="list-group-item list-group-item-action"
-									aria-current="true"
-								>
-									Utility Billing
-								</a>
-								<a href="https://bolingbrook-il.dacragov.com/il/bolingbrook/payment" class="list-group-item list-group-item-action"
-									>Parking Ticket</a
-								>
-								<a href="https://amwater.com/ilaw/" class="list-group-item list-group-item-action">Water Bill</a>
-								<a href="https://www.govpaynow.com/gps/user/cyg/plc/a003pt" class="list-group-item list-group-item-action"
-									>Landlord License Payment</a
-								>
-								<a href="http://www.willcountytreasurer.com/" class="list-group-item list-group-item-action"
-									>Property Taxes (Will County Treasurer) item</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="flush-headingTwo">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseTwo"
-							aria-expanded="false"
-							aria-controls="flush-collapseTwo"
-						>
-							Link Set #2
-						</button>
-					</h2>
-					<div
-						id="flush-collapseTwo"
-						class="accordion-collapse collapse"
-						aria-labelledby="flush-headingTwo"
-						data-bs-parent="#accordionFlushExample"
-					>
-						<div style="padding: 0px" class="accordion-body">
-							<div style="border-radius: 0px; border-top: 0px; border-bottom: 0px" class="list-group">
-								<a
-									href="https://selfservice.bolingbrook.com/MSSLive/login.aspx?ReturnUrl=%2fMSSLive%2fcitizens%2fdefault.aspx"
-									class="list-group-item list-group-item-action"
-									aria-current="true"
-								>
-									Utility Billing
-								</a>
-								<a href="https://bolingbrook-il.dacragov.com/il/bolingbrook/payment" class="list-group-item list-group-item-action"
-									>Parking Ticket</a
-								>
-								<a href="https://amwater.com/ilaw/" class="list-group-item list-group-item-action">Water Bill</a>
-								<a href="https://www.govpaynow.com/gps/user/cyg/plc/a003pt" class="list-group-item list-group-item-action"
-									>Landlord License Payment</a
-								>
-								<a href="http://www.willcountytreasurer.com/" class="list-group-item list-group-item-action"
-									>Property Taxes (Will County Treasurer) item</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="flush-headingThree">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseThree"
-							aria-expanded="false"
-							aria-controls="flush-collapseThree"
-						>
-							Link Set #3
-						</button>
-					</h2>
-					<div
-						id="flush-collapseThree"
-						class="accordion-collapse collapse"
-						aria-labelledby="flush-headingThree"
-						data-bs-parent="#accordionFlushExample"
-					>
-						<div style="padding: 0px" class="accordion-body">
-							<div style="border-radius: 0px; border-top: 0px; border-bottom: 0px" class="list-group">
+							<div style="border-radius: 0px; border-top: 0px; border-bottom: 0px" class="list-group list-group-flush">
 								<a
 									href="https://selfservice.bolingbrook.com/MSSLive/login.aspx?ReturnUrl=%2fMSSLive%2fcitizens%2fdefault.aspx"
 									class="list-group-item list-group-item-action"
@@ -164,7 +75,7 @@
 			</div>
 		</div>
 		<div class="col-lg-8">
-			<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+			<div data-bs-spy="scroll" style="position: relative" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
 				<h3 class="overline" id="list-item-1">Main Categories</h3>
 				<section class="mb-5">
 					<div class="row gx-5 justify-content-center">
@@ -175,10 +86,16 @@
 									class="card-img-top"
 									alt="Service Request"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Service Requests</h5>
-									<p class="card-text my-1">Report Potholes, downed mailboxes, etc.</p>
-									<a href="#" id="card-button" style="border: none" class="btn btn-outline-primary">Make Request </a>
+									<p class="card-text">Report Potholes, downed mailboxes, etc.</p>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										Create Request
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -189,10 +106,16 @@
 									class="card-img-top"
 									alt="Online Garbage Payment"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Garbage Online Payment</h5>
-									<p class="card-text my-1">Pay a utility bill online here</p>
-									<a href="#" style="border: none" class="btn btn-outline-primary">Make Payment </a>
+									<p class="card-text">Pay a utility bill online here</p>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										Make a Payment
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -203,10 +126,16 @@
 									class="card-img-top"
 									alt="Online Garbage Payment"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Online Permits</h5>
-									<p class="card-text my-1">Apply for Express Permits Online</p>
-									<a href="#" style="border: none" class="btn btn-outline-primary">Go somewhere </a>
+									<p class="card-text">Apply for Express Permits Online</p>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										View Permits
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -217,24 +146,37 @@
 									class="card-img-top"
 									alt="Online Garbage Payment"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Sign Up for Brook Police News</h5>
 									<p class="card-text">Get the latest news from the Bolingbrook Police Department</p>
-									<a href="#" style="border: none" class="btn btn-outline-primary">Go somewhere </a>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										Sign Up
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="card card-raised h-100" style="width: 100%">
+								
 								<img
 									src="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/alerts_Web(1).png"
 									class="card-img-top"
 									alt="Brook Alerts"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Sign Up For Brook Alerts</h5>
 									<p class="card-text">Get the latest news directly from the Village of Bolingbrook.</p>
-									<a href="#" style="border: none" class="btn btn-outline-primary">Sign Up </a>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										Sign Up
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -245,10 +187,16 @@
 									class="card-img-top"
 									alt="Overnight Parking"
 								/>
-								<div class="card-body px-2 py-2">
+								<div class="card-body">
 									<h5 class="card-title">Overnight Parking / Vacation Watch</h5>
 									<p class="card-text">Register a car for on-street parking or request a vacation watch for a house</p>
-									<a href="#" style="border: none" class="btn btn-outline-primary">Go somewhere </a>
+									<a
+										class="fst-button text-decoration-none d-inline-flex align-items-center mt-auto"
+										href="https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg"
+									>
+										View
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -271,6 +219,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-md-4 mb-5">
 							<div class="card card-raised ripple-primary h-100">
 								<div class="card-body flex-column d-flex h-100 p-4">
@@ -286,44 +235,47 @@
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="card card-raised ripple-primary h-100">
-								<div class="card-body flex-column d-flex h-100 p-4"">
-								<i class="material-icons icon-lg text-primary">upcoming</i>
-								<h2 class="display-6" style="font-size: 2rem">Community Calendar</h2>
-								<p>See what events will be hosted around Bolingbrook!</p>
-								<a class="stretched-link fst-button text-decoration-none d-inline-flex align-items-center mt-auto" href="#!">
-									Get Started
-									<i class="material-icons icon-sm ms-2">arrow_forward</i>
-								</a>
+								<div class="card-body flex-column d-flex h-100 p-4">
+									<i class="material-icons icon-lg text-primary">upcoming</i>
+									<h2 class="display-6" style="font-size: 2rem">Community Calendar</h2>
+									<p>See what events will be hosted around Bolingbrook!</p>
+									<a class="stretched-link fst-button text-decoration-none d-inline-flex align-items-center mt-auto" href="#!">
+										Get Started
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
+				</section>
 
-					<div class="col-md-4 mb-5">
-						<div class="mdc-card">
-							<div class="mdc-card__primary-action">
-								<div
-									class="mdc-card__media mdc-card__media--16-9"
-									style="
-										background-image: url(https://www.bolingbrook.com/vertical/Sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Service_Request_Banner_Web.jpg);
-									"
-								></div>
-							</div>
-							<div class="mdc-card__actions">
-								<div class="mdc-card__action-buttons">
-									<button class="mdc-button mdc-card__action mdc-card__action--button">
-										<div class="mdc-button__ripple"></div>
-										<span class="mdc-button__label">Action 1</span>
-									</button>
-									<button class="mdc-button mdc-card__action mdc-card__action--button">
-										<div class="mdc-button__ripple"></div>
-										<span class="mdc-button__label">Action 2</span>
-									</button>
+				<h3 class="overline" id="list-item-3">Extra</h3>
+				<section class="mb-5">
+					<div class="row gx-5 justify-content-center">
+						<div class="col-md-4 mb-5">
+							<div class="card card-raised ripple-primary h-100">
+								<div class="card-body flex-column d-flex h-100 p-4">
+									<i class="material-icons icon-lg text-primary">insert_drive_file</i>
+									<h2 class="display-6">Forms and Permits</h2>
+									<p>Get important Files</p>
+									<a class="stretched-link fst-button text-decoration-none d-inline-flex align-items-center mt-auto" href="#!">
+										Get Started
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
-								<div class="mdc-card__action-icons">
-									<button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
-									<button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">
-										more_vert
-									</button>
+							</div>
+						</div>
+
+						<div class="col-md-4 mb-5">
+							<div class="card card-raised ripple-primary h-100">
+								<div class="card-body flex-column d-flex h-100 p-4">
+									<i class="material-icons icon-lg text-primary">delete</i>
+									<h2 class="display-6" style="font-size: 2rem">Garbage and Refuse</h2>
+									<p>See what events will be hosted around Bolingbrook!</p>
+									<a class="stretched-link fst-button text-decoration-none d-inline-flex align-items-center mt-auto" href="#!">
+										Get Started
+										<i class="material-icons icon-sm ms-2">arrow_forward</i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -336,18 +288,9 @@
 
 		<div class="col-lg-2 mb-5 mb-lg-0">
 			<!-- Side column sticky navigation stick-->
-
-			<div class="sticky-top pt-5 nav-stick">
-				<div id="list-example" class="list-group">
-					<a class="list-group-item list-group-item-action" href="#list-item-1">Main Categories</a>
-					<a class="list-group-item list-group-item-action" href="#list-item-2">News and Events</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
-
-
 
 <style>
 	#responsiveLink {
@@ -418,12 +361,3 @@
 		text-align: left !important;
 	}
 </style>
-
-<script>
-
-	
-	const selector = ".mdc-button, .mdc-icon-button, .mdc-card__primary-action";
-	const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
-		mdc.ripple.MDCRipple.attachTo(el);
-	});
-</script>
