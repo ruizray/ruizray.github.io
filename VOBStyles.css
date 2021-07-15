@@ -1,3 +1,26 @@
+.customCSS p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	line-height: 1.875rem;
+	font-size: 1.125rem;
+	font-weight: 300;
+}
+
+.customCSS ul li,
+.customCSS ol li {
+	list-style-position: outside;
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.customCSS h1,
+.customCSS h2 {
+	font-family: "Roboto", sans-serif;
+	text-align: inherit;
+	padding: initial;
+	margin: 0;
+}
+
 .CTA-primary {
 	margin-right: 1rem;
 	border-left-style: ridge !important;
@@ -347,14 +370,6 @@ right connector from last child*/
 }
 .dropdown-menu > li:hover > .dropdown-submenu {
 	display: block;
-}
-
-p {
-	margin-top: 0;
-	margin-bottom: 1rem;
-	line-height: 1.875rem;
-	font-size: 1.125rem;
-	font-weight: 300;
 }
 
 /* inViewport */
