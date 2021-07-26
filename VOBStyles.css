@@ -18,7 +18,27 @@
 	font-family: "Roboto", sans-serif;
 	text-align: inherit;
 	padding: initial;
-	margin: 0;
+	margin-bottom:0.25rem
+}
+
+.scrollspy-level-1 {
+	font-size:1.125rem !important;
+}
+
+.scrollspy-level-2 {
+	font-size:0.975rem !important;
+}
+
+.responsive-image{
+	width:75%;
+}
+
+.subsection ul{
+	margin-bottom:0px
+}
+
+.subsection {
+	margin-bottom:1rem;
 }
 
 .CTA-primary {
@@ -60,6 +80,9 @@ ul.list-group-flush div {
 @media screen and (max-width: 576px) {
 	.clamped {
 		width: auto;
+	}
+	.responsive-image{
+		width:auto;
 	}
 }
 @media screen and (max-width: 1024px) {
