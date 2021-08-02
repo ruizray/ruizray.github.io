@@ -1,16 +1,18 @@
 .customCSS p {
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 0.75rem;
 	line-height: 1.875rem;
 	font-size: 1.125rem;
 	font-weight: 300;
 }
 
-.customCSS ul li,
-.customCSS ol li {
+.customCSS .card-body ul li,
+.customCSS .card-body ol li {
 	list-style-position: outside;
 	margin-bottom: auto;
 	margin-top: auto;
+	font-size: 1.125rem;
+	font-weight: 300;
 }
 
 .customCSS h1,
@@ -18,27 +20,27 @@
 	font-family: "Roboto", sans-serif;
 	text-align: inherit;
 	padding: initial;
-	margin-bottom:0.25rem
+	margin-bottom: 0.25rem;
 }
 
 .scrollspy-level-1 {
-	font-size:1.125rem !important;
+	font-size: 1.125rem !important;
 }
 
 .scrollspy-level-2 {
-	font-size:0.975rem !important;
+	font-size: 0.975rem !important;
 }
 
-.responsive-image{
-	width:75%;
+.responsive-image {
+	width: 75%;
 }
 
-.subsection ul{
-	margin-bottom:0px
+.subsection ul {
+	margin-bottom: 0px;
 }
 
 .subsection {
-	margin-bottom:1rem;
+	margin-bottom: 1rem;
 }
 
 .CTA-primary {
@@ -81,8 +83,8 @@ ul.list-group-flush div {
 	.clamped {
 		width: auto;
 	}
-	.responsive-image{
-		width:auto;
+	.responsive-image {
+		width: auto;
 	}
 }
 @media screen and (max-width: 1024px) {
@@ -395,4 +397,20 @@ right connector from last child*/
 	display: block;
 }
 
-/* inViewport */
+.contentBG {
+	padding: 0px;
+}
+
+main.container.content {
+	margin: 0px;
+	padding: 0px;
+}
+
+div.mainContent {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+div.socialFixed {
+	display: none;
+}
