@@ -429,3 +429,12 @@ div.socialFixed {
 .quickLinksBox {
 	border: 1px solid rgba(0, 0, 0, 0.125);
 }
+
+.list-group-item {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.accordion-button:after {
+	display:none;	
+}
